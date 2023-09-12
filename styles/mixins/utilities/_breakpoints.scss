@@ -1,0 +1,29 @@
+@function projectBreakpoint( $bp ) {
+    @if map-has-key( $breakpoints, $bp ) {
+        @return map-get( $breakpoints, $bp );
+    }
+    @return $bp;
+}
+
+@function breakpoint( $bp ) {
+    @return projectBreakpoint($bp);
+}
+
+@function isValidBreakpoint( $bp ) {
+    @if map-has-key($breakpoints, $bp ) or type-of( $bp ) == number {
+        @return true;
+    }
+    @return false;
+}
+
+@mixin menuMobile {
+    @media ( max-width: breakpoint( $menuCollapseBreakpoint ) ) {
+        @content;
+    }
+}
+
+@mixin menuDesktop {
+    @media ( min-width: breakpoint( $menuCollapseBreakpoint ) ) {
+        @content;
+    }
+}

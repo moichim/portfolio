@@ -1,0 +1,71 @@
+$dimension: 1rem;
+
+.themeSwitch {
+
+    @include transition();
+
+    position: relative;
+    aspect-ratio: 1 / 1;
+
+    min-height: $dimension;
+    min-width: $dimension;
+    overflow: hidden;
+
+    background: variable( text );
+    color: variable( bg );
+    border-radius: 50%;
+
+    svg {
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: .2rem;
+    }
+
+    > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include transition();
+    }
+
+    
+
+}
+
+.themeSwitch__1x {
+    width: 1rem
+}
+
+.themeSwitch__2x {
+    height: 2rem
+}
+
+.themeSwitch__adaptive-width {
+    width: 100%;
+}
+
+.themeSwitch__adaptive-height {
+    height: 100%;
+}
+
+.themeSwitch__interactive {
+    &:hover {
+        cursor: pointer;
+        background: variable( primary );
+    }
+}
+
+.themeSwitch__wrapper {
+    
+        @include transition();
+}
+
+.themeSwitch__dark {
+    > div {
+        top: - 100%;
+    }
+}

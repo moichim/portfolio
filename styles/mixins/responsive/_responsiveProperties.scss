@@ -1,0 +1,125 @@
+@use "sass:map";
+
+@function responsiveValue(
+    /* list */ $list,
+    $breakpoint
+) {
+    @if map-has-key($breakpoint, $list ) {
+        @return map-get( $breakpoint, $list );
+    }
+    @else {
+        @return null;
+    }
+}
+
+@function property(
+    /* property */ $property,
+    /* map */ $list,
+    $multiply: null,
+) {
+
+    $result: (
+        property: $property
+    );
+
+    $values: ();
+    @each $breakpoint, $value in $list {
+
+        @if map-has-key($breakpoints, $breakpoint) {
+
+            @if not $multiply {}
+            @else if type-of($multiply) == number and type-of($value) == number {
+                $value: $value * $multiply;
+            }
+
+            $values: map.set( $values, $breakpoint, $value )
+
+        }
+
+    }
+
+    $result: map.set( $result, "values", $values );
+
+    @return $result;
+
+}
+
+@function addPropertyValue( $result, $breakpoint, $property, $value: false ) {
+    @if map-has-key( $result, $breakpoint ) {
+
+        $previousState: map-get( $result, $breakpoint );
+        $newState: map.set( $previousState, #{$property}, $value );
+        $result: map.set( $result, $breakpoint, $newState );
+
+    }
+    @else {
+        $result: map.set( $result, $breakpoint, ( #{$property}: $value ) )
+    }
+    @return $result;
+}
+
+@function combineProperties( $list... ) {
+    $result: ();
+    @each $item in $list {
+
+        @each $prop in $item {
+            @if type-of($prop) == map {
+
+                @if map-has-key($prop , "property" ) {
+
+                    $property: map-get( $prop, "property" );
+
+                    @if map-has-key( $prop, "baseValue" ) {
+                        
+                        $baseValue: map-get( $prop, "baseValue" );
+
+                        @if not $baseValue == false {
+                            $result: addPropertyValue( $result, 0, $property, map-get( $prop, "baseValue" ) );
+                        }
+                    }
+
+                    @if map-has-key( $prop, "values" ) {
+                        
+                        $values: map-get( $prop, "values" );
+                        
+                        @if type-of( $values ) == map {
+
+                            @each $breakpoint, $value in $values {
+
+                                $result: addPropertyValue( $result, $breakpoint, $property, $value );
+                            
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    @return $result;
+}
+
+
+
+@function breakpoint( $key ) {
+    @return map-get( $breakpoints, $key );
+}
+
+
+@mixin responsiveProperties( $list... ) {
+
+    $combined: combineProperties( $list );
+
+    @if map-has-key($combined, 0 ) {
+        @include printProperties( map-get( $combined, 0 ) );
+    }
+
+    @each $breakpoint, $pxval in $breakpoints {
+        @if map-has-key($combined, $breakpoint ) {
+            @media (min-width: breakpoint($breakpoint) ) {
+                @include printProperties( map-get( $combined, $breakpoint ) );
+            }
+        }
+    }
+
+}

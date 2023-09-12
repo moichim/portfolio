@@ -1,0 +1,38 @@
+@use "sass:meta";
+
+@mixin formatVariable( $name, $value ) {
+    --#{$prefix}-#{$name}: #{meta.inspect( $value )};
+}
+
+@mixin _printVariables( $map ) {
+
+    @if type-of( $map ) == map {
+
+        @each $var, $val in $map {
+            // --#{$prefix}-#{$var}: #{ meta.inspect( $val ) };
+            @include formatVariable( $var, $val );
+        }
+
+    }
+
+}
+
+@mixin printDefaultVariables() {
+    @include _printVariables( map-get( $variables, "default" ) );
+}
+
+@mixin printThemeVariables( $theme ) {
+    @include _printVariables( map-get( map-get( $variables, "themes" ), $theme ) );
+}
+
+@function variable( $name ) {
+    @if map-has-key( map-get( $variables, "default" ), $name ) {
+        $x: var(--#{$prefix}-#{$name});
+        @return $x;
+    }
+    @return null;
+}
+
+@mixin variableOverride( $name, $value ) {
+
+}

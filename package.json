@@ -9,14 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "clsx": "^2.0.0",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "framer-motion": "^10.16.4",
+    "gray-matter": "^4.0.3",
     "next": "13.4.19",
+    "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "reset-css": "^5.0.2",
+    "sass": "^1.66.1",
+    "ts-migrate": "^0.1.35",
     "typescript": "5.2.2"
   }
 }

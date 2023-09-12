@@ -1,0 +1,6 @@
+@function fontSize( $value ) {
+    @if unit( $value ) == "" {
+        @return #{$value}rem;
+    }
+    @return $value;
+}

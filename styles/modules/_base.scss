@@ -1,0 +1,37 @@
+:root {
+
+    // The base styles
+    @include printDefaultVariables();
+
+    // Print other themes
+    @each $theme,
+    $vars in map-get($variables, "themes") {
+
+        &[data-theme='#{$theme}'] {
+            @include printThemeVariables($theme );
+        }
+
+    }
+
+
+}
+
+html {
+
+    @include responsiveIndex((
+        font-size: (
+            0: 18px,
+            sm: 20px,
+            md: 21px,
+            lg: 23px,
+            xl: 25px
+        )
+    ));
+
+}
+
+body {
+    background: variable(bg);
+    color: variable(text);
+    @include transition();
+}

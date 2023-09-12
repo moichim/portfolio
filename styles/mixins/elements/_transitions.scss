@@ -1,0 +1,13 @@
+@use "sass:list";
+@use "sass:string";
+
+@function renderTransition( $property, $easing, $duration ) {
+    @return #{$property} #{$duration} #{$easing};
+}
+
+@mixin transition( ) {
+
+    transition: all .3s ease-in-out;
+
+
+}

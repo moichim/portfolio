@@ -1,0 +1,57 @@
+@use "sass:map";
+
+@mixin responsiveIndex( $map ) {
+    @if type-of( $map ) == map {
+
+        // Expand lists values
+        $expanded: ();
+        @each $property, $values in $map {
+            @if type-of( $values ) == map {
+
+            }
+            @else {
+                $values: ( 0: $values );
+            }
+            $expanded: map.set( $expanded, $property, $values )
+        }
+
+        // Revert from properties to breakpoints
+        $reverted: ();
+        @each $property, $values in $expanded {
+
+            @each $breakpoint, $value in $values {
+
+                $breakpoint: projectBreakpoint( $breakpoint );
+
+                @if map-has-key( $reverted, $breakpoint ) {
+
+                    $prev: map-get( $reverted, $breakpoint );
+                    $next: map-merge( $prev, ( #{$property}: $value ) );
+                    $reverted: map.set( $reverted, $breakpoint, $next );
+
+                }
+                @else {
+                    $reverted: map.set( $reverted, $breakpoint, ( #{$property}: $value ) );
+                }
+
+            }
+
+        }
+
+        // Print the values
+        @each $bp, $attrs in $reverted {
+
+            @if $bp == 0 {
+                @include printProperties( $attrs );
+            }
+            @else {
+                @media ( min-width: $bp ) {
+                    @include printProperties( $attrs );
+                }
+            }
+
+        }
+
+
+    }
+}

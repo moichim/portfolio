@@ -1,0 +1,32 @@
+@use "sass:map";
+
+@mixin responsiveList( $list ){
+
+    @if type-of( $list ) == map {
+
+        $projected: ();
+
+        @each $breakpoint, $properties in $list {
+
+            @if isValidBreakpoint( $breakpoint ) {
+                $projected: map.set( 
+                    $projected, 
+                    projectBreakpoint( $breakpoint ), 
+                    $properties 
+                );   
+            }
+
+        }
+
+        $list: map-sort( $projected );
+
+        @each $bp, $props in $list {
+            @media ( min-width: $bp ) {
+                @each $property, $value in $props {
+                    #{$property}: $value;
+                }
+            }
+        }
+
+    }
+}
