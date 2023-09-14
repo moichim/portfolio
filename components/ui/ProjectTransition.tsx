@@ -9,7 +9,7 @@ function ProjectTransition({ children, ...rest }: PageTransitionProps, ref: Page
 	const animate = { opacity: 1, scale: 1 }
 	const exit = { opacity: 0, scale: .7 }
 
-	const transition = { duration: 0.4, ease: 'easeInOut' }
+	const transition = { duration: 2, ease: 'easeInOut' }
 
 	return (
 		<motion.div
