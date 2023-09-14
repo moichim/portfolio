@@ -1,13 +1,9 @@
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
 import PageTransition from "@/components/ui/PageTransition"
 import ProjectTransition from "@/components/ui/ProjectTransition"
 import { Metadata } from "@/data/ProjectsManager"
 import { Metadata as Meta } from "next"
 import { forwardRef } from "react"
-import Text from "@/components/partials/content/Text"
-import Youtube from "@/components/partials/content/Youtube"
-import Picture from "@/components/partials/content/Picture"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
@@ -17,35 +13,27 @@ type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
 
 export const metadata: Metadata = {
-	"title": "První projekt",
-	"description": "interaktivní instalace",
+	"title": "Druhý projekt",
 	"authors": [{
 		"name": "Janův jiná"
 	}],
 	"image": "/fireman.webp",
-	"color": "green",
+	"color": "navy",
 	"year": 2023,
-	"month": 11,
-	"day": 1,
-	"keywords": [ "design" ],
+	"month": 10,
+	"day": 7,
+	"keywords": [ "art" ],
 	"public": true
 }
 
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
+	let sth = "ale zase";
+
 
 	return (
 		<ProjectLayout ref={ref} meta={metadata}>
-			<Content>
-
-				<Text xs={12} lg={6} xl={4}>Toto je nějaký text</Text>
-				<Text xs={12} lg={6} xl={4}>Toto je nějaký text</Text>
-				<Text lg={6} xl={4}>Toto je nějaký text</Text>
-				<Youtube lg={5} id="CMZrZ6R6uxM"/>
-				<Picture lg={3} src="/fireman.webp"/>
-				<Picture lg={3} src="/fireman.webp">Nějaký obrázek</Picture>
-
-			</Content>
+			<div className="IndexPage">První projekt</div>
 		</ProjectLayout>
 	)
 }

@@ -1,0 +1,73 @@
+.container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: black;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.placeholder {
+    display: block;
+    outline: 0;
+    border:0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        .icon {
+            transform: scale( 1.5 );
+            background-color: variable( highlight );
+        }
+    }
+
+}
+
+.overlay {
+
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon {
+    
+    margin: 0;
+    padding: .5rem;
+    outline: 0;
+    box-shadow: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    background: variable( primary );
+
+    height: 3rem;
+    width: 3rem;
+
+    color: white;
+
+    @include transition();
+
+}

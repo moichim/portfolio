@@ -1,0 +1,134 @@
+@mixin vertical-center-flex {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes animate-fade {
+    0% { opacity: 0; transform: translateY( 3rem ) }
+    100% { opacity: 1; transform: translateY( 0rem ) }
+  }
+
+@keyframes animate-menu {
+    0% { opacity: 0; transform: translateX( -100% ) }
+    100% { opacity: 1; transform: translateX( 0rem ) }
+}
+
+
+// First include all transitions
+.navigation,
+.navigation_siteTitle,
+.navigation_background,
+.navigation_links {
+    transition: all #{$menuCollapseDuration/1000}s ease-in-out;
+}
+
+
+.navigation {
+
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include sharedVerticalPadding;
+
+    z-index: 999;
+
+    a {
+        &:link,
+        &:visited {
+            color: variable( primary );
+        }
+    }
+
+    @include menuMobile{
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-wrap: wrap;
+
+        padding: 1rem;
+
+        .navigation_siteTitle,
+        .navigation_toggles,
+        .navigation_links { z-index: 1 }
+
+        .navigation_siteTitle { order: 1; flex-grow: 1 }
+        .navigation_toggles { order: 2 }
+        .navigation_links { order: 3; flex-basis: 100%; height: 0; overflow: hidden; }
+
+        .navigation_background {
+            position: absolute;
+            background: variable( highlight );
+            height: 0vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        &.navigation___expanded {
+            // height: 100vh;
+            background: variable( text );
+            .navigation_siteTitle { 
+                font-size: fontSize( 3 ) 
+            }
+            .navigation_background {
+                height: 100vh;
+            }
+            .link {
+
+                font-size: 1.5rem;
+                margin-bottom: .5rem;
+
+                @for $i from 1 through 100 {
+                    
+                    &:nth-child(#{$i}) {
+                        animation-delay: #{ ( $i * 100 ) / 1000}s;
+                        animation-duration: .4s;
+                        animation-name: animate-menu;
+                        animation-fill-mode: both;
+                    }
+                }
+            }
+            .navigation_links {
+                height: fit-content;
+            }
+        }
+
+    }
+
+    @include menuDesktop{
+
+        @include vertical-center-flex();
+
+        .navigation_links {
+            text-align: right;
+            flex-grow: 1;
+            ul {
+                @include vertical-center-flex();
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+            }
+        }
+
+        .navigation_background {
+            display: none !important;
+        }
+
+    }
+
+}
+
+
+.link {
+
+    // background: green;
+    // transform: translateX(-5rem);
+    @include menuMobile {
+        // transform: translateX(-100%);
+    }
+
+}

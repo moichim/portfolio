@@ -1,13 +1,15 @@
 import GlobalLayout from '@/components/layout/global/GlobalLayout';
-import Header from '@/components/layout/navigation/Header';
 import GlobalProviders from '@/context/GlobalProviders';
 import LayoutInnerProviders from '@/context/LayoutInnerProviders';
-import '@/styles/globals.scss'
-import { NextPage } from 'next';
-import type { AppProps } from 'next/app'
-import Link from 'next/link';
-import { useRouter } from 'next/router'
+import '@/styles/globals.scss';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 
+import "@/components/partials/content/Magnifier.scss";
+import "@fontsource/ibm-plex-sans";
+import "@fontsource/ibm-plex-sans/400-italic.css";
+import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/700.css";
 
 export default function App({ Component, pageProps }: AppProps) {
 

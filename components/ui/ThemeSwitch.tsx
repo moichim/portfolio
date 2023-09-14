@@ -7,16 +7,11 @@ import clsx from "clsx";
 import styles from "./ThemeSwitch.module.scss";
 import { useTheme } from "@/context/theme/themeContext";
 
-type ThemeSwitchProps = React.PropsWithChildren & {
-    size?: "1x"|"2x"|"adapt-width"|"adapt-height"
-}
-
-const ThemeSwitch: React.FC<ThemeSwitchProps> = ( { size = "1x", ...props } ) => {
+const ThemeSwitch: React.FC = () => {
 
     const context = useTheme();
 
     const classes = [
-        // reset.resetContainer,
         styles.themeSwitch
     ];
 
@@ -36,7 +31,6 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ( { size = "1x", ...props } ) =>
     // Append remaining classes
     classes.push( styles.themeSwitch__interactive );
     classes.push( context.isDark ? styles.themeSwitch__dark : styles.themeSwitch__light );
-    classes.push( styles[ `themeSwitch__${size}` ] );
 
     return(
         <Switch

@@ -1,0 +1,133 @@
+@mixin imageHeight {
+    @include responsiveIndex((
+        height: ( 0: 200px, md: 300px, lg: 350px ),
+    ));
+}
+
+@keyframes animate-fade {
+    0% { transform: translateY( 10rem ); opacity: 0 }
+    100% { transform: translateY( 0rem ); opacity: 1 }
+  }
+
+.container {
+    position: relative;
+    width: 100%;
+    @include up(md){
+        overflow: hidden;
+        @include imageHeight;
+    }
+
+    @for $i from 0 through 100 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{ ( $i * 75 ) / 1000}s;
+            animation-duration: .3s;
+            animation-name: animate-fade;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+
+.link {
+    display: block;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        transform: scale( 1.2 );
+        @include transition();
+    }
+
+    @include imageHeight();
+    
+    @include up( md ) {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.bg {
+    opacity: 0;
+    background: currentColor;
+    opacity: .5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include transition();
+}
+
+.text {
+
+    box-sizing: border-box;
+    
+    @include transition();
+
+    @include upto( md ) {
+        padding-top: .5rem;
+        padding-bottom: 1rem;
+    }
+
+    @include up( md ) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 0;
+        color: white;
+
+        @include imageHeight();
+
+    }
+
+}
+
+.title {
+    font-weight: bold;
+    @include transition();
+    @include up( md ) {
+        transform: translateY( -1rem );
+    }
+}
+
+.link {
+    &:hover,
+    &:focus {
+
+        outline: 0;
+        border: 0;
+
+        .image {
+            img {
+                transform: scale( 1 );
+            }
+        }
+        .text {
+            opacity: 1;
+        }
+        .bg {
+            opacity: .3;
+            @include up(md) {
+                opacity: .8;
+            }
+        }
+        .title {
+            @include up(md) {
+                transform: translateY(0rem);
+            }
+        }
+
+    }
+}
+

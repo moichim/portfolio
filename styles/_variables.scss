@@ -8,8 +8,12 @@ $breakpoints: (
     xl: 1500px
 );
 
+$transitionDuration: 200;
+
 $menuCollapseBreakpoint: md;
-$menuCollapseDuration: 300;
+$menuCollapseDuration: $transitionDuration;
+
+$gap: 1rem;
 
 $primary: red;
 

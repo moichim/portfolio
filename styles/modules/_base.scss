@@ -34,4 +34,15 @@ body {
     background: variable(bg);
     color: variable(text);
     @include transition();
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+    // padding: 2rem;
 }
+
+a {
+    color: variable( primary );
+}
+
+
+
+

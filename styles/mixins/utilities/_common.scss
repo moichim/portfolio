@@ -87,3 +87,24 @@
   
     @return $number;
   }
+
+@function gridItemWidthValue( $cols, $g: 1rem ) {
+  @if $cols == 1 {
+    @return 100%;
+  }
+  @else {
+      @return calc(  #{ percentage( 1/$cols ) } - #{ $g * ( $cols - 1 ) / $cols } );
+  }
+}
+
+@mixin gridItemWidth( $cols, $g: 1rem ) {
+  width: percentage( 1/$cols );
+    // width: gridItemWidthValue($cols,$g );
+}
+
+@mixin sharedVerticalPadding() {
+    padding: 0 1rem;
+    @include up( md ) {
+        padding: 0 2rem;
+    }
+}

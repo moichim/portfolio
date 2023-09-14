@@ -4,12 +4,12 @@ import { motion, HTMLMotionProps } from 'framer-motion'
 type PageTransitionProps = HTMLMotionProps<'div'>
 export type PageTransitionRef = React.ForwardedRef<HTMLDivElement>
 
-function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTransitionRef) {
-	const initial = { opacity: 0, y: "100vh" }
-	const animate = { opacity: 1, y: 0 }
-	const exit = { opacity: 0, y: "100vh" }
+function ProjectTransition({ children, ...rest }: PageTransitionProps, ref: PageTransitionRef) {
+	const initial = { opacity: 0, scale: .7 }
+	const animate = { opacity: 1, scale: 1 }
+	const exit = { opacity: 0, scale: .7 }
 
-	const transition = { duration: 0.5, ease: 'easeInOut' }
+	const transition = { duration: 0.4, ease: 'easeInOut' }
 
 	return (
 		<motion.div
@@ -25,4 +25,4 @@ function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTra
 	)
 }
 
-export default forwardRef(PageTransition)
+export default forwardRef(ProjectTransition)

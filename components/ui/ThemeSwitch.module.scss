@@ -1,4 +1,4 @@
-$dimension: 1rem;
+$dimension: 1.5rem;
 
 .themeSwitch {
 
@@ -7,6 +7,14 @@ $dimension: 1rem;
     position: relative;
     aspect-ratio: 1 / 1;
 
+    width: $dimension;
+
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+    margin: 0;
+    padding: 0;
+
     min-height: $dimension;
     min-width: $dimension;
     overflow: hidden;
@@ -14,6 +22,7 @@ $dimension: 1rem;
     background: variable( text );
     color: variable( bg );
     border-radius: 50%;
+    display: inline-block;
 
     svg {
         display: block;

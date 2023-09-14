@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    margin-left: $gap / (-2);
+    margin-right: $gap / (-2);
+    width: calc( 100% + #{$gap});
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}

@@ -1,0 +1,64 @@
+$gap: 1rem;
+
+.animate {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes animate-fade {
+    0% { opacity: 0; transform: translateY( 3rem ) }
+    100% { opacity: 1; transform: translateY( 0rem ) }
+  }
+
+.container {
+
+    box-sizing: border-box;
+    
+    $cols: 12;
+
+    @each $bp, $val in $breakpoints {
+
+        @for $i from 1 through $cols {
+    
+            $value: percentage( $i / $cols );
+    
+            @if $bp == 0 {
+                &.col-xs-#{$i} {
+                    width: $value;
+                }
+            }
+            @else {
+                @include up( $bp ) {
+                    &.col-#{$bp}-#{$i} {
+                        width: $value;
+                    }
+                }
+            }
+    
+        }
+    
+    }
+
+    // Animation
+    
+
+    @for $i from 0 through 100 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{ ( $i * 100 ) / 1000}s;
+            animation-duration: .3s;
+            animation-name: animate-fade;
+            animation-fill-mode: backwards;
+        }
+    }
+
+
+
+}
+
+.wrapper {
+    padding: $gap / 2;
+}
+
+

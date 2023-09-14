@@ -27,3 +27,15 @@
         @content;
     }
 }
+
+@mixin up( $breakpoint ) {
+    @media ( min-width: breakpoint( $breakpoint ) ) {
+        @content;
+    }
+}
+
+@mixin upto( $breakpoint ) {
+    @media ( max-width: calc( #{breakpoint( $breakpoint ) - 1px} ) ) {
+        @content;
+    }
+}

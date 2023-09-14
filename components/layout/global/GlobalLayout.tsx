@@ -1,4 +1,5 @@
 import Header from "../navigation/Header";
+import Navigation from "../navigation/Navigation";
 
 /** 
  * Markup common to the entire site.
@@ -8,10 +9,8 @@ import Header from "../navigation/Header";
 */
 const GlobalLayout: React.FC<React.PropsWithChildren> = props => {
     return <div>
-        <Header />
-        <main>
-            {props.children}
-        </main>
+        <Navigation />
+        {props.children}
     </div>;
 }
 

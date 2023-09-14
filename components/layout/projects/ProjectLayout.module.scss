@@ -1,0 +1,28 @@
+.container {
+
+    transition: all .4s ease-in-out;
+    @include sharedVerticalPadding;
+
+}
+
+.zoomed {
+    transform: scale( .7 );
+    opacity: .2;
+}
+
+.header {
+
+    text-align: center;
+    padding: 2rem 0;
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: .5rem;
+        font-size: 2rem;
+    }
+
+}
+
+.content {
+
+}

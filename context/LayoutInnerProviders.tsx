@@ -1,5 +1,6 @@
 'use client';
 
+import { PageContextProvider } from "./project/ProjectContext";
 import ThemeProvider from "./theme/themeContext"
 import TransitionProvider from "./transition/TransitionProvider"
 
