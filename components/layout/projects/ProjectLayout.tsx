@@ -1,11 +1,14 @@
 import { forwardRef } from "react";
 import { PageTransitionRef } from "../../ui/PageTransition";
-import ProjectTransition from "../../ui/ProjectTransition";
+// import ProjectTransition from "../../ui/ProjectTransition";
 import styles from "./ProjectLayout.module.scss";
 import Head from "next/head";
 import { Metadata } from "@/data/ProjectsManager";
 import { PageContextProvider, usePageContext } from "@/context/project/ProjectContext";
 import clsx from "clsx";
+import dynamic from "next/dynamic";
+
+const ProjectTransition = dynamic( () => import( "@/components/ui/ProjectTransition" ) );
 
 
 type ProjectProps = React.PropsWithChildren & {

@@ -17,12 +17,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return <GlobalProviders>
     <GlobalLayout>
+      <div style={{position: "relative", width: "100%"}}>
       <LayoutInnerProviders>
         <Component 
           key={id} 
           {...pageProps} 
         />
       </LayoutInnerProviders>
+      </div>
     </GlobalLayout>
   </GlobalProviders>
   

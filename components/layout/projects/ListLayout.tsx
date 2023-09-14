@@ -1,11 +1,14 @@
 import { forwardRef } from "react";
-import PageTransition, { PageTransitionRef } from "../../ui/PageTransition";
+import { PageTransitionRef } from "../../ui/PageTransition";
 import ProjectTransition from "../../ui/ProjectTransition";
 import Head from "next/head";
 import { Metadata, ProjectMetadata } from "@/data/ProjectsManager";
 import ProjectGrid from "@/components/partials/ProjectGrid";
 import { formatTitle } from "@/utils/formatters";
-import styles from "./ListLayout.module.scss"
+import styles from "./ListLayout.module.scss";
+import dynamic from "next/dynamic";
+
+const PageTransition = dynamic( () => import( "@/components/ui/PageTransition" ) );
 
 type ListLayoutProps = {
     title?: string,
