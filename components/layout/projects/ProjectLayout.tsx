@@ -7,8 +7,7 @@ import { Metadata } from "@/data/ProjectsManager";
 import { PageContextProvider, usePageContext } from "@/context/project/ProjectContext";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
-
-const ProjectTransition = dynamic( () => import( "@/components/ui/ProjectTransition" ) );
+import ProjectTransition from "@/components/ui/ProjectTransition";
 
 
 type ProjectProps = React.PropsWithChildren & {

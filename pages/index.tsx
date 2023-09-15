@@ -1,7 +1,5 @@
 import ListLayout from "@/components/layout/projects/ListLayout"
-import ProjectGrid from "@/components/partials/ProjectGrid"
 import IndexText from "@/components/partials/page/IndexText"
-import PageTransition from "@/components/ui/PageTransition"
 import ProjectsManager from "@/data/ProjectsManager"
 import { InferGetStaticPropsType } from "next"
 import Link from "next/link"
