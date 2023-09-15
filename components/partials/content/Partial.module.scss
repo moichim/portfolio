@@ -16,7 +16,8 @@ $gap: 1rem;
 
     box-sizing: border-box;
     // overflow:hidden;
-    
+
+
     $cols: 12;
 
     @each $bp, $val in $breakpoints {
@@ -40,6 +41,14 @@ $gap: 1rem;
     
         }
     
+    }
+
+    .container {
+        width: 100%;
+        .wrapper {
+            padding: 0;
+            padding-bottom: 1rem;
+        }
     }
 
     // Animation

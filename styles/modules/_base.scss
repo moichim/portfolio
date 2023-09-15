@@ -20,11 +20,11 @@ html {
 
     @include responsiveIndex((
         font-size: (
-            0: 18px,
-            sm: 20px,
-            md: 21px,
-            lg: 23px,
-            xl: 25px
+            0: 22px,
+            //sm: 20px,
+            md: 25px,
+            //lg: 23px,
+            //xl: 30px
         )
     ));
 
@@ -34,9 +34,9 @@ body {
     background: variable(bg);
     color: variable(text);
     @include transition();
+
     font-family: "IBM Plex Sans", sans-serif;
     overflow-x: hidden;
-    // padding: 2rem;
 }
 
 a {

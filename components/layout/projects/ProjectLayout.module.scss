@@ -13,12 +13,20 @@
 .header {
 
     text-align: center;
-    padding: 2rem 0;
+    padding: 4rem 0 4rem 0;
+
+    @include menuMobile{
+        padding: 5rem 0 6rem 0;
+    }
 
     h1 {
         font-weight: bold;
         margin-bottom: .5rem;
-        font-size: 2rem;
+        // font-size: 2rem;
+    }
+
+    p {
+        // padding-top: 2rem;
     }
 
 }

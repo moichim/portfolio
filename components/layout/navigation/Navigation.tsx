@@ -49,6 +49,7 @@ const Header: React.FC = () => {
         <>
         <header className={clsx( ...classes )}>
 
+            <div className={styles.overlay} aria-hidden></div>
             <div className={styles.bg} aria-hidden></div>
 
 

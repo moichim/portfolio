@@ -10,7 +10,7 @@ $breakpoints: (
 
 $transitionDuration: 200;
 
-$menuCollapseBreakpoint: md;
+$menuCollapseBreakpoint: lg;
 $menuCollapseDuration: $transitionDuration;
 
 $gap: 1rem;
@@ -21,12 +21,13 @@ $variables: (
     default: (
         primary: blue,
         secondary: green,
-        bg: rgb(241, 241, 241),
+        bg: rgb(255, 255, 255),
         text: black,
         highlight: yellow,
         navBg: blue,
         navText: white,
-        navLink: yellow
+        navLink: yellow,
+        navDark: rgb(0, 0, 88)
     ),
     themes:(
         dark: (

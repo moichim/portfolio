@@ -9,6 +9,7 @@ import Text from "@/components/partials/content/Text"
 import Youtube from "@/components/partials/content/Youtube"
 import Picture from "@/components/partials/content/Picture"
 import Link from "next/link"
+import { useScheme } from "@/context/color/ColorContextProvider"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
@@ -34,6 +35,8 @@ export const metadata: Metadata = {
 
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
+
+	const scheme = useScheme({primary: "red", text: "black", bg: "navy"});
 
 	return (
 		<ProjectLayout ref={ref} meta={metadata}>
