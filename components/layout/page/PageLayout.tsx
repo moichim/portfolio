@@ -8,16 +8,14 @@ import styles from "./PageLayout.module.scss";
 
 function PageLayout( props: React.PropsWithChildren, ref: PageTransitionRef ) {
 
-    return <>
-        <PageTransition ref={ref}>
+    return <PageTransition ref={ref}>
             <Head>
                 <title>{formatTitle()}</title>
             </Head>
             <main className={styles.container}>
                 {props.children}
             </main>
-        </PageTransition>
-    </>
+    </PageTransition>
 
 }
 
