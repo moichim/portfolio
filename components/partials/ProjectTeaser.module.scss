@@ -23,6 +23,10 @@
             animation-duration: .3s;
             animation-name: animate-fade;
             animation-fill-mode: backwards;
+
+            @include menuMobile() {
+                animation-delay: #{ ( $i * 150 ) / 1000}s; 
+            }
         }
     }
 }

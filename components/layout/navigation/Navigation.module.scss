@@ -13,13 +13,33 @@
     100% { opacity: 1; transform: translateX( 0rem ) }
 }
 
+@mixin expandedName {
+        span {
+                    &:first-child {
+                        max-width: 6rem;
+                    }
+
+                    &:last-child {
+                        max-width: 8rem;
+                    }
+                }
+}
+
 
 // First include all transitions
 .navigation,
-.navigation_siteTitle,
-.navigation_background,
-.navigation_links {
+.title,
+.bg,
+.links,
+.theme {
     transition: all #{$menuCollapseDuration/1000}s ease-in-out;
+}
+
+.block {
+    // background: green;
+    @include menuMobile{
+        height: 5rem;
+    }
 }
 
 
@@ -35,9 +55,21 @@
     z-index: 999;
 
     a {
+
+        text-decoration: none;
+
         &:link,
         &:visited {
             color: variable( primary );
+        }
+    }
+
+    .title {
+
+        a {
+            &:hover {
+                @include expandedName;
+            }
         }
     }
 
@@ -50,17 +82,22 @@
 
         padding: 1rem;
 
-        .navigation_siteTitle,
-        .navigation_toggles,
-        .navigation_links { z-index: 1 }
+        .title,
+        .toggles,
+        .links { z-index: 1 }
 
-        .navigation_siteTitle { order: 1; flex-grow: 1 }
-        .navigation_toggles { order: 2 }
-        .navigation_links { order: 3; flex-basis: 100%; height: 0; overflow: hidden; }
+        .title { order: 1; flex-grow: 1; font-size: 3rem }
+        .toggles { order: 2 }
+        .links { order: 3; flex-basis: calc( 100% - 3rem ); height: 0; overflow: hidden; }
 
-        .navigation_background {
+        .block {
+            height: 3rem;
+            content: "";
+        }
+
+        .bg {
             position: absolute;
-            background: variable( highlight );
+            background: variable( navBg );
             height: 0vh;
             width: 100vw;
             top: 0;
@@ -68,19 +105,87 @@
             z-index: 0;
         }
 
-        &.navigation___expanded {
-            // height: 100vh;
-            background: variable( text );
-            .navigation_siteTitle { 
-                font-size: fontSize( 3 ) 
+        a {
+            @include transition;
+            &:hover,
+            &:focus {
+                color: variable( primary );
             }
-            .navigation_background {
+        }
+
+        .title {
+            a {
+
+                @include transition;
+                transition-duration: .4s;
+                color: variable( text );
+
+                &:hover,
+                &:focus {
+                    color: variable( primary );
+                }
+            }
+            span {
+                //@include transition();
+                transition: max-width .3s ease-in-out;
+                display: inline-block;
+                vertical-align: bottom;
+                overflow: hidden;
+                max-width: 0;
+            }
+        }
+
+        .toggles {
+            position: relative;
+        }
+
+        .theme {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            > button {
+                width: 48px !important;
+            }
+        }
+
+        .hamburger {
+            background: variable( text );
+            color: variable( bg );
+            border-radius: 50%;
+        }
+
+        .link {
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+        }
+
+        &.navigation___expanded {
+
+            a {
+                color: variable( navText );
+                &:hover,
+                &focus {
+                    color: variable( navLink );
+                }
+            }
+
+            background: variable( navBg );
+            .title { 
+                @include expandedName;
+                a {
+                    color: variable( navText );
+                    transition-duration: .2s;
+                    &:hover,
+                    &:focus {
+                        color: variable( navLink );
+                    }
+                }
+            }
+            .bg {
                 height: 100vh;
             }
             .link {
-
-                font-size: 1.5rem;
-                margin-bottom: .5rem;
 
                 @for $i from 1 through 100 {
                     
@@ -92,8 +197,26 @@
                     }
                 }
             }
-            .navigation_links {
-                height: fit-content;
+            .links {
+                height: 80vh;
+
+                // display: flex;
+                // align-items: flex-end;
+
+                ul {
+                    width: calc( 100% - 3rem );
+                }
+
+            }
+            .theme {
+                top: 3rem;
+                opacity: 1;
+                z-index: 999;
+                // position: relative;
+            }
+            .hamburger {
+                background: variable( bg );
+                color: variable( text );
             }
         }
 
@@ -103,7 +226,10 @@
 
         @include vertical-center-flex();
 
-        .navigation_links {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .links {
             text-align: right;
             flex-grow: 1;
             ul {
@@ -114,21 +240,14 @@
             }
         }
 
-        .navigation_background {
+        .bg {
             display: none !important;
         }
 
-    }
+        .hamburger {
+            display: none;
+        }
 
-}
-
-
-.link {
-
-    // background: green;
-    // transform: translateX(-5rem);
-    @include menuMobile {
-        // transform: translateX(-100%);
     }
 
 }

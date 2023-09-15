@@ -12,7 +12,7 @@ function PageLayout( props: React.PropsWithChildren, ref: PageTransitionRef ) {
 
     const classes = clsx([
         styles.container,
-        "test"
+        
     ]);
 
     return <PageTransition ref={ref}>

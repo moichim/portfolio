@@ -12,7 +12,7 @@ import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/700.css";
 
 import PageTransition, { useAsPathWithoutHash } from '@madeinhaus/nextjs-page-transition';
-import '@madeinhaus/nextjs-page-transition/dist/index.css';
+
 
 export default function App({ Component, pageProps, router }: AppProps) {
 
@@ -28,16 +28,10 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <GlobalLayout>
       
       <LayoutInnerProviders>
-        <PageTransition
-          as="div"
-          outPhaseDuration={100}
-          inPhaseDuration={100}
-        >
           <Component 
             key={key} 
             {...pageProps} 
           />
-        </PageTransition>
       </LayoutInnerProviders>
     </GlobalLayout>
   </GlobalProviders>

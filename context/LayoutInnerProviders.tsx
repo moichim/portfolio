@@ -2,7 +2,7 @@
 
 import { PageContextProvider } from "./project/ProjectContext";
 import ThemeProvider from "./theme/themeContext"
-import TransitionProvider from "./transition/TransitionProvider"
+import TransitionProvider from "./transition/TransitionProvider";
 
 /** Providers available only to the page content (not to navigation) */
 const LayoutInnerProviders: React.FC<React.PropsWithChildren> = props => {

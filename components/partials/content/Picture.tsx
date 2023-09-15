@@ -17,7 +17,7 @@ const Picture: React.FC<PictureProps> = ({
 
         <div className={styles.container}>
 
-        <Magnifier>
+        {/* <Magnifier> */}
             <Image 
                 src={src}
                 alt="Zlo"
@@ -26,7 +26,7 @@ const Picture: React.FC<PictureProps> = ({
                 objectFit="cover"
                 className={styles.image}
             />
-        </Magnifier>
+        {/*</Magnifier>*/}
 
         {props.children && <div className={styles.caption}>{props.children}</div>}
 

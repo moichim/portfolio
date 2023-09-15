@@ -20,7 +20,6 @@ function ListLayout( props: ListLayoutProps, ref: PageTransitionRef ) {
 
     const classes = clsx([
         styles.container,
-        "test"
     ]);
 
     return <PageTransition ref={ref}>

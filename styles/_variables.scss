@@ -21,15 +21,18 @@ $variables: (
     default: (
         primary: blue,
         secondary: green,
-        bg: white,
+        bg: rgb(241, 241, 241),
         text: black,
-        highlight: yellow
+        highlight: yellow,
+        navBg: blue,
+        navText: white,
+        navLink: yellow
     ),
     themes:(
         dark: (
-            bg: black,
-            text: yellow,
-            primary: red
+            bg: rgb(10, 10, 10),
+            text: rgb(255, 255, 255),
+            primary: blue
         )
     )
 );

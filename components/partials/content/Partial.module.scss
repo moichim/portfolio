@@ -9,12 +9,13 @@ $gap: 1rem;
   
   @keyframes animate-fade {
     0% { opacity: 0; transform: translateY( 3rem ) }
-    100% { opacity: 1; transform: translateY( 0rem ) }
+    100% { opacity: 1; transform: translateY( 0px ) }
   }
 
 .container {
 
     box-sizing: border-box;
+    // overflow:hidden;
     
     $cols: 12;
 
@@ -59,6 +60,7 @@ $gap: 1rem;
 
 .wrapper {
     padding: $gap / 2;
+    overflow: hidden;
 }
 
 
