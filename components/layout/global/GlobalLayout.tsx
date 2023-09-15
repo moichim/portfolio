@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "../navigation/Header";
 import Navigation from "../navigation/Navigation";
 
@@ -9,6 +10,9 @@ import Navigation from "../navigation/Navigation";
 */
 const GlobalLayout: React.FC<React.PropsWithChildren> = props => {
     return <div>
+        <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <Navigation />
         {props.children}
     </div>;

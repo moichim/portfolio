@@ -3,7 +3,7 @@ import GlobalProviders from '@/context/GlobalProviders';
 import LayoutInnerProviders from '@/context/LayoutInnerProviders';
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
+import { Router, useRouter } from 'next/router';
 
 import "@/components/partials/content/Magnifier.scss";
 import "@fontsource/ibm-plex-sans";
@@ -11,21 +11,35 @@ import "@fontsource/ibm-plex-sans/400-italic.css";
 import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/700.css";
 
-export default function App({ Component, pageProps }: AppProps) {
+import PageTransition, { useAsPathWithoutHash } from '@madeinhaus/nextjs-page-transition';
+import '@madeinhaus/nextjs-page-transition/dist/index.css';
 
-  const { asPath: id } = useRouter();
+export default function App({ Component, pageProps, router }: AppProps) {
+
+  // const key = router.asPath;
+  const key = useAsPathWithoutHash();
+
+  const type = Component.displayName;
+  console.log( Component );
+
+  
 
   return <GlobalProviders>
     <GlobalLayout>
-      <div style={{position: "relative", width: "100%"}}>
+      
       <LayoutInnerProviders>
-        <Component 
-          key={id} 
-          {...pageProps} 
-        />
+        <PageTransition
+          as="div"
+          outPhaseDuration={100}
+        >
+          <Component 
+            key={key} 
+            {...pageProps} 
+          />
+        </PageTransition>
       </LayoutInnerProviders>
-      </div>
     </GlobalLayout>
   </GlobalProviders>
+  
   
 }

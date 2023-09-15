@@ -1,9 +1,12 @@
-import ListLayout from "@/components/layout/projects/ListLayout"
+// import ListLayout from "@/components/layout/projects/ListLayout"
 import IndexText from "@/components/partials/page/IndexText"
 import ProjectsManager from "@/data/ProjectsManager"
 import { InferGetStaticPropsType } from "next"
 import Link from "next/link"
 import { forwardRef } from "react"
+import dynamic from "next/dynamic";
+
+const ListLayout = dynamic( () => import( "@/components/layout/projects/ListLayout" ) );
 
 function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps>, ref: React.ForwardedRef<HTMLDivElement> ) {
 
