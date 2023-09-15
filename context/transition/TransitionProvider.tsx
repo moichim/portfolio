@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import '@madeinhaus/nextjs-page-transition/dist/index.css';
 
 import styles from "./TransitionProvider.module.scss";
+import { ReactElement } from 'react';
 
 const TransitionProvider: React.FC<React.PropsWithChildren> = props => {
 
@@ -17,7 +18,7 @@ const TransitionProvider: React.FC<React.PropsWithChildren> = props => {
           inPhaseDuration={100}
           className={styles.container}
         >
-            {props.children}
+            {props.children as ReactElement}
             </PageTransition>
         </AnimatePresence>
 }
