@@ -8,6 +8,7 @@ import { forwardRef } from "react"
 import Text from "@/components/partials/content/Text"
 import Youtube from "@/components/partials/content/Youtube"
 import Picture from "@/components/partials/content/Picture"
+import Link from "next/link"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
@@ -46,6 +47,8 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 				<Picture lg={3} src="/fireman.webp">Nějaký obrázek</Picture>
 
 			</Content>
+
+			<Link href="/">Home</Link>
 		</ProjectLayout>
 	)
 }

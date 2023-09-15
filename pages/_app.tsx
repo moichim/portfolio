@@ -31,6 +31,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <PageTransition
           as="div"
           outPhaseDuration={100}
+          inPhaseDuration={100}
         >
           <Component 
             key={key} 

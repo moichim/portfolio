@@ -16,7 +16,7 @@ function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTra
 			ref={ref}
 			initial={{ opacity: 0, y: "50vh", position: "absolute", top: 0, width: "100%" }}
 			animate={{ opacity: 1, y: "0vh", position: "relative" }}
-			exit={{ opacity: 0, y: "50vh", position: "absolute" }}
+			// exit={{ opacity: 0, y: "50vh", position: "absolute" }}
 			transition={transition}
 			{...rest}
 		>
