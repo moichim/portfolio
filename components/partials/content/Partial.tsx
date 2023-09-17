@@ -6,17 +6,20 @@ type Breakpoint = "sm" | "md" | "lg" | "xl";
 export type PartialProps = React.PropsWithChildren & {
     [index in Breakpoint]?: number
 } & {
-    xs?: number
+    xs?: number,
+    type?: "image"|"video"|"text"|"audio"|"bare"
 }
 
 const Partial: React.FC<PartialProps> = ({
     xs = 12,
+    type = "bare",
     ...props
 }) => {
 
     const classes: string[] = [
         styles.container,
-        styles[`col-xs-${xs}`]
+        styles[type],
+        styles[`col-xs-${xs}` ]
     ];
 
     ( ["sm","md","lg","xl"] as Breakpoint[] ).forEach( (bp) => {

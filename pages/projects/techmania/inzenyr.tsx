@@ -1,34 +1,26 @@
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
 import Content from "@/components/partials/content/Content"
-import PageTransition from "@/components/ui/PageTransition"
-import ProjectTransition from "@/components/ui/ProjectTransition"
-import { Metadata } from "@/data/ProjectsManager"
-import { Metadata as Meta } from "next"
-import { forwardRef } from "react"
-import Text from "@/components/partials/content/Text"
-import Youtube from "@/components/partials/content/Youtube"
-import Picture from "@/components/partials/content/Picture"
-import Link from "next/link"
-import { useScheme } from "@/context/color/ColorContextProvider"
 import Partial from "@/components/partials/content/Partial"
+import Picture from "@/components/partials/content/Picture"
+import { useScheme } from "@/context/color/ColorContextProvider"
+import { Metadata } from "@/data/ProjectsManager"
+import Link from "next/link"
+import { forwardRef } from "react"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
-
-
-
 
 
 export const metadata: Metadata = {
 	"title": "Grafika expozice Inženýr",
 	"description": "Vizuální ídentita interaktivní expozice",
 	"authors": [{
-		"name": "Janův jiná"
+		"name": "Jan Jáchim"
 	}],
 	"image": "/inzenyr/fotostena.jpg",
-	"color": "blue",
-	"year": 2023,
-	"month": 11,
+	"color": "#0f1d1f",
+	"year": 2019,
+	"month": 8,
 	"day": 1,
 	"keywords": [ "design" ],
 	"public": true

@@ -184,7 +184,7 @@
 
             span {
                 //@include transition();
-                transition: max-width .3s ease-in-out;
+                transition: max-width .5s ease-in-out;
                 display: inline-block;
                 vertical-align: bottom;
                 overflow: hidden;
@@ -283,12 +283,17 @@
                 top: 3rem;
                 opacity: 1;
                 z-index: 999;
-                // position: relative;
+                button {
+                    background: variable( navDark );
+                    color: variable( navText );
+                }
             }
 
             .hamburger {
-                background: variable(bg);
-                color: variable(text);
+                // background: variable(bg);
+                // color: variable(text);
+                color: variable( navBg );
+                background-color: variable( navText );
             }
         }
 
@@ -330,7 +335,8 @@
             }
         }
 
-        .bg {
+        .bg,
+        .overlay {
             display: none !important;
         }
 

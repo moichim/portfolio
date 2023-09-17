@@ -6,6 +6,7 @@ import clsx from "clsx";
 // import reset from "../../../styles/modules/reset.module.scss";
 import styles from "./ThemeSwitch.module.scss";
 import { useTheme } from "@/context/theme/themeContext";
+import { usePageContext } from "@/context/project/ProjectContext";
 
 const ThemeSwitch: React.FC = () => {
 

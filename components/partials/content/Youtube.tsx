@@ -16,7 +16,7 @@ const Youtube: React.FC<YoutubeProps> = ({
 
     const [clicked, setClicked] = React.useState<boolean>(false);
 
-    return <Partial {...props}>
+    return <Partial {...props} type="video">
 
         <div className={styles.container}>
 

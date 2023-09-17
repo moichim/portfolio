@@ -8,19 +8,28 @@ $gap: 1rem;
     // gap: $gap;
     flex-wrap: wrap;
 
+    @include upto( md ) {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
     > * {
 
         box-sizing: border-box;
 
-        @include up( md ) {
+        @media ( min-width: 400px ) {
             @include gridItemWidth( 2 );
         }
-        @include up( lg ) {
+
+        @include up( md ) {
             @include gridItemWidth( 3 );
+        }
+        @include up( lg ) {
+            @include gridItemWidth( 4 );
         }
     
         @include up( xl ) {
-            @include gridItemWidth( 4 );
+            @include gridItemWidth( 5 );
         }
 
         

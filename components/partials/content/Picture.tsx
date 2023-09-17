@@ -13,14 +13,14 @@ const Picture: React.FC<PictureProps> = ({
     ...props
 }) => {
 
-    return <Partial {...props}>
+    return <Partial {...props} type="image">
 
         <div className={styles.container}>
 
         {/* <Magnifier> */}
             <Image 
                 src={src}
-                alt="Zlo"
+                alt=""
                 width={1200}
                 height={700}
                 objectFit="cover"
