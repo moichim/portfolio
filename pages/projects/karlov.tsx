@@ -59,7 +59,6 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
 			</Content>
 
-			<Link href="/">Home</Link>
 		</ProjectLayout>
 	)
 }
