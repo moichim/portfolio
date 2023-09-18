@@ -1,16 +1,15 @@
+import Content from "@/components/content/Content"
+import Partial from "@/components/content/partials/Partial"
+import Picture from "@/components/content/partials/Picture"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import { useScheme } from "@/context/color/ColorContextProvider"
+import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
 import { forwardRef } from "react"
 
-import fulldome from "@/public/inzenyr/fulldome.png";
-import fotostena from "@/public/inzenyr/fotostena.jpg";
-import motive from "@/public/inzenyr/motive.jpg";
-import stena from "@/public/inzenyr/stena.jpg";
+import fotostena from "@/public/inzenyr/fotostena.jpg"
+import fulldome from "@/public/inzenyr/fulldome.png"
+import motive from "@/public/inzenyr/motive.jpg"
+import stena from "@/public/inzenyr/stena.jpg"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>

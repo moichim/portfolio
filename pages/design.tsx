@@ -1,5 +1,5 @@
 import PageLayout from "@/components/layout/page/PageLayout"
-import ProjectGrid from "@/components/partials/ProjectGrid"
+import ProjectGrid from "@/components/listing/ProjectGrid"
 import ProjectsManager from "@/data/ProjectsManager"
 import { InferGetStaticPropsType } from "next"
 import { forwardRef } from "react"

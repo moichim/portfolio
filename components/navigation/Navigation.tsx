@@ -1,13 +1,10 @@
-'use client';
-
-import { MouseEventHandler, useState, MouseEvent, useLayoutEffect, useMemo, useCallback, PropsWithChildren } from "react";
-import styles from "./Navigation.module.scss";
+import { useLayoutContext } from "@/context/layout/LayoutContext";
 import clsx from "clsx";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import ThemeSwitch from "@/components/ui/ThemeSwitch";
-import { usePageContext } from "@/context/project/ProjectContext";
+import { MouseEvent, PropsWithChildren } from "react";
 import MenuTrigger from "./MenuTrigger";
+import styles from "./Navigation.module.scss";
+import ThemeSwitch from "./ThemeSwitch";
 
 type NavigationLinkProps = PropsWithChildren & {
     title?: string,
@@ -19,7 +16,7 @@ type NavigationLinkProps = PropsWithChildren & {
 
 const Navlink: React.FC< NavigationLinkProps > = ( props ) => {
 
-    const page = usePageContext();
+    const page = useLayoutContext();
     const router = useRouter();
 
     const handleClick = ( event: MouseEvent<HTMLAnchorElement> ) => {
@@ -31,7 +28,6 @@ const Navlink: React.FC< NavigationLinkProps > = ( props ) => {
     return <a 
         href={ props.href }
         onClick={ handleClick }
-        aria-description={props.description}
     >
         {props.children ?? props.title}
     </a>
@@ -40,7 +36,7 @@ const Navlink: React.FC< NavigationLinkProps > = ( props ) => {
 
 const Header: React.FC = () => {    
 
-    const page = usePageContext();
+    const page = useLayoutContext();
 
     const classes = [ styles.navigation ];
     if ( page.isExpanded ) classes.push( styles.navigation___expanded );

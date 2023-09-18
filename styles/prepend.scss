@@ -2,3 +2,5 @@
 
 @import "variables.scss";
 @import "mixins.scss";
+
+/** Common imports that are imported on top of every SCSS document that is imported by JS (modules and global.scss) */

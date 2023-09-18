@@ -1,24 +1,22 @@
+import Content from "@/components/content/Content"
+import Partial from "@/components/content/partials/Partial"
+import Picture from "@/components/content/partials/Picture"
+import Text from "@/components/content/partials/Text"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import Text from "@/components/partials/content/Text"
-import { useScheme } from "@/context/color/ColorContextProvider"
+import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
 import { forwardRef } from "react"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import thumb from "@/public/binboat/thumb.jpg";
-import img1 from "@/public/binboat/1.jpg";
-import img2 from "@/public/binboat/2.jpg";
-import img3 from "@/public/binboat/3.jpg";
-import img4 from "@/public/binboat/4.jpg";
-import img6 from "@/public/binboat/6.jpg";
-import img7 from "@/public/binboat/7.jpg";
-import img8 from "@/public/binboat/8.jpg";
+import img1 from "@/public/binboat/1.jpg"
+import img3 from "@/public/binboat/3.jpg"
+import img4 from "@/public/binboat/4.jpg"
+import img6 from "@/public/binboat/6.jpg"
+import img7 from "@/public/binboat/7.jpg"
+import img8 from "@/public/binboat/8.jpg"
+import thumb from "@/public/binboat/thumb.jpg"
 
 
 export const metadata: Metadata = {

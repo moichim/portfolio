@@ -1,23 +1,23 @@
 import React from "react";
 import { createContext, useContext } from "react"
 
-type PageContextType = {
+type LayoutContextType = {
     isZoomed: boolean,
     setIsZoomed: React.Dispatch<React.SetStateAction<boolean>>,
     isExpanded: boolean,
     setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const defaultValue: PageContextType = {
+const defaultValue: LayoutContextType = {
     isZoomed: false,
     setIsZoomed: ( val ) => {},
     isExpanded: false,
     setIsExpanded: ( val ) => {}
 }
 
-const PageContext = createContext<PageContextType>( defaultValue );
+const LayoutContext = createContext<LayoutContextType>( defaultValue );
 
-export const PageContextProvider: React.FC<React.PropsWithChildren> = props => {
+export const LayoutContextProvider: React.FC<React.PropsWithChildren> = props => {
 
     const [ isZoomed, setIsZoomed ] = React.useState<boolean>( false );
     const [ isExpanded, setIsExpanded ] = React.useState<boolean>( false );
@@ -26,15 +26,15 @@ export const PageContextProvider: React.FC<React.PropsWithChildren> = props => {
         isZoomed,
         setIsZoomed,
         isExpanded,
-        setIsExpanded: setIsExpanded.bind(this)
+        setIsExpanded
     }
 
-    return <PageContext.Provider value={value}>
+    return <LayoutContext.Provider value={value}>
         {props.children}
-    </PageContext.Provider>
+    </LayoutContext.Provider>
 
 }
 
-export const usePageContext = () => {
-    return useContext( PageContext );
+export const useLayoutContext = () => {
+    return useContext( LayoutContext );
 }

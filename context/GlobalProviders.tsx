@@ -1,19 +1,19 @@
 'use client';
 
-import ColorContextProvider from "./color/ColorContextProvider";
-import { PageContextProvider } from "./project/ProjectContext";
-import ThemeProvider from "./theme/themeContext"
+import SchemeContextProvider from "./scheme/SchemeContextProvider";
+import { LayoutContextProvider } from "./layout/LayoutContext";
+import ThemeProvider from "./theme/ThemecontextProvider"
 import TransitionProvider from "./transition/TransitionProvider"
 
 /** Global context providers for the entire application */
 const GlobalProviders: React.FC<React.PropsWithChildren> = props => {
-    return <ColorContextProvider>
-        <PageContextProvider>
+    return <SchemeContextProvider>
+        <LayoutContextProvider>
             <ThemeProvider>
                 {props.children}
             </ThemeProvider>
-        </PageContextProvider>
-    </ColorContextProvider>
+        </LayoutContextProvider>
+    </SchemeContextProvider>
 }
 
 export default GlobalProviders;

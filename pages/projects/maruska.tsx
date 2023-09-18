@@ -1,21 +1,16 @@
+import Content from "@/components/content/Content"
+import Picture from "@/components/content/partials/Picture"
+import Text from "@/components/content/partials/Text"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import Youtube from "@/components/partials/content/Youtube"
-import Text from "@/components/partials/content/Text"
-import { useScheme } from "@/context/color/ColorContextProvider"
+import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
 import { forwardRef } from "react"
 
 import img1 from "@/public/maruska/1.jpg"
-import img2 from "@/public/maruska/2.jpg";
-import img3 from "@/public/maruska/3.jpg";
-import img4 from "@/public/maruska/4.jpg";
-import img5 from "@/public/maruska/5.jpg";
-import img6 from "@/public/maruska/6.jpg";
-import img7 from "@/public/maruska/7.jpg";
+import img2 from "@/public/maruska/2.jpg"
+import img3 from "@/public/maruska/3.jpg"
+import img6 from "@/public/maruska/6.jpg"
+import img7 from "@/public/maruska/7.jpg"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>

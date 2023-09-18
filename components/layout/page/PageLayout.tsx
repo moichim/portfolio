@@ -1,12 +1,9 @@
-import Header from "../navigation/Header";
-import { ForwardRefComponent } from "framer-motion";
-import PageTransition, { PageTransitionRef } from "../../ui/PageTransition";
-import { forwardRef } from "react";
-import Head from "next/head";
-import { formatTitle } from "@/utils/formatters";
-import styles from "./PageLayout.module.scss";
+import { formatTitle } from "@/components/utils/formatters";
 import clsx from "clsx";
-import ProjectTransition from "@/components/ui/ProjectTransition";
+import Head from "next/head";
+import { forwardRef } from "react";
+import styles from "./PageLayout.module.scss";
+import PageTransition, { PageTransitionRef } from "@/components/transitions/PageTransition";
 
 function PageLayout( props: React.PropsWithChildren, ref: PageTransitionRef ) {
 

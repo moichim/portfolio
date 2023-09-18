@@ -1,16 +1,18 @@
-import { usePageContext } from '@/context/project/ProjectContext';
+import { useLayoutContext } from '@/context/layout/LayoutContext';
 import clsx from 'clsx';
 import React from 'react';
 import Zoom, { Controlled, UncontrolledProps} from 'react-medium-image-zoom';
 
 type MagnifierProps = React.PropsWithChildren & UncontrolledProps & {}
 
+
+/** @todo Should be refactored to the perfection */
 const Magnifier: React.FC<MagnifierProps> = ({children, ...props}) => {
 
-    const [isClosing, setIsClosing] = React.useState<boolean>( false );
+    const [ isClosing, setIsClosing] = React.useState<boolean>( false );
     const [ isOpen, setIsOpen ] = React.useState<boolean>( false );
 
-    const context = usePageContext();
+    const context = useLayoutContext();
 
     const handleZoomChange = (shouldZoom: boolean) => {
 
@@ -33,13 +35,9 @@ const Magnifier: React.FC<MagnifierProps> = ({children, ...props}) => {
 
     React.useEffect(() => {
 
-        if ( context.isZoomed === true ) {
-            // setIsClosing( false );
-        }
-
         context.setIsZoomed( isOpen );
 
-    }, [isOpen]);
+    }, [isOpen, context]);
 
     return <Controlled
         isZoomed={ isOpen }

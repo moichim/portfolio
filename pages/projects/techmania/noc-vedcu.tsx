@@ -1,16 +1,14 @@
+import Content from "@/components/content/Content"
+import Picture from "@/components/content/partials/Picture"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import { useScheme } from "@/context/color/ColorContextProvider"
+import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
 import { forwardRef } from "react"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import img from "@/public/noc-vedcu/nv.jpg";
+import img from "@/public/noc-vedcu/nv.jpg"
 
 
 export const metadata: Metadata = {

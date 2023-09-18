@@ -1,8 +1,7 @@
+import Image from "next/image";
 import React from "react";
 import Partial, { PartialProps } from "./Partial";
 import styles from "./Youtube.module.scss";
-import Image from "next/image";
-import Magnifier from "./Magnifier";
 
 type YoutubeProps = PartialProps & {
     id: string,

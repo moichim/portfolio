@@ -1,4 +1,4 @@
-import { THEMES } from "./themeContext";
+import { THEMES } from "./ThemecontextProvider";
 
 const STORAGE_NAME = "theme";
 

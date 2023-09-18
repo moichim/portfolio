@@ -1,9 +1,8 @@
+import Content from "@/components/content/Content"
+import Partial from "@/components/content/partials/Partial"
+import Picture from "@/components/content/partials/Picture"
+import Text from "@/components/content/partials/Text"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import Text from "@/components/partials/content/Text"
-import { useScheme } from "@/context/color/ColorContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
 import Link from "next/link"
 import { forwardRef } from "react"
@@ -11,11 +10,11 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import img1 from "@/public/spoluzaci/1.jpg";
-import img2 from "@/public/spoluzaci/2.jpg";
-import img3 from "@/public/spoluzaci/3.jpg";
-import img4 from "@/public/spoluzaci/4.jpg";
-import img5 from "@/public/spoluzaci/5.jpg";
+import img1 from "@/public/spoluzaci/1.jpg"
+import img2 from "@/public/spoluzaci/2.jpg"
+import img3 from "@/public/spoluzaci/3.jpg"
+import img4 from "@/public/spoluzaci/4.jpg"
+import img5 from "@/public/spoluzaci/5.jpg"
 
 
 export const metadata: Metadata = {

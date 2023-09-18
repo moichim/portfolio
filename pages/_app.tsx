@@ -16,12 +16,10 @@ import PageTransition, { useAsPathWithoutHash } from '@madeinhaus/nextjs-page-tr
 
 export default function App({ Component, pageProps, router }: AppProps) {
 
-  // const key = router.asPath;
   const key = useAsPathWithoutHash();  
 
   return <GlobalProviders>
     <GlobalLayout>
-      
       <LayoutInnerProviders>
           <Component 
             key={key} 

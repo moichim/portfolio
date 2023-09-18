@@ -1,19 +1,17 @@
+import Content from "@/components/content/Content"
+import Text from "@/components/content/partials/Text"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import Text from "@/components/partials/content/Text"
-import { useScheme } from "@/context/color/ColorContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
 import { forwardRef } from "react"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import catalogue from "@/public/stavba-roku/catalog.jpg";
-import logo from "@/public/stavba-roku/logo.png";
-import concept from "@/public/stavba-roku/koncept.jpg";
+import Partial from "@/components/content/partials/Partial"
+import Picture from "@/components/content/partials/Picture"
+import catalogue from "@/public/stavba-roku/catalog.jpg"
+import concept from "@/public/stavba-roku/koncept.jpg"
+import logo from "@/public/stavba-roku/logo.png"
 
 
 export const metadata: Metadata = {

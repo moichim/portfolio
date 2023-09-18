@@ -1,13 +1,10 @@
 import { forwardRef } from "react";
-import { PageTransitionRef } from "../../ui/PageTransition";
-// import ProjectTransition from "../../ui/ProjectTransition";
-import styles from "./ProjectLayout.module.scss";
-import Head from "next/head";
+import { useLayoutContext } from "@/context/layout/LayoutContext";
 import { Metadata } from "@/data/ProjectsManager";
-import { PageContextProvider, usePageContext } from "@/context/project/ProjectContext";
 import clsx from "clsx";
-import dynamic from "next/dynamic";
-import ProjectTransition from "@/components/ui/ProjectTransition";
+import Head from "next/head";
+import styles from "./ProjectLayout.module.scss";
+import ProjectTransition, { PageTransitionRef } from "@/components/transitions/ProjectTransition";
 
 
 type ProjectProps = React.PropsWithChildren & {
@@ -16,7 +13,7 @@ type ProjectProps = React.PropsWithChildren & {
 
 function ProjectLayout( props: ProjectProps, ref: PageTransitionRef ) {
 
-    const context = usePageContext();
+    const context = useLayoutContext();
 
     const classes: string[] = [
         styles.container

@@ -1,19 +1,17 @@
+import Content from "@/components/content/Content"
+import Partial from "@/components/content/partials/Partial"
+import Picture from "@/components/content/partials/Picture"
+import Youtube from "@/components/content/partials/Youtube"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import Youtube from "@/components/partials/content/Youtube"
-import { useScheme } from "@/context/color/ColorContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
 import { forwardRef } from "react"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import blik from "@/public/blik/2021/blik.jpg";
-import horizontal from "@/public/blik/2021/horizontal.jpg";
-import vertical from "@/public/blik/2021/vertical.jpg";
+import blik from "@/public/blik/2021/blik.jpg"
+import horizontal from "@/public/blik/2021/horizontal.jpg"
+import vertical from "@/public/blik/2021/vertical.jpg"
 
 export const metadata: Metadata = {
 	"title": "Blik Blik 2021",

@@ -1,13 +1,6 @@
 import fs from "fs";
 import path from "path";
-import matter from 'gray-matter';
-import { serialize } from "next-mdx-remote/serialize"
-import dynamic from 'next/dynamic'
 import ts from "typescript";
-import App from "next/app";
-// const tsMigrate = require('ts-migrate');
-// import objectParser from 'js-object-parser';
-import { parseJSONObject } from "parse-json-object";
 import { Metadata as Meta } from "next";
 
 export type Metadata = Meta & {
@@ -27,7 +20,7 @@ export type ProjectMetadata = Metadata & {
     image: string,
 }
 
-/** Handle projects stored in pages/projects as .tsx files */
+/** Handle projects stored in pages/projects as .tsx files in 'pages/projects'*/
 class ProjectsManager {
 
     static repositoryPath: string = "./pages/projects";

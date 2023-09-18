@@ -1,12 +1,7 @@
-'use client';
-
 import { Switch } from "@headlessui/react";
 import clsx from "clsx";
-
-// import reset from "../../../styles/modules/reset.module.scss";
 import styles from "./ThemeSwitch.module.scss";
-import { useTheme } from "@/context/theme/themeContext";
-import { usePageContext } from "@/context/project/ProjectContext";
+import { useTheme } from "@/context/theme/ThemecontextProvider";
 
 const ThemeSwitch: React.FC = () => {
 

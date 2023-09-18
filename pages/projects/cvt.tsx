@@ -1,25 +1,22 @@
+import Content from "@/components/content/Content"
+import Picture from "@/components/content/partials/Picture"
+import Text from "@/components/content/partials/Text"
+import Youtube from "@/components/content/partials/Youtube"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
-import Content from "@/components/partials/content/Content"
-import Partial from "@/components/partials/content/Partial"
-import Picture from "@/components/partials/content/Picture"
-import Text from "@/components/partials/content/Text"
-import Youtube from "@/components/partials/content/Youtube"
-import { useScheme } from "@/context/color/ColorContextProvider"
+import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
 import { forwardRef } from "react"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import thumb from "@/public/cvt/thumb.jpg";
-import img1 from "@/public/cvt/ep_1.png";
-import img2 from "@/public/cvt/ep_2.png";
-import img3 from "@/public/cvt/ep_3.png";
-import img4 from "@/public/cvt/ep_4.png";
-import img5 from "@/public/cvt/ep_5.png";
-import img6 from "@/public/cvt/ep_6.png";
-import img7 from "@/public/cvt/ep_7.png";
+import img1 from "@/public/cvt/ep_1.png"
+import img2 from "@/public/cvt/ep_2.png"
+import img3 from "@/public/cvt/ep_3.png"
+import img4 from "@/public/cvt/ep_4.png"
+import img5 from "@/public/cvt/ep_5.png"
+import img6 from "@/public/cvt/ep_6.png"
+import img7 from "@/public/cvt/ep_7.png"
 
 
 export const metadata: Metadata = {

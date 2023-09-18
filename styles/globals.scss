@@ -1,8 +1,49 @@
 @import 'reset-css';
 
-@import 'modules/base';
-// @import 'modules/nativeElements';
+/** Global CSS imported into the app */
 
-.test {
-    background: violet;
+
+:root {
+
+    // The base styles
+    @include printDefaultVariables();
+
+    // Print other themes
+    @each $theme,
+    $vars in map-get($variables, "themes") {
+
+        &[data-theme='#{$theme}'] {
+            @include printThemeVariables($theme );
+        }
+
+    }
+
+
+}
+
+html {
+
+    @include responsiveIndex((
+        font-size: (
+            0: 22px,
+            md: 25px,
+        )
+    ));
+
+}
+
+body {
+    background: variable(bg);
+    color: variable(text);
+    @include transition();
+
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: variable( primary );
+    &:focus {
+        outline: 0;
+    }
 }

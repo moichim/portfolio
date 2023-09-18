@@ -1,7 +1,7 @@
 'use client';
 
-import { PageContextProvider } from "./project/ProjectContext";
-import ThemeProvider from "./theme/themeContext"
+import { LayoutContextProvider } from "./layout/LayoutContext";
+import ThemeProvider from "./theme/ThemecontextProvider"
 import TransitionProvider from "./transition/TransitionProvider";
 
 /** Providers available only to the page content (not to navigation) */

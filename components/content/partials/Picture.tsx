@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Partial, { PartialProps } from "./Partial";
-import Magnifier from "./Magnifier";
-
-import styles from "./Picture.module.scss"
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import styles from "./Picture.module.scss";
 
 type PictureProps = PartialProps & {
     src: StaticImport

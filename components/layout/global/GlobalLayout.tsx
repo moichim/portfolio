@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Header from "../navigation/Header";
-import Navigation from "../navigation/Navigation";
+import Navigation from "../../navigation/Navigation";
 
 /** 
  * Markup common to the entire site.
