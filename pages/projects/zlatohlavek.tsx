@@ -8,6 +8,8 @@ import { Metadata } from "@/data/ProjectsManager"
 import Link from "next/link"
 import { forwardRef } from "react"
 
+import img from "@/public/zlatohlavek/thumb.jpg";
+
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
@@ -36,7 +38,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 		<ProjectLayout ref={ref} meta={metadata}>
 			<Content>
 
-				<Picture md={8} src="/zlatohlavek/thumb.jpg" />
+				<Picture md={8} src={img} />
 
 				<Text md={4} lg={3}>
 

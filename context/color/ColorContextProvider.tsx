@@ -69,8 +69,6 @@ const ColorContextProvider: React.FC< React.PropsWithChildren > = ( props ) => {
 
     }
 
-    console.log( "štyl", style );
-
     return <ColorContext.Provider value={{
         scheme,
         setScheme: setScheme.bind( this )

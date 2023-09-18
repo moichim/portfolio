@@ -1,3 +1,5 @@
+// @use 'sass:math';
+
 .container {
     width: 100%;
     box-sizing: border-box;
@@ -21,16 +23,14 @@
         }
     }
 
-
 }
 
 .wrapper {
-    margin-left: $gap / (-2);
-    margin-right: $gap / (-2);
+    margin-left: math.div($gap, -2);
+    margin-right: math.div($gap, -2);
     width: calc( 100% + #{$gap});
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    // overflow: hidden;
     justify-content: center;
 }

@@ -9,6 +9,13 @@ import { Metadata } from "@/data/ProjectsManager"
 import Link from "next/link"
 import { forwardRef } from "react"
 
+import img1 from "@/public/souzvon/1.jpg"
+import img2 from "@/public/souzvon/2.jpg";
+import img3 from "@/public/souzvon/3.jpg";
+import img4 from "@/public/souzvon/4.jpg";
+import img5 from "@/public/souzvon/5.jpg";
+import img6 from "@/public/souzvon/6.png";
+
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
@@ -38,18 +45,18 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
             <Content>
 
                 <Youtube id="JJC4rQWPUvo" md={6} lg={6} />
-                <Picture md={6} lg={3} src="/souzvon/1.jpg" />
+                <Picture md={6} lg={3} src={img1} />
                 <Partial md={6} lg={3}>
                     <Text>Světelná instalace využívající Kinect, mlhu a algoritmickou hudební kompozici.</Text>
-                    <Picture src="/souzvon/4.jpg" />
+                    <Picture src={img2} />
                 </Partial>
                 <Text md={6} lg={3}>
                     <p>Je-li světelný objekt nerušen, žije svým vlastním životem. Paprsky se udržují v nekonečném rytmickém pohybu a temně duní.</p>
                     <p>Divák může vyvážený stav narušit a instalaci tak oživit. Paprsky reagují na dotyk - odrážejí se od lidí, nabírají rychlost, mění směr a vyluzují nečekané zvuky.</p>
                     <p>Světelný objekt postupně sice zaniká, ale divák je svědkem a spoluautorem nečekané hudební kompozice.</p>
                 </Text>
-                <Picture md={6} xl={9} src="/souzvon/5.jpg" />
-                <Picture md={6} lg={3} src="/souzvon/2.jpg" />
+                <Picture md={6} xl={9} src={img5} />
+                <Picture md={6} lg={3} src={img2} />
                 <Partial md={6}>
                     <Youtube id="tNBG_siHMxY" />
                     <Youtube id="QEU6CLzeBQQ" />
@@ -74,12 +81,11 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
 
                 </Text>
-                <Picture md={6} lg={5} src="/souzvon/3.jpg" />
-                <Picture md={6} lg={4} src="/souzvon/6.png" />
+                <Picture md={6} lg={5} src={img3} />
+                <Picture md={6} lg={4} src={img6} />
 
             </Content>
 
-            <Link href="/">Home</Link>
         </ProjectLayout>
     )
 }

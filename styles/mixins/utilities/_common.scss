@@ -93,7 +93,7 @@
     @return 100%;
   }
   @else {
-      @return calc(  #{ percentage( 1/$cols ) } - #{ $g * ( $cols - 1 ) / $cols } );
+      @return calc(  #{ percentage( 1/$cols ) } - #{ $g * math.div( ( $cols - 1 ), $cols ) } );
   }
 }
 

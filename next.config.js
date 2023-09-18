@@ -3,7 +3,7 @@ const nextConfig = {
     pageExtensions: ["tsx"],
     reactStrictMode: true,
     sassOptions: {
-        prependData: `@import "@/styles/prepend.scss";`,
+        prependData: `@use 'sass:math'; @import "@/styles/prepend.scss";`,
         logger: {
             warn: function (message) {
                 console.warn(message)

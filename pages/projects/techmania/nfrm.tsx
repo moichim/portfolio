@@ -10,6 +10,9 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
+import obalka from "@/public/brozura/obalka.jpg";
+import vnitrek from "@/public/brozura/vnitrek.jpg";
+
 
 export const metadata: Metadata = {
 	"title": "Brožura Neformální vzdělávání v plzeňském kraji",
@@ -35,12 +38,11 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 		<ProjectLayout ref={ref} meta={metadata}>
 			<Content>
 
-                <Picture lg={4} src="/brozura/obalka.jpg" />
-                <Picture lg={8} src="/brozura/vnitrek.jpg" />
+                <Picture lg={4} src={obalka} />
+                <Picture lg={8} src={vnitrek} />
 
 			</Content>
 
-			<Link href="/">Home</Link>
 		</ProjectLayout>
 	)
 }

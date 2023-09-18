@@ -11,6 +11,20 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
+import img1 from "@/public/karlov/1.jpg";
+import img2 from "@/public/karlov/2.jpg";
+import img3 from "@/public/karlov/3.jpg";
+import img4 from "@/public/karlov/4.jpg";
+import img5 from "@/public/karlov/5.jpg";
+import img6 from "@/public/karlov/6.jpg";
+import img10 from "@/public/karlov/10.jpg";
+import img11 from "@/public/karlov/11.jpg";
+import img12 from "@/public/karlov/12.jpg";
+import img13 from "@/public/karlov/13.jpg";
+import img14 from "@/public/karlov/14.jpg";
+import img15 from "@/public/karlov/15.jpg";
+import thumb from "@/public/karlov/thumb.jpg";
+
 
 export const metadata: Metadata = {
 	"title": "V Plzni na Karlově",
@@ -36,7 +50,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 		<ProjectLayout ref={ref} meta={metadata}>
 			<Content>
 
-                <Picture lg={6} src="/karlov/4.jpg" />
+                <Picture lg={6} src={img4} />
 
                 <Text lg={4}>
                     <p>I designed an exhibition and a monography of a social research project.</p>
@@ -44,18 +58,18 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                     <p>That quarter does not exist anymore. The research was about strong collective identity and shared memories of Karlov's former inhabitants.</p>
                 </Text>
 
-                <Picture lg={6} src="/karlov/1.jpg" />
-                <Picture lg={4} src="/karlov/2.jpg" />
-                <Picture lg={4} src="/karlov/3.jpg" />
-                <Picture lg={6} src="/karlov/6.jpg" />
-                <Picture lg={4} src="/karlov/5.jpg" />
-                <Picture lg={3} src="/karlov/15.jpg" />
+                <Picture lg={6} src={img1} />
+                <Picture lg={4} src={img2} />
+                <Picture lg={4} src={img3} />
+                <Picture lg={6} src={img6} />
+                <Picture lg={4} src={img5} />
+                <Picture lg={3} src={img15} />
                 <Partial lg={3}>
-                    <Picture src="/karlov/14.jpg"/>
-                    <Picture src="/karlov/10.jpg"/>
+                    <Picture src={img14}/>
+                    <Picture src={img10}/>
                 </Partial>
-                <Picture lg={4} src="/karlov/12.jpg" />
-                <Picture lg={8} src="/karlov/13.jpg" />
+                <Picture lg={4} src={img12} />
+                <Picture lg={8} src={img13} />
 
 			</Content>
 

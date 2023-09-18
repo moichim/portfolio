@@ -3,9 +3,10 @@ import Partial, { PartialProps } from "./Partial";
 import Magnifier from "./Magnifier";
 
 import styles from "./Picture.module.scss"
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 type PictureProps = PartialProps & {
-    src: string
+    src: StaticImport
 };
 
 const Picture: React.FC<PictureProps> = ({
@@ -21,9 +22,8 @@ const Picture: React.FC<PictureProps> = ({
             <Image 
                 src={src}
                 alt=""
-                width={1200}
-                height={700}
                 objectFit="cover"
+                layout="responsive"
                 className={styles.image}
             />
         {/*</Magnifier>*/}

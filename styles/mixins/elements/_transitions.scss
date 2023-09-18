@@ -1,5 +1,6 @@
 @use "sass:list";
 @use "sass:string";
+@use "sass:math";
 
 @function renderTransition( $property, $easing, $duration ) {
     @return #{$property} #{$duration} #{$easing};
@@ -7,7 +8,7 @@
 
 @mixin transition( ) {
 
-    transition: all #{$transitionDuration/1000}s ease-in-out;
+    transition: all #{math.div( $transitionDuration, 1000 )}s ease-in-out;
 
 
 }

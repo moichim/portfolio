@@ -12,6 +12,15 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
+import thumb from "@/public/cvt/thumb.jpg";
+import img1 from "@/public/cvt/ep_1.png";
+import img2 from "@/public/cvt/ep_2.png";
+import img3 from "@/public/cvt/ep_3.png";
+import img4 from "@/public/cvt/ep_4.png";
+import img5 from "@/public/cvt/ep_5.png";
+import img6 from "@/public/cvt/ep_6.png";
+import img7 from "@/public/cvt/ep_7.png";
+
 
 export const metadata: Metadata = {
 	"title": "Neutopte se v dluzích",
@@ -19,7 +28,7 @@ export const metadata: Metadata = {
 	"authors": [{
 		"name": "Jan Jáchim"
 	}],
-	"image": "/cvt/expecto-patronum.jpg",
+	"image": "/cvt/thumb.jpg",
 	"color": "#141626",
 	"year": 2017,
 	"month": 4,
@@ -49,13 +58,13 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                     <p><small>Kampaň využívá symboly z Harryho Pottera, k čemuž se nám nepodařilo vyjednat svolení.</small></p>
                 </Text>
 
-				<Picture md={8} src="/cvt/ep_1.png" />
-                <Picture md={8} src="/cvt/ep_2.png" />
-                <Picture md={8} src="/cvt/ep_3.png" />
-                <Picture md={8} src="/cvt/ep_4.png" />
-                <Picture md={8} src="/cvt/ep_5.png" />
-                <Picture md={8} src="/cvt/ep_6.png" />
-                <Picture md={8} src="/cvt/ep_7.png" />
+				<Picture md={8} src={img1} />
+                <Picture md={8} src={img2} />
+                <Picture md={8} src={img3} />
+                <Picture md={8} src={img4} />
+                <Picture md={8} src={img5} />
+                <Picture md={8} src={img6} />
+                <Picture md={8} src={img7} />
 
 			</Content>
 

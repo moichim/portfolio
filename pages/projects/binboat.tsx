@@ -11,6 +11,15 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
+import thumb from "@/public/binboat/thumb.jpg";
+import img1 from "@/public/binboat/1.jpg";
+import img2 from "@/public/binboat/2.jpg";
+import img3 from "@/public/binboat/3.jpg";
+import img4 from "@/public/binboat/4.jpg";
+import img6 from "@/public/binboat/6.jpg";
+import img7 from "@/public/binboat/7.jpg";
+import img8 from "@/public/binboat/8.jpg";
+
 
 export const metadata: Metadata = {
 	"title": "Binboat",
@@ -36,7 +45,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 		<ProjectLayout ref={ref} meta={metadata}>
 			<Content>
 
-				<Picture md={8} src="/binboat/thumb.jpg" />
+				<Picture md={8} src={thumb} />
 
 				<Partial md={4}>
 
@@ -45,16 +54,16 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 						<p>Mottem společnosti je "Pomůžeme Vám neztratit se v moři Vašich dat."</p>
 					</Text>
 
-					<Picture src="/binboat/8.jpg" />
+					<Picture src={img8} />
 
 				</Partial>
 
-				<Picture md={6} lg={4} src="/binboat/1.jpg" />
-				<Picture md={6} lg={4} src="/binboat/2.jpg" />
-				<Picture md={6} lg={4} src="/binboat/3.jpg" />
-				<Picture md={6} lg={4} src="/binboat/4.jpg" />
-				<Picture md={6} lg={4} src="/binboat/6.jpg" />
-				<Picture md={6} lg={4} src="/binboat/7.jpg" />
+				<Picture md={6} lg={4} src={img1} />
+				<Picture md={6} lg={4} src={img1} />
+				<Picture md={6} lg={4} src={img3} />
+				<Picture md={6} lg={4} src={img4} />
+				<Picture md={6} lg={4} src={img6} />
+				<Picture md={6} lg={4} src={img7} />
 
 			</Content>
 

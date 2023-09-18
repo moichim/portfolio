@@ -11,6 +11,10 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
+import catalogue from "@/public/stavba-roku/catalog.jpg";
+import logo from "@/public/stavba-roku/logo.png";
+import concept from "@/public/stavba-roku/koncept.jpg";
+
 
 export const metadata: Metadata = {
 	"title": "Stavba roku Plzeňského kraje",
@@ -36,7 +40,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 		<ProjectLayout ref={ref} meta={metadata}>
 			<Content>
 
-				<Picture md={8} src="/stavba-roku/catalog.jpg" />
+				<Picture md={8} src={catalogue} />
 
 
                 <Partial md={4}>
@@ -46,11 +50,11 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 						<p>Mottem společnosti je "Pomůžeme Vám neztratit se v moři Vašich dat."</p>
 					</Text>
 
-					<Picture src="/stavba-roku/logo.png" />
+					<Picture src={logo} />
 
 				</Partial>
 
-				<Picture md={8} src="/stavba-roku/koncept.jpg" />
+				<Picture md={8} src={concept} />
 
 			</Content>
 

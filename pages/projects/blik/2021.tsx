@@ -11,6 +11,9 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
+import blik from "@/public/blik/2021/blik.jpg";
+import horizontal from "@/public/blik/2021/horizontal.jpg";
+import vertical from "@/public/blik/2021/vertical.jpg";
 
 export const metadata: Metadata = {
 	"title": "Blik Blik 2021",
@@ -39,16 +42,15 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 				<Partial lg={8}>
 
                     <Youtube id="gAaklnZr6Rc" />
-					<Picture src="/blik/2021/blik.jpg" />
+					<Picture src={blik} />
 
 				</Partial>
 
-                <Picture lg={4} src="/blik/2021/vertical.jpg" />
-                <Picture src="/blik/2021/horizontal.jpg" />
+                <Picture lg={4} src={vertical} />
+                <Picture src={horizontal} />
 
 			</Content>
 
-			<Link href="/">Home</Link>
 		</ProjectLayout>
 	)
 }

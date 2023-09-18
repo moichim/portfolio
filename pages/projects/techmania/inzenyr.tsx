@@ -7,6 +7,11 @@ import { Metadata } from "@/data/ProjectsManager"
 import Link from "next/link"
 import { forwardRef } from "react"
 
+import fulldome from "@/public/inzenyr/fulldome.png";
+import fotostena from "@/public/inzenyr/fotostena.jpg";
+import motive from "@/public/inzenyr/motive.jpg";
+import stena from "@/public/inzenyr/stena.jpg";
+
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
@@ -36,17 +41,16 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 			<Content>
 
 				<Partial lg={6}>
-					<Picture src="/inzenyr/fotostena.jpg" />
-					<Picture lg={6} src="/inzenyr/motive.jpg" />
+					<Picture src={fotostena} />
+					<Picture lg={6} src={motive} />
 				</Partial>
 				<Partial lg={6}>
-					<Picture src="/inzenyr/stena.jpg" />
-					<Picture src="/inzenyr/fulldome.png" />
+					<Picture src={stena} />
+					<Picture src={fulldome} />
 				</Partial>
 
 			</Content>
 
-			<Link href="/">Home</Link>
 		</ProjectLayout>
 	)
 }

@@ -7,8 +7,8 @@ import { Router, useRouter } from 'next/router';
 
 import "@/components/partials/content/Magnifier.scss";
 import "@fontsource/ibm-plex-sans";
-import "@fontsource/ibm-plex-sans/400-italic.css";
-import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/500-italic.css";
+import "@fontsource/ibm-plex-sans/500.css";
 import "@fontsource/ibm-plex-sans/700.css";
 
 import PageTransition, { useAsPathWithoutHash } from '@madeinhaus/nextjs-page-transition';
@@ -17,12 +17,7 @@ import PageTransition, { useAsPathWithoutHash } from '@madeinhaus/nextjs-page-tr
 export default function App({ Component, pageProps, router }: AppProps) {
 
   // const key = router.asPath;
-  const key = useAsPathWithoutHash();
-
-  const type = Component.displayName;
-  console.log( Component );
-
-  
+  const key = useAsPathWithoutHash();  
 
   return <GlobalProviders>
     <GlobalLayout>

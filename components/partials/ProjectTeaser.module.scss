@@ -17,13 +17,13 @@
 
     @for $i from 0 through 100 {
         &:nth-child(#{$i}) {
-            animation-delay: #{ ( $i * 75 ) / 1000}s;
+            animation-delay: #{ math.div( $i * 75, 1000 ) }s;
             animation-duration: .3s;
             animation-name: animate-fade;
             animation-fill-mode: backwards;
 
             @include menuMobile() {
-                animation-delay: #{ ( $i * 150 ) / 1000}s; 
+                animation-delay: #{ math.div( $i * 150, 1000 )}s; 
             }
         }
     }
