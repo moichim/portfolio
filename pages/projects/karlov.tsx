@@ -17,12 +17,12 @@ import img3 from "@/public/karlov/3.jpg";
 import img4 from "@/public/karlov/4.jpg";
 import img5 from "@/public/karlov/5.jpg";
 import img6 from "@/public/karlov/6.jpg";
-import img10 from "@/public/karlov/10.jpg";
-import img11 from "@/public/karlov/11.jpg";
-import img12 from "@/public/karlov/12.jpg";
-import img13 from "@/public/karlov/13.jpg";
-import img14 from "@/public/karlov/14.jpg";
-import img15 from "@/public/karlov/15.jpg";
+import img10 from "@/public/karlov/7.jpg";
+import img11 from "@/public/karlov/8.jpg";
+import img12 from "@/public/karlov/9.jpg";
+import img13 from "@/public/karlov/16.jpg";
+import img14 from "@/public/karlov/17.jpg";
+import img15 from "@/public/karlov/18.jpg";
 import thumb from "@/public/karlov/thumb.jpg";
 
 
