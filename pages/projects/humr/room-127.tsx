@@ -11,11 +11,11 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import img1 from "@/public/pokoj-127/1.jpg";
-import img2 from "@/public/pokoj-127/2.jpg";
-import img3 from "@/public/pokoj-127/3.jpg";
-import img4 from "@/public/pokoj-127/4.jpg";
-import img5 from "@/public/pokoj-127/5.jpg";
+import img1 from "@/public/pokoj_127/1.jpg";
+import img2 from "@/public/pokoj_127/2.jpg";
+import img3 from "@/public/pokoj_127/3.jpg";
+import img4 from "@/public/pokoj_127/4.jpg";
+import img5 from "@/public/pokoj_127/5.jpg";
 
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 	"authors": [{
 		"name": "Jan Jáchim"
 	}],
-	"image": "/pokoj-127/1.JPG",
+	"image": "/pokoj_127/1.JPG",
 	"color": "#033030",
 	"year": 2007,
 	"month": 6,
