@@ -1,0 +1,24 @@
+.container {
+    &:not( :last-child ) {
+        padding-bottom: 2rem;
+    }
+}
+
+.position {
+    // font-weight: bold;
+}
+
+.company {
+    padding-left: 3rem;
+    box-sizing: border-box;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2px;
+        background: variable( text );
+        left: 0;
+        top: .7rem;
+    }
+}

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 	"authors": [{
 		"name": "Jan Jáchim"
 	}],
-	"image": "/spoluzaci/1.JPG",
+	"image": "/spoluzaci/1.jpg",
 	"color": "#031830",
 	"year": 2006,
 	"month": 12,

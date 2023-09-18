@@ -59,8 +59,18 @@ const Header: React.FC = () => {
 
             <nav className={styles.links} aria-roledescription="Menu s nabídkou odkazů">
                 <ul>
-                    <li className={styles.link}><Navlink title="Interaktivita" href="/interactive" /></li>
-                    <li className={styles.link}><Navlink title="Design" href="/design" /></li>
+                    <li className={styles.link}>
+                        <Navlink title="Interaktivita" href="/interactive" />
+                    </li>
+                    <li className={styles.link}>
+                        <Navlink title="Design" href="/design" />
+                    </li>
+                    <li className={styles.link}>
+                        <Navlink title="Bio" href="/bio" />
+                    </li>
+                    <li className={styles.link}>
+                        <Navlink title="Contact" href="/contact" />
+                    </li>
                 </ul>
             </nav>
 

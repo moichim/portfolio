@@ -14,8 +14,8 @@ import horizontal from "@/public/blik/2021/horizontal.jpg"
 import vertical from "@/public/blik/2021/vertical.jpg"
 
 export const metadata: Metadata = {
-	"title": "Blik Blik 2021",
-	"description": "Vizuál plzeňského festivalu světla",
+	"title": "Blik Blik 2023",
+	"description": "Propagační videoprojekce pro Blik Blik 2023",
 	"authors": [{
 		"name": "Jan Jáchim"
 	}],

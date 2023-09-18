@@ -6,13 +6,11 @@ import Link from "next/link"
 
 function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps> ) {
 
-    
-
     return <ListLayout
         projects={props.projects}
         above={
             <IndexText>
-                Programuji a <Link href="/design">designuji</Link>. Snažím se to dělat normálně
+                Zde jsou všechny práce, které jsem na web dal.
             </IndexText>
         }
     />;
@@ -23,7 +21,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            projects: ProjectsManager.getProjects( {keyword: "featured", visibility: true} )
+            projects: ProjectsManager.getProjects( )
         }
     }
 
