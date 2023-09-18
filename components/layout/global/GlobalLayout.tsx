@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "../../navigation/Navigation";
+import Footer from "@/components/navigation/Footer";
 
 /** 
  * Markup common to the entire site.
@@ -13,7 +14,10 @@ const GlobalLayout: React.FC<React.PropsWithChildren> = props => {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Navigation />
-        {props.children}
+        <div style={{minHeight: "70vh"}}>
+            {props.children}
+        </div>
+        <Footer />
     </div>;
 }
 

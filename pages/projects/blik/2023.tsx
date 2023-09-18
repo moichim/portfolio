@@ -2,6 +2,7 @@ import Content from "@/components/content/Content"
 import Partial from "@/components/content/partials/Partial"
 import Picture from "@/components/content/partials/Picture"
 import Youtube from "@/components/content/partials/Youtube"
+import Text from "@/components/content/partials/Text"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
 import { Metadata } from "@/data/ProjectsManager"
 import { forwardRef } from "react"
@@ -9,9 +10,15 @@ import { forwardRef } from "react"
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-import blik from "@/public/blik/2021/blik.jpg"
-import horizontal from "@/public/blik/2021/horizontal.jpg"
-import vertical from "@/public/blik/2021/vertical.jpg"
+import img1 from "@/public/blik/2023/0031.jpg"
+import img2 from "@/public/blik/2023/0075.jpg"
+import img3 from "@/public/blik/2023/0100.jpg"
+import img4 from "@/public/blik/2023/0179.jpg"
+import img5 from "@/public/blik/2023/0189.jpg"
+import img6 from "@/public/blik/2023/0216.jpg"
+import img7 from "@/public/blik/2023/0220.jpg"
+import img8 from "@/public/blik/2023/0284.jpg"
+import { useScheme } from "@/context/scheme/SchemeContextProvider"
 
 export const metadata: Metadata = {
 	"title": "Blik Blik 2023",
@@ -19,33 +26,39 @@ export const metadata: Metadata = {
 	"authors": [{
 		"name": "Jan Jáchim"
 	}],
-	"image": "/blik/2021/blik.jpg",
-	"color": "#081F2D",
-	"year": 2021,
-	"month": 10,
-	"day": 1,
-	"keywords": [ "design", "featured" ],
+	"image": "/blik/2023/thumb.jpg",
+	"color": "#265208",
+	"year": 2023,
+	"month": 3,
+	"day": 20,
+	"keywords": [ "design", "featured", "interactive" ],
 	"public": true
 }
 
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
 
-	// useScheme([{ bg: "white" }, {bg: "black"}]);
+	useScheme([{ primary: "#207324", bg: "#cffad1" }, {bg: "#0b1a01"}]);
 
 	return (
 		<ProjectLayout ref={ref} meta={metadata}>
 			<Content>
 
-				<Partial lg={8}>
+				<Youtube md={6} lg={8} id="2WD7oqWaLCQ" />
 
-                    <Youtube id="gAaklnZr6Rc" />
-					<Picture src={blik} />
+				<Text md={6} lg={3}>
+					<p>Projekce pro finančního partnera festivalu.</p>
+					<p>Animace v Blenderu.</p>
+				</Text>
 
-				</Partial>
-
-                <Picture lg={4} src={vertical} />
-                <Picture src={horizontal} />
+				<Picture md={6} lg={3} src={img1} />
+				<Picture md={6} lg={3} src={img2} />
+				<Picture md={6} lg={3} src={img3} />
+				<Picture md={6} lg={3} src={img4} />
+				<Picture md={6} lg={3} src={img5} />
+				<Picture md={6} lg={3} src={img6} />
+				<Picture md={6} lg={3} src={img7} />
+				<Picture md={6} lg={3} src={img8} />
 
 			</Content>
 

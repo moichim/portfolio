@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 	}],
 	"image": "/karlov/thumb.jpg",
 	"color": "#1C0324",
-	"year": 2019,
-	"month": 8,
-	"day": 1,
+	"year": 2013,
+	"month": 10,
+	"day": 10,
 	"keywords": [ "design", "featured" ],
 	"public": true
 }

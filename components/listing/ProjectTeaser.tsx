@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const ProjectTeaser: React.FC<ProjectMetadata> = props => {
 
-    return <article className={styles.container}>
+    return <article className={styles.container} style={{backgroundColor: props.color ?? "currentcolor"}}>
 
         <Link 
             href={props.path}
