@@ -84,7 +84,7 @@ const SkillItem: React.FC<SkillItemProps> = props => {
 
         <h3 className={styles.position}>{props.technology}</h3>
 
-        {props.features && props.features.map(f => <Feature {...f} />)}
+        {props.features && props.features.map(f => <Feature key={f.name} {...f} />)}
 
     </div>
 
