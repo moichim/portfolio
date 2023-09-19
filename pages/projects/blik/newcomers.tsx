@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "year": 2020,
     "month": 2,
     "day": 1,
-    "keywords": ["interactive", "featured"],
+    "keywords": ["interactive", "featured", "code"],
     "public": true
 }
 
