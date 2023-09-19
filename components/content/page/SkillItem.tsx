@@ -58,7 +58,7 @@ const Feature: React.FC<FeaturePropType> = props => {
                 {props.years && <p>{props.years}</p>}
                 {props.desc && <p>{props.desc}</p>}
                 {props.referencies && <div>
-                    Reference: {props.referencies.map(r => <Link href={r.link} target={r.link.includes("http") && "_blank"}>{r.name}</Link>)}
+                    Reference: {props.referencies.map(r => <Link href={r.link} target={r.link.includes("http") ? "_blank" : "_self" } key={r.link}>{r.name}</Link>)}
                 </div>}
             </div>
         </div>
