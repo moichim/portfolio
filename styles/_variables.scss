@@ -23,7 +23,7 @@ $variables: (
         secondary: green,
         bg: rgb(255, 255, 255),
         text: black,
-        highlight: yellow,
+        highlight: red,
         navBg: blue,
         navText: white,
         navLink: yellow,
@@ -33,7 +33,7 @@ $variables: (
         dark: (
             bg: rgb(10, 10, 10),
             text: rgb(255, 255, 255),
-            primary: blue
+            primary: rgb(47, 0, 255)
         )
     )
 );

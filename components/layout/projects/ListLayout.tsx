@@ -30,7 +30,7 @@ function ListLayout( props: ListLayoutProps, ref: PageTransitionRef ) {
                 
                 {props.title && <header className={styles.header}>
                     <h1>{props.title}</h1>
-                </header> }
+                </header>}
 
                 {props.above && props.above}
 

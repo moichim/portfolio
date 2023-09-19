@@ -74,16 +74,6 @@
 
     z-index: 999;
 
-    a {
-
-        text-decoration: none;
-
-        &:link,
-        &:visited {
-            color: variable(primary);
-        }
-    }
-
     .title {
 
         a {
@@ -158,6 +148,10 @@
             &:focus {
                 color: variable(primary);
             }
+        }
+
+        .separator {
+            height: 1rem;
         }
 
         .title {
@@ -288,10 +282,14 @@
         padding-bottom: 2rem;
 
         a {
-            color: variable( text );
+            color: variable( primary );
             &:hover {
-                color: variable( primary );
+                color: variable( highlight );
             }
+        }
+
+        .separator {
+            display: none;
         }
 
         .links {

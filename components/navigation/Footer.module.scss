@@ -1,11 +1,72 @@
 .container {
-    @include sharedVerticalPadding;
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
 
+    @include sharedVerticalPadding;
+    padding-top: 1rem !important;
+    padding-bottom: 3rem !important;
     text-align: center;
 
+    @include transition;
+
+    svg {
+        width: 1.5rem;
+        padding-top: 1rem;
+    }
+
+
+}
+
+.off {
+    transform: translateY(10rem);
+    opacity: 0;
+}
+
+.idle {
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+.footer {
+
+    padding-top: 2rem;
+    
     p {
         padding-bottom: 1rem;
     }
+}
+
+
+
+
+
+.nav {
+
+    @include sharedVerticalPadding;
+    text-align: center;
+
+    ul {
+        li {
+            
+            padding: .5rem .5rem;
+            display: inline-block;
+
+            @include up( sm ) {
+
+                padding: .5rem 0rem;
+                
+                &:not( :last-child ) {
+                    &:after {
+                    
+                        content: "-";
+                        display: inline-block;
+                        padding: 0 .5rem;
+    
+                    }
+                }
+            }
+
+            
+        }
+
+    }
+
 }

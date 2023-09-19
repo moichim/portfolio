@@ -1,4 +1,11 @@
 .container {
     @include sharedVerticalPadding;
-    // background: red;
+    padding-bottom: 2rem !important;
+    @include menuMobile {
+        text-align: center;
+    }
+}
+
+.header {
+    display: none !important;
 }

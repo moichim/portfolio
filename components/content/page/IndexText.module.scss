@@ -1,7 +1,18 @@
 .container {
 
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 4rem;
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    @include menuMobile{
+        em {
+            display: block;
+            padding-top: 1rem;
+        }
+    }
 
 }
 

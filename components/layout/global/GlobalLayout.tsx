@@ -14,7 +14,7 @@ const GlobalLayout: React.FC<React.PropsWithChildren> = props => {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Navigation />
-        <div style={{minHeight: "70vh"}}>
+        <div style={{minHeight: "0vh"}}>
             {props.children}
         </div>
         <Footer />

@@ -34,6 +34,40 @@ const Navlink: React.FC< NavigationLinkProps > = ( props ) => {
 
 }
 
+import exp from "@/styles/modules/export.module.scss";
+import { Link } from "@madeinhaus/nextjs-page-transition";
+
+const SiteTitle: React.FC = () => {
+
+    const context = useLayoutContext();
+
+    const router = useRouter();
+
+    const handleClick = (event: MouseEvent) => {
+
+        event.preventDefault();
+
+        if (window.innerWidth < ( parseFloat( exp.menuCollapseBreakpoint ) ) ) {
+
+            if ( context.isExpanded === false ) {
+                context.setIsExpanded( true );
+            } else {
+                router.push( "/" );
+                context.setIsExpanded( false );
+            }
+        } else {
+            router.push( "/", undefined, {
+                scroll: false
+            } );
+        }
+    };
+
+    return <Link href="/" onClick={handleClick}>
+        J<span>an&nbsp;</span>
+        J<span>áchim</span>
+    </Link>
+}
+
 const Header: React.FC = () => {    
 
     const page = useLayoutContext();
@@ -51,20 +85,22 @@ const Header: React.FC = () => {
 
 
             <div className={ styles.title }>
-                <Navlink href="/">
-                    J<span>an&nbsp;</span>
-                    J<span>áchim</span>
-                </Navlink>
+                <SiteTitle />
             </div>
 
             <nav className={styles.links} aria-roledescription="Menu s nabídkou odkazů">
                 <ul>
+                    
                     <li className={styles.link}>
                         <Navlink title="Interaktivita" href="/interactive" />
                     </li>
                     <li className={styles.link}>
                         <Navlink title="Design" href="/design" />
                     </li>
+                    <li className={styles.link}>
+                        <Navlink title="Kód" href="/code" />
+                    </li>
+                    <li className={styles.separator}></li>
                     <li className={styles.link}>
                         <Navlink title="Bio" href="/bio" />
                     </li>

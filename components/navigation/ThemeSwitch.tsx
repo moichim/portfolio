@@ -2,10 +2,13 @@ import { Switch } from "@headlessui/react";
 import clsx from "clsx";
 import styles from "./ThemeSwitch.module.scss";
 import { useTheme } from "@/context/theme/ThemecontextProvider";
+import { useLayoutContext } from "@/context/layout/LayoutContext";
 
 const ThemeSwitch: React.FC = () => {
 
     const context = useTheme();
+
+    const layout = useLayoutContext();
 
     const classes = [
         styles.themeSwitch
@@ -28,10 +31,18 @@ const ThemeSwitch: React.FC = () => {
     classes.push( styles.themeSwitch__interactive );
     classes.push( context.isDark ? styles.themeSwitch__dark : styles.themeSwitch__light );
 
+    const handleClick = (checked: boolean) => {
+
+        context.toggleTheme();
+
+        layout.setIsExpanded(false);
+
+    }
+
     return(
         <Switch
             checked={ context.isDark }
-            onChange={ context.toggleTheme }
+            onChange={ handleClick }
             className={ clsx( ...classes ) }
             aria-label={ label }
         >

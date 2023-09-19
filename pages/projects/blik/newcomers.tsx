@@ -3,7 +3,7 @@ import Picture from "@/components/content/partials/Picture"
 import Text from "@/components/content/partials/Text"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
+import { Link } from "@madeinhaus/nextjs-page-transition"
 import { forwardRef } from "react"
 
 import kompozice from "@/public/prichozi/kompozice.jpg"
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         "name": "Jan Jáchim"
     }],
     "image": "/prichozi/thumb.jpg",
-    "color": "navy",
+    "color": "#3c124f",
     "year": 2020,
     "month": 2,
     "day": 1,

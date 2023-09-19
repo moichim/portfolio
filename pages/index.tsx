@@ -2,7 +2,7 @@ import IndexText from "@/components/content/page/IndexText"
 import ListLayout from "@/components/layout/projects/ListLayout"
 import ProjectsManager from "@/data/ProjectsManager"
 import { InferGetStaticPropsType } from "next"
-import Link from "next/link"
+import { Link } from "@madeinhaus/nextjs-page-transition"
 
 function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps> ) {
 
@@ -12,7 +12,8 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps> ) {
         projects={props.projects}
         above={
             <IndexText>
-                Programuji a <Link href="/design">designuji</Link>. Snažím se to dělat normálně
+                <p className="mobileOnly">Jmenuji se Jan Jáchim.</p>
+                <p>Dělám <Link href="/code">kód</Link>, <Link href="/design">design</Link> a  <Link href="/interactive">interaktivní projekty</Link>. <em>Snažím se to dělat normálně.</em></p>
             </IndexText>
         }
     />;

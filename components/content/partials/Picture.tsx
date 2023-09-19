@@ -2,6 +2,8 @@ import Image from "next/image";
 import Partial, { PartialProps } from "./Partial";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import styles from "./Picture.module.scss";
+import { useState } from "react";
+import clsx from "clsx";
 
 type PictureProps = PartialProps & {
     src: StaticImport
@@ -12,9 +14,16 @@ const Picture: React.FC<PictureProps> = ({
     ...props
 }) => {
 
+    const [ loaded, setLoaded ] = useState<boolean>( false );
+
+    const classes = clsx([
+        styles.container,
+        loaded ? styles.loaded : styles.loading
+    ]);
+
     return <Partial {...props} type="image">
 
-        <div className={styles.container}>
+        <div className={classes}>
 
         {/* <Magnifier> */}
             <Image 
@@ -23,6 +32,7 @@ const Picture: React.FC<PictureProps> = ({
                 objectFit="cover"
                 layout="responsive"
                 className={styles.image}
+                onLoad={() => setLoaded( true )}
             />
         {/*</Magnifier>*/}
 

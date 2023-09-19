@@ -23,12 +23,12 @@ export const metadata: Metadata = {
         "name": "Jan Jáchim"
     }],
     "image": "/maruska/1.jpg",
-    "color": "#210901",
+    "color": "#363d03",
     "year": 2022,
     "month": 3,
     "day": 27,
     "keywords": ["interactive", "featured"],
-    "public": false
+    "public": true
 }
 
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {

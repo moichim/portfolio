@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         "name": "Jan Jáchim"
     }],
     "image": "/maruska/1.jpg",
-    "color": "#210901",
+    "color": "#180621",
     "year": 2023,
     "month": 3,
     "day": 27,

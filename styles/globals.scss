@@ -43,7 +43,19 @@ body {
 
 a {
     color: variable( primary );
+    text-decoration: none;
+    @include transition;
+    &:hover,
+    &:focus {
+        color: variable( highlight );
+    }
     &:focus {
         outline: 0;
+    }
+}
+
+.mobileOnly {
+    @include menuDesktop{
+        display: none;
     }
 }

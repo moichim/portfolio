@@ -6,7 +6,8 @@ import React from "react"
 type SchemeDef = {
     primary?: string,
     text?: string,
-    bg?: string
+    bg?: string,
+    highlight?: string
 }
 
 /**
@@ -45,6 +46,7 @@ const printScheme = ( s:SchemeDef ) => {
         ${printVariable(s,"text")}
         ${printVariable(s,"bg")}
         ${printVariable(s,"primary")}
+        ${printVariable(s,"highlight")}
     `;
 }
 

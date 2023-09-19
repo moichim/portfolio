@@ -1,8 +1,8 @@
 import { ProjectMetadata } from "@/data/ProjectsManager";
-import Link from "next/link";
 
 import styles from "./ProjectTeaser.module.scss";
 import Image from "next/image";
+import { Link } from "@madeinhaus/nextjs-page-transition";
 
 const ProjectTeaser: React.FC<ProjectMetadata> = props => {
 

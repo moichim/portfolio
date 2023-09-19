@@ -36,7 +36,7 @@
     text-align: center;
     @include sharedVerticalPadding;
     padding-top: 3rem !important;
-    padding-bottom: 1rem !important;
+    // padding-bottom: 1rem !important;
 
     div:not( :last-child ) {
         padding-bottom: 1rem;
@@ -44,21 +44,6 @@
 
     svg {
         width: 1.5rem;
-    }
-
-}
-
-.nav {
-
-    @include sharedVerticalPadding;
-    text-align: center;
-
-    ul {
-        li {
-            display: inline-block;
-            padding: .5rem;
-        }
-
     }
 
 }

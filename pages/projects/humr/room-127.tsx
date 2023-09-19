@@ -4,7 +4,7 @@ import Picture from "@/components/content/partials/Picture"
 import Text from "@/components/content/partials/Text"
 import ProjectLayout from "@/components/layout/projects/ProjectLayout"
 import { Metadata } from "@/data/ProjectsManager"
-import Link from "next/link"
+import { Link } from "@madeinhaus/nextjs-page-transition"
 import { forwardRef } from "react"
 
 type IndexPageProps = {}
