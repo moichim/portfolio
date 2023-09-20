@@ -11,6 +11,7 @@ import img2 from "@/public/maruska/2.jpg"
 import img3 from "@/public/maruska/3.jpg"
 import img6 from "@/public/maruska/6.jpg"
 import img7 from "@/public/maruska/7.jpg"
+import Youtube from "@/components/content/partials/Youtube"
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     "authors": [{
         "name": "Jan Jáchim"
     }],
-    "image": "/maruska/1.jpg",
+    "image": "/blik/hum/hum.jpg",
     "color": "#180621",
     "year": 2023,
     "month": 3,
@@ -40,24 +41,18 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
         <ProjectLayout ref={ref} meta={metadata}>
             <Content>
 
-                <Picture md={6} lg={4} src={img2}></Picture>
-                <Picture md={6} lg={4} src={img7}></Picture>
-                <Text md={6} lg={3}>
-                    <p>Projekce vznikla v rámci School of Videomapping, 2023 Plzeň pod vedením Luca Pulvirenti a Cristina Santangelo.</p>
-                    <p>Stopáž: 1 min</p>
-                    <p>Zvuk: Generativní kompozice naprogramovaná v SuperCollideru</p>
-                    <p>Vizuál: Resolume Arena</p>
-                </Text>
-                <Picture md={6} lg={3} src={img6}></Picture>
-                <Picture md={6} lg={4} src={img3}></Picture>
-                <Text md={6} lg={3}>
-                    <p>Through the thermocamera, the visitor can discover that the head of the girl is hot.</p>
-                    <p>The light and sound is controlled by the thermocamera - by the temperature of the focal point of the camera.</p>
-                    <p>When the camera points at the sculpture's head, the girl starts singing. Whenever the IR camera sees a human, the sculpture starts heartbeating.</p>
-                </Text>
+                <Youtube id="FhpBt2aWzn8" sm={6} md={4} lg={3}short>Záznam z akce</Youtube>
 
-                <Picture md={6} lg={4} src={img6}></Picture>
-                <Picture md={6} lg={8} src={img1}></Picture>
+                <Youtube id="ZqE5RLFFzc0" sm={6} md={4} lg={3}short>Animace</Youtube>
+
+                <Text md={4} lg={3}>
+                    <p>Videomapping na budově Studijní a vědecké knihovny Plzeňského kraje.</p>
+                    <p>Městská zvuková "Urban Jungle".</p>
+                    <p>Stopáž: 1 min</p>
+                    <p>Zvuk: Generativní kompozice naprogramovaná v SuperCollideru z využitím vlastních samplů a syntetizátorů</p>
+                    <p>Vizuál: Resolume Arena</p>
+                    <p>Projekce vznikla v rámci School of Videomapping, 2023 Plzeň pod vedením Luca Pulvirenti a Cristina Santangelo.</p>
+                </Text>
 
             </Content>
 

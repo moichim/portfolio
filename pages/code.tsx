@@ -36,16 +36,12 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
 
                     <ul>
                         <li>
-                            <button onClick={() => layout.setIsZoomed(z => !z)}>{layout.isZoomed ? "Skrýt podrobnosti" : "Zobrazit podrobnosti"}</button>
+                            <a href="#skills" onClick={() => layout.setIsZoomed(z => !z)}>{layout.isZoomed ? "Skrýt podrobnosti" : "Zobrazit podrobnosti"}</a>
                         </li>
                         <li>
                             <Link href="#reference" scroll={true}>Přejít na referenční projekty</Link>
                         </li>
                     </ul>
-
-                    
-
-                    
 
                 </Text>
 
@@ -239,8 +235,8 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
 
         </Content>
 
-        <IndexText>
-            <h2 id="reference">Projekty, které jsem kódoval:</h2>
+        <IndexText id="reference">
+            <h2>Projekty, které jsem kódoval:</h2>
         </IndexText>
 
         <ProjectGrid projects={props.projects}/>

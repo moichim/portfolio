@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                 <ul>
                     
                     <li className={styles.link}>
-                        <Navlink title="Interaktivita" href="/interactive" />
+                        <Navlink title="Intermédia" href="/interactive" />
                     </li>
                     <li className={styles.link}>
                         <Navlink title="Design" href="/design" />

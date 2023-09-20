@@ -1,9 +1,17 @@
 .container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
     height: 0;
     background: black;
+
+    &.wide {
+        padding-bottom: 56.25%;
+    }
+
+    &.short {
+        padding-bottom: 177.78%;
+
+    }
 }
 
 .content {
@@ -33,7 +41,7 @@
     &:focus {
         .icon {
             transform: scale( 1.5 );
-            background-color: variable( highlight );
+            background-color: variable( primary );
         }
     }
 
@@ -61,7 +69,7 @@
     box-sizing: border-box;
     border-radius: 50%;
 
-    background: variable( primary );
+    background: variable( highlight );
 
     height: 3rem;
     width: 3rem;

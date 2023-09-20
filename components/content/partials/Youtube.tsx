@@ -2,10 +2,13 @@ import Image from "next/image";
 import React from "react";
 import Partial, { PartialProps } from "./Partial";
 import styles from "./Youtube.module.scss";
+import clsx from "clsx";
+import Caption from "./Caption";
 
 type YoutubeProps = PartialProps & {
     id: string,
-    label?: string
+    label?: string,
+    short?: true
 }
 
 const Youtube: React.FC<YoutubeProps> = ({
@@ -15,9 +18,14 @@ const Youtube: React.FC<YoutubeProps> = ({
 
     const [clicked, setClicked] = React.useState<boolean>(false);
 
+    const classes = clsx([
+        styles.container,
+        props.short ? styles.short : styles.wide
+    ]);
+
     return <Partial {...props} type="video">
 
-        <div className={styles.container}>
+        <div className={classes}>
 
             <div className={styles.content}>
                 {!clicked
@@ -58,6 +66,8 @@ const Youtube: React.FC<YoutubeProps> = ({
             </div>
 
         </div>
+
+        {props.children && <Caption>{props.children}</Caption>}
 
     </Partial>
 

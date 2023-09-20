@@ -13,7 +13,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps>) {
         projects={props.projects} 
         above={
             <IndexText>
-                <p>Dělám vizuální identity, knihy a další věci. Původně jsem vazač knih.</p>
+                <p>Vizuální identity, knihy a další věci. Původně jsem vazač knih.</p>
             </IndexText>
         }
     />;

@@ -1,4 +1,5 @@
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 import { createContext, useContext } from "react"
 
 type LayoutContextType = {
@@ -21,6 +22,12 @@ export const LayoutContextProvider: React.FC<React.PropsWithChildren> = props =>
 
     const [ isZoomed, setIsZoomed ] = React.useState<boolean>( false );
     const [ isExpanded, setIsExpanded ] = React.useState<boolean>( false );
+
+    const router = useRouter();
+
+    useEffect( () => {
+        setIsZoomed( false );
+    }, [router.asPath]);
 
     const value = {
         isZoomed,

@@ -4,6 +4,7 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import styles from "./Picture.module.scss";
 import { useState } from "react";
 import clsx from "clsx";
+import Caption from "./Caption";
 
 type PictureProps = PartialProps & {
     src: StaticImport
@@ -36,7 +37,7 @@ const Picture: React.FC<PictureProps> = ({
             />
         {/*</Magnifier>*/}
 
-        {props.children && <div className={styles.caption}>{props.children}</div>}
+        {props.children && <Caption>{props.children}</Caption>}
 
         </div>
 

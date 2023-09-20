@@ -1,0 +1,44 @@
+.link {
+    display: block;
+
+    &:hover,
+    &:focus {
+        .container {
+            color: variable( bg );
+            background-color: variable( highlight );
+        }
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+
+    color: variable( bg );
+    background-color: variable( primary );
+
+    @include transition;
+
+    
+}
+
+.icon {
+    svg {
+        height: 1.5rem;
+    }
+}
+
+.title {
+
+}
+
+.content {
+    flex-grow: 1;
+    padding: 0 1rem;
+    > div {
+        opacity: .7
+    }
+}

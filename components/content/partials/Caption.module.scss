@@ -1,0 +1,19 @@
+.container {
+
+    padding-top: .3rem;
+
+    svg {
+        height: 1rem;
+        vertical-align: baseline;
+        padding-right: .5rem;
+        transform: translateY(.1rem);
+    }
+
+    @include upto(md) {
+        padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+    }
+
+}
