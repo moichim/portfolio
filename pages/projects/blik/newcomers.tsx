@@ -39,8 +39,8 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
                 <Text md={6} lg={4} xl={3}>
 
-                    <p>I wrote a generator of future Czech soundscape, which currently being influenced by the climate change.</p>
-                    <p>The composition consists of:</p>
+                    <p>I wrote a generator of the future Czech soundscape, which is currently influenced by the climate change.</p>
+                    <p>The sound composition consists of:</p>
                     <ul>
                         <li>environmental sound including new animal species and new weather</li>
                         <li>musical layer featuring deformed traditional songs about the Czech countryside</li>
