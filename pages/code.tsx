@@ -89,6 +89,10 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     name: "p5.js",
                                 },
                                 {
+                                    name: "Lottie Files",
+                                    // desc: "V rámci Electron.js jsem jednoduchým způsobem implementoval webový server."
+                                },
+                                {
                                     name: "Angular",
                                     minor: true,
                                     desc: "Realioval jsem v něm 1 menší interaktivní projekt.",
@@ -100,6 +104,7 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     name: "three.js / React Three Fiber",
                                     minor: true
                                 },
+                                
 
 
                             ]}
@@ -141,7 +146,8 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     minor: true,
                                     name: "Express.js",
                                     desc: "V rámci Electron.js jsem jednoduchým způsobem implementoval webový server."
-                                }
+                                },
+                                
 
 
                             ]}
@@ -170,8 +176,7 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     years: "cca 7 let",
                                     desc: <span>Ovládám framework <a href="https://processing.org" target="_blank">Processing.org</a> pro interaktivní aplikace v jazyce JAVA. Prošel jsem si knihu <a target="_blank" href="https://natureofcode.com/">Nature of Code</a> od Daniela Shiffmana.</span>,
                                     referencies: [
-                                        { name: "Instalace s kinectem", link: "/projects/blik/souzvon" },
-                                        { name: "Instalace se čtením RTSP streamu z termokamery", link: "/projects/blik/maruska" }
+                                        { name: "Projekty v Processingu", link: "/processing" }
                                     ]
                                 },
                                 {
@@ -196,31 +201,10 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     years: "od roku 2019",
                                     desc: "Ve zvukovém serveru SuperCollider píšu aplikace pro algorytmický zvuk.",
                                     referencies: [
-                                        { name: "edu.labir.cz", link: "https://edu.labir.cz" }
+                                        { name: "Projekty, které jsem realizoval s využitím SuperCollideru", link: "/supercollider" }
                                     ]
                                 },
-                                {
-                                    name: "Wordpress",
-                                    years: "od roku 2015",
-                                    desc: "Na Wordpressu jsem začínal. Resp. ještě předtím jsem začal s Drupalem...",
-                                    referencies: [
-                                        { name: "pronajmy-epre.cz", link: "https://pronajmy-epre.cz" }
-                                    ]
-                                },
-                                {
-                                    minor: true,
-                                    name: "Django / Wagtail CMS",
-                                    years: "2017 - 2019",
-                                    desc: "Provozuji meněí VPS s několika weby na platformě Wagtail CMS.",
-                                    referencies: [
-                                        { name: "matej.rizek.serchan.cz", link: "http://matej.rizek.serchan.cz/" }
-                                    ]
-                                },
-                                {
-                                    minor: true,
-                                    name: "Express.js",
-                                    desc: "V rámci Electron.js jsem jednoduchým způsobem implementoval webový server."
-                                }
+                                
 
 
                             ]}

@@ -25,11 +25,18 @@ function IndexPage() {
 
                 <Text>
 
-                    <h2>S čím pracuji</h2>
+                    <h2>Co dělám</h2>
 
-                    <p>Webový vývoj provádím v JS. Mám zkušenosti s Next.js, Gatsby.js, React.js a PHP.</p>
+                    <p>Dělám grafiku a programování okolo webu a interaktivních instalací.</p>
 
-                    <p>Okrajové zkušenosti mám s frameworky Django a Angular.</p>
+                    <p>Profesně působím povětšinou někde poblíž vzdělávání, popularizaci vědy a interaktivních projektů pro děti. Mám zkušenosti s tvorbou vzdělávacích exponátů a materiálů pro online vzdělávání.</p>
+
+                    <ul>
+                        <li>webový vývoj provozuji dle současných standardů (<Link href="/code">co umím</Link>)</li>
+                        <li>Adobe Creative Suite ovládám rutinně</li>
+                        <li>Pro tvůrčí záměr vždy najdu adekvátní technologii</li>
+                        <li>nejvíce ze všeho mne baví učit se novým věcem</li>
+                    </ul>
 
                     <p></p>
 
