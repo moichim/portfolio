@@ -31,14 +31,14 @@ function IndexPage() {
 
                     <p>Profesně působím povětšinou někde poblíž vzdělávání, popularizaci vědy a interaktivních projektů pro děti. Mám zkušenosti s tvorbou vzdělávacích exponátů a materiálů pro online vzdělávání.</p>
 
+                    <p>Domluvím se s marketéry i s didaktiky.</p>
+
                     <ul>
                         <li>webový vývoj provozuji dle současných standardů (<Link href="/code">co umím</Link>)</li>
                         <li>Adobe Creative Suite ovládám rutinně</li>
                         <li>Pro tvůrčí záměr vždy najdu adekvátní technologii</li>
                         <li>nejvíce ze všeho mne baví učit se novým věcem</li>
                     </ul>
-
-                    <p></p>
 
                 </Text>
 
