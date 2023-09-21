@@ -12,6 +12,8 @@
     "@fontsource/ibm-plex-sans": "^5.0.12",
     "@headlessui/react": "^1.7.17",
     "@madeinhaus/nextjs-page-transition": "^3.1.1",
+    "@react-three/drei": "^9.84.2",
+    "@react-three/fiber": "^8.14.2",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -26,6 +28,7 @@
     "react-medium-image-zoom": "^5.1.8",
     "reset-css": "^5.0.2",
     "sass": "^1.66.1",
+    "three": "^0.156.1",
     "typescript": "5.2.2"
   }
 }

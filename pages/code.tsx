@@ -181,11 +181,13 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 },
                                 {
                                     name: "Unity 3D",
-                                    minor: true
+                                    minor: true,
+                                    desc: "Absolvoval jsem základní kurz skriptování."
                                 },
                                 {
                                     name: "openFrameworks",
-                                    minor: true
+                                    minor: true,
+                                    desc: "Jednodušší aplikace, která, která poslouchala OSC signály a podle určité logiky překládala je na jiné OSC signály za účelem ovládání různých zařízení z jednoho místa."
                                 }
 
 
@@ -199,7 +201,7 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 {
                                     name: "SuperCollider",
                                     years: "od roku 2019",
-                                    desc: "Ve zvukovém serveru SuperCollider píšu aplikace pro algorytmický zvuk.",
+                                    desc: "Ve zvukovém serveru SuperCollider píšu aplikace pro algoritmický zvuk.",
                                     referencies: [
                                         { name: "Projekty, které jsem realizoval s využitím SuperCollideru", link: "/supercollider" }
                                     ]

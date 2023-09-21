@@ -7,27 +7,30 @@ import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
 import { forwardRef } from "react"
 
-import img1 from "@/public/other-places/1.jpg"
-import img2 from "@/public/other-places/2.jpg"
-import img3 from "@/public/other-places/3.jpg"
-import img4 from "@/public/other-places/4.jpg"
+import img1 from "@/public/analyza/jj_matik_a.jpg"
+import img2 from "@/public/analyza/jj_matik_b.jpg"
+import img3 from "@/public/analyza/jj_matik_c.jpg"
+import img4 from "@/public/analyza/jj_matik_d.jpg"
+import img5 from "@/public/analyza/jj_matik_e.jpg"
+
+
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
 
 export const metadata: Metadata = {
-    "title": "Other places",
-    "description": "Audiovisual installation",
+    "title": "Matematická analýza",
+    "description": "Intervence",
     "authors": [{
         "name": "Jan Jáchim"
     }],
-    "image": "/other-places/4.jpg",
+    "image": "/analyza/jj_matik_a.jpg",
     "color": "#210901",
-    "year": 2013,
-    "month": 6,
-    "day": 27,
-    "keywords": ["interactive","school"],
+    "year": 2011,
+    "month": 4,
+    "day": 17,
+    "keywords": ["school"],
     "public": true
 }
 
@@ -40,15 +43,14 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
         <ProjectLayout ref={ref} meta={metadata}>
             <Content>
 
-                <Youtube md={6} lg={7} id="ChmfrNm9mJk"/>
-                <Text md={6} lg={3}>
-                    <p>Movie with no image, sound illusion of a fictionnal hideout.</p>
+                <Picture md={6} src={img2}></Picture>
+                <Text md={6} lg={3} xl={2}>
+                    <p>Vyrobil jsem "kopii" vysokoškolských skript a tajně jsem ji podvrhl do univerzitní knihovny.</p>
                 </Text>
-
-                <Picture md={6} lg={3} src={img1}></Picture>
-                <Picture md={6} lg={3} src={img2}></Picture>
-                <Picture md={6} lg={3} src={img3}></Picture>
-                <Picture md={6} lg={3} src={img4}></Picture>
+                <Picture md={6} lg={4} src={img4}></Picture>
+                <Picture md={8} src={img1}></Picture>
+                <Picture md={6} lg={3} src={img5}></Picture>
+                <Picture md={6} src={img3}></Picture>
 
             </Content>
 
