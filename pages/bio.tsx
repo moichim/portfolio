@@ -29,9 +29,7 @@ function IndexPage() {
 
                     <p>Dělám grafiku a programování okolo webu a interaktivních instalací.</p>
 
-                    <p>Profesně působím povětšinou někde poblíž vzdělávání, popularizaci vědy a interaktivních projektů pro děti. Mám zkušenosti s tvorbou vzdělávacích exponátů a materiálů pro online vzdělávání.</p>
-
-                    <p>Domluvím se s marketéry i s didaktiky.</p>
+                    <p>Profesně působím povětšinou někde poblíž vzdělávání, popularizace vědy a interaktivních projektů pro děti. Mám zkušenosti s tvorbou vzdělávacích exponátů a materiálů pro online vzdělávání. Domluvím se s marketéry i s didaktiky.</p>
 
                     <ul>
                         <li>webový vývoj provozuji dle současných standardů (<Link href="/code">co umím</Link>)</li>
