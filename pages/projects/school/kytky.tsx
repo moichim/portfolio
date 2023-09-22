@@ -75,7 +75,6 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 <Picture md={6} lg={3} src={img8}></Picture>
                 <Picture md={6} lg={3} src={img9}></Picture>
                 <Picture md={6} lg={3} src={img10}></Picture>
-                <Picture md={6} lg={3} src={img10}></Picture>
                 <Picture md={6} lg={3} src={img11}></Picture>
                 <Picture md={6} lg={3} src={img12}></Picture>
                 <Picture md={6} lg={3} src={img13}></Picture>

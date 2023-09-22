@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 	}],
 	"image": "/cvt/thumb.jpg",
 	"color": "#141626",
-	"year": 2017,
+	"year": 2020,
 	"month": 4,
 	"day": 11,
 	"keywords": [ "design", "featured", "code" ],

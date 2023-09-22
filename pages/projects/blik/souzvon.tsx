@@ -11,6 +11,7 @@ import { forwardRef } from "react"
 import img1 from "@/public/souzvon/1.jpg"
 import img2 from "@/public/souzvon/2.jpg"
 import img3 from "@/public/souzvon/3.jpg"
+import img4 from "@/public/souzvon/4.jpg"
 import img5 from "@/public/souzvon/5.jpg"
 import img6 from "@/public/souzvon/6.png"
 
@@ -46,7 +47,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 <Picture md={6} lg={3} src={img1} />
                 <Partial md={6} lg={3}>
                     <Text>Světelná instalace využívající Kinect, mlhu a algoritmickou hudební kompozici.</Text>
-                    <Picture src={img2} />
+                    <Picture src={img4} />
                 </Partial>
                 <Text md={6} lg={3}>
                     <p>Je-li světelný objekt nerušen, žije svým vlastním životem. Paprsky se udržují v nekonečném rytmickém pohybu a temně duní.</p>
@@ -57,7 +58,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 <Picture md={6} lg={3} src={img2} />
                 <Partial md={6}>
                     <Youtube id="tNBG_siHMxY" />
-                    <Youtube id="QEU6CLzeBQQ" />
+                    <Youtube id="QEU6CLzeBQQ">Takto vypadá samotná projekce</Youtube>
                 </Partial>
                 <Text md={6} xl={3}>
 

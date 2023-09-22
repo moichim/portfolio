@@ -33,7 +33,7 @@ function ProjectLayout(props: ProjectProps, ref: PageTransitionRef) {
 
                 <header className={styles.header}>
                     <h1>{props.meta.title}</h1>
-                    <p>{props.meta.description}</p>
+                    <p>{props.meta.description} ({props.meta.year})</p>
                 </header>
 
                 <div className={styles.content}>
