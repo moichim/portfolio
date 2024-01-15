@@ -59,19 +59,26 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             technology="Frontend"
                             features={[
                                 {
-                                    name: "Next.js, Gatsby.js",
-                                    years: "cca 3 roky",
-                                    desc: "Několik menších webů jsem realizoval s pomocí moderních generátorů."
+                                    name: "Next.js",
+                                    years: "od roku 2023",
+                                    referencies: [
+                                        { name: "Mikroklima", link: "/projects/ntc/meteo" }
+                                    ]
+                                },
+                                {
+                                    name: "Gatsby.js",
+                                    years: "2019 - 2020",
+                                    desc: "Realizoval jsem několik prezentačních webových aplikací."
                                 },
                                 {
                                     name: "React.js",
-                                    years: "cca 4 roky",
-                                    desc: "Realizoval jsem několik komplexních aplikací jako jsou složitější formuláře, datagridy anebo dashboardy pro vizualizaci dat."
+                                    years: "od roku 2019",
+                                    desc: "Vizualizace dat, formuláře, datagridy či dashboardy."
                                 },
                                 {
                                     name: "Electron.js",
                                     years: "cca 2 roky",
-                                    desc: "Realizoval jsem několik interaktivních kiosků běžících na Rapsberry PI.",
+                                    desc: "Interaktivní kiosky běžící na Rapsberry PI.",
                                     referencies: [
                                         { name: "Blablátor", link: "/projects/blik/blablator" }
                                     ]
@@ -82,7 +89,7 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 
                                 {
                                     name: "CSS",
-                                    years: "cca 7 let",
+                                    years: "od roku 2014",
                                     desc: "Tailwind.css, CSS modules, BEM"
                                 },
                                 {
@@ -95,7 +102,7 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 {
                                     name: "Angular",
                                     minor: true,
-                                    desc: "Realioval jsem v něm 1 menší interaktivní projekt.",
+                                    // desc: "Realioval jsem v něm 1 menší interaktivní projekt.",
                                     referencies: [
                                         { name: "Blablátor", link: "/projects/blik/blablator" }
                                     ]
@@ -115,9 +122,18 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             technology="Backend"
                             features={[
                                 {
+                                    name: "GraphQL",
+                                    desc: "Implementoval jsem Apollo server v Next.js. Data v Gatsby.js čtu z GraphQL."
+                                },
+                                {
+                                    minor: true,
+                                    name: "Nodejs",
+                                    desc: "Implementoval jsem Apollo server, v rámci Electron.js využívám jednodušší Express.js server."
+                                },
+                                {
                                     name: "Nette",
                                     years: "od roku 2020",
-                                    desc: "Reallizoval jsem v Nette 1 vetší projekt.",
+                                    desc: "Vyvimul jsem středně velký vzdělávací portál.",
                                     referencies: [
                                         { name: "edu.labir.cz", link: "https://edu.labir.cz" }
                                     ]
@@ -142,12 +158,6 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                         { name: "matej.rizek.serchan.cz", link: "http://matej.rizek.serchan.cz/" }
                                     ]
                                 },
-                                {
-                                    minor: true,
-                                    name: "Express.js",
-                                    desc: "V rámci Electron.js jsem jednoduchým způsobem implementoval webový server."
-                                },
-                                
 
 
                             ]}
@@ -173,8 +183,8 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             features={[
                                 {
                                     name: "Processing.org",
-                                    years: "cca 7 let",
-                                    desc: <span>Ovládám framework <a href="https://processing.org" target="_blank">Processing.org</a> pro interaktivní aplikace v jazyce JAVA. Prošel jsem si knihu <a target="_blank" href="https://natureofcode.com/">Nature of Code</a> od Daniela Shiffmana.</span>,
+                                    years: "od roku 2015",
+                                    desc: <span>Ovládám framework <a href="https://processing.org" target="_blank">Processing.org</a> pro interaktivní aplikace v Javě.</span>,
                                     referencies: [
                                         { name: "Projekty v Processingu", link: "/processing" }
                                     ]
@@ -185,11 +195,13 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     desc: "Absolvoval jsem základní kurz skriptování."
                                 },
                                 {
-                                    name: "openFrameworks",
-                                    minor: true,
-                                    desc: "Jednodušší aplikace, která, která poslouchala OSC signály a podle určité logiky překládala je na jiné OSC signály za účelem ovládání různých zařízení z jednoho místa."
-                                }
-
+                                    name: "Blender 3D",
+                                    years: "od roku 2018",
+                                    // minor: true,
+                                    referencies: [
+                                        { name: "Projekty v Blenderu", link: "/blender" }
+                                    ]
+                                },
 
                             ]}
 

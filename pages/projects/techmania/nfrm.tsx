@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 	"year": 2018,
 	"month": 7,
 	"day": 25,
-	"keywords": [ "design" ],
+	"keywords": [ "design", "blender" ],
 	"public": true
 }
 
