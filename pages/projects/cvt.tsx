@@ -7,6 +7,8 @@ import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
 import { forwardRef } from "react"
 
+import 'react-device-frameset/styles/marvel-devices.min.css'
+
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
@@ -17,6 +19,9 @@ import img4 from "@/public/cvt/ep_4.png"
 import img5 from "@/public/cvt/ep_5.png"
 import img6 from "@/public/cvt/ep_6.png"
 import img7 from "@/public/cvt/ep_7.png"
+import { DeviceFrameset } from "react-device-frameset"
+import { Interactive } from "@/components/utils/interactive/Interactive"
+import Partial from "@/components/content/partials/Partial"
 
 
 export const metadata: Metadata = {
@@ -41,27 +46,47 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
 	return (
 		<ProjectLayout ref={ref} meta={metadata}>
-			<Content>
+			<Content>				
 
                 <Youtube md={6} lg={9}  id="PLF4CI3BLHc" />
 
                 <Text md={6} lg={3}>
                     <p>S příchodem pandemie covid-19 v březnu 2020 jsem pro Člověka v tísni navrhl kampaň propagující dluhové poradenství. Kampaň měla cílit na občany řešící náhlý výpadek příjmů.</p>
                     <p>Vymyslel jsem design a animace. Nakódoval jsem <a href="http://expecto-patronum.serchan.cz" target="_blank">interaktivní prototyp</a> landing page.</p>
-                    <p><small>Prototyp by ještě zasloužil trochu odladit. Ale nezbyla nám na to už energie.</small></p>
 
-                    <p><small>3D animace oceánu vychází z implementace <a href="https://threejs.org/" target="_blank">three.js</a> v opensource repozitáři <a href="https://github.com/jbouny/ocean" target="_blank">jbouny/ocean</a>.</small></p>
-
-                    <p><small>Kampaň využívá symboly z Harryho Pottera, k čemuž se nám nepodařilo vyjednat svolení.</small></p>
                 </Text>
 
-				<Picture md={8} src={img1} />
-                <Picture md={8} src={img2} />
-                <Picture md={8} src={img3} />
-                <Picture md={8} src={img4} />
-                <Picture md={8} src={img5} />
-                <Picture md={8} src={img6} />
-                <Picture md={8} src={img7} />
+				<div style={{width:"100%", textAlign: "center", paddingTop: "3rem"}}>
+
+					<div style={{position: "relative"}}>
+					
+						<DeviceFrameset device="MacBook Pro" color="gold">
+							<iframe width="100%" height="100%" src="http://expecto-patronum.serchan.cz/"></iframe>
+						</DeviceFrameset>
+						<Interactive>Interakvitní</Interactive>
+
+					</div>
+				</div>
+
+				<div style={{width:"100%", textAlign: "center", paddingTop: "3rem"}}>
+
+					<div style={{position: "relative"}}>
+					
+						<DeviceFrameset device="iPhone X" color="gold">
+							<iframe width="100%" height="100%" src="http://expecto-patronum.serchan.cz/"></iframe>
+						</DeviceFrameset>
+						<Interactive>Interakvitní</Interactive>
+
+					</div>
+				</div>
+
+				<Picture md={6} src={img1} />
+                <Picture md={6} src={img2} />
+                <Picture md={6} src={img3} />
+                <Picture md={6} src={img4} />
+                <Picture md={6} src={img5} />
+                <Picture md={6} src={img6} />
+                <Picture md={6} src={img7} />
 
 			</Content>
 

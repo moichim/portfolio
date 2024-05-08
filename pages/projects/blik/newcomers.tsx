@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "year": 2020,
     "month": 2,
     "day": 1,
-    "keywords": ["interactive", "featured", "code", "processing", "supercollider"],
+    "keywords": ["interactive", "code", "processing", "supercollider"],
     "public": true
 }
 
@@ -107,10 +107,10 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
                 <Text>
                     <div style={{paddingTop: "4rem", textAlign: "center"}}>
-                        <audio src="/prichozi/prichozi.wav" controls/>
+                        {/*<audio src="/prichozi/prichozi.wav" controls/>*/}
                         <br />
                         <br />
-                        <p>I am sorry, I havent found any better documentation.</p>
+                        <p>I am sorry, I am looking for a documentation.</p>
                     </div>
                 </Text>
 

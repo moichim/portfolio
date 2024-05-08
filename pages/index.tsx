@@ -13,7 +13,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps> ) {
         above={
             <IndexText>
                 <p className="mobileOnly">Jmenuji se Jan Jáchim.</p>
-                <p>Dělám <Link href="/code">kód</Link>, <Link href="/design">design</Link> a  <Link href="/interactive">interaktivní projekty</Link>. <em>Snažím se to dělat normálně.</em></p>
+                <p>Dělám <Link href="/code">kód</Link>, <Link href="/design">design</Link> a <Link href="/interactive">interaktivní projekty</Link>.</p>
             </IndexText>
         }
     />;

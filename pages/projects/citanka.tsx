@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 	}],
 	"image": "/citanka/thumb.jpg",
 	"color": "#54401f",
-	"year": 2009,
+	"year": 2022,
 	"month": 4,
 	"day": 31,
 	"keywords": [ "design" ],

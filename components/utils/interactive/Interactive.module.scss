@@ -1,0 +1,26 @@
+@keyframes wiggle {
+    from {transform: translateY(-.7rem);}
+    50% {transform: translateY(0rem);}
+    to {transform: translateY(-.7rem)}
+  }
+
+.container {
+
+    position: absolute;
+    top: -1.5rem;
+    left: calc( 50% - 150px );
+    width: 300px;
+
+    color: variable( primary );
+    font-size: .7rem;
+    text-align: center;
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.arrow {
+    margin-top: -.5rem
+}

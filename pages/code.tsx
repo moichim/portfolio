@@ -61,15 +61,12 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 {
                                     name: "Next.js",
                                     years: "od roku 2023",
+                                    desc: "V Next.js vyvíjím aplikaci pro vzdělávání a výzkum - webové rozhraní pro analýzu termogramů v kontextu meterologických dat.",
                                     referencies: [
                                         { name: "Mikroklima", link: "/projects/ntc/meteo" }
                                     ]
                                 },
-                                {
-                                    name: "Gatsby.js",
-                                    years: "2019 - 2020",
-                                    desc: "Realizoval jsem několik prezentačních webových aplikací."
-                                },
+                                
                                 {
                                     name: "React.js",
                                     years: "od roku 2019",
@@ -100,6 +97,12 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     // desc: "V rámci Electron.js jsem jednoduchým způsobem implementoval webový server."
                                 },
                                 {
+                                    name: "Gatsby.js",
+                                    years: "2019 - 2020",
+                                    desc: "Pro klienty jsem realizoval prezentační webové aplikace.",
+                                    minor: true
+                                },
+                                {
                                     name: "Angular",
                                     minor: true,
                                     // desc: "Realioval jsem v něm 1 menší interaktivní projekt.",
@@ -108,12 +111,11 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     ]
                                 },
                                 {
-                                    name: "three.js / React Three Fiber",
-                                    minor: true
-                                },
+                                    name: "Vue 3",
+                                    minor: true,
+                                    // desc: "Realioval jsem v něm 1 menší interaktivní projekt.",
+                                }
                                 
-
-
                             ]}
 
                         />
@@ -123,17 +125,17 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             features={[
                                 {
                                     name: "GraphQL",
-                                    desc: "Implementoval jsem Apollo server v Next.js. Data v Gatsby.js čtu z GraphQL."
+                                    desc: "Implementoval jsem ApolloServer v Next.js. Používám @apollo/client."
                                 },
                                 {
                                     minor: true,
                                     name: "Nodejs",
-                                    desc: "Implementoval jsem Apollo server, v rámci Electron.js využívám jednodušší Express.js server."
+                                    desc: "V Electron.js využívám Express.js, v Next.js využívám @apollo/server."
                                 },
                                 {
                                     name: "Nette",
                                     years: "od roku 2020",
-                                    desc: "Vyvimul jsem středně velký vzdělávací portál.",
+                                    desc: "Vyvinul jsem středně velký portál pro sdílení vzdělávacího obsahu a zapůjčování termokamer.",
                                     referencies: [
                                         { name: "edu.labir.cz", link: "https://edu.labir.cz" }
                                     ]
@@ -141,10 +143,7 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 {
                                     name: "Wordpress",
                                     years: "od roku 2015",
-                                    desc: "Na Wordpressu jsem začínal. Resp. ještě předtím jsem začal s Drupalem...",
-                                    referencies: [
-                                        { name: "pronajmy-epre.cz", link: "https://pronajmy-epre.cz" }
-                                    ]
+                                    desc: "Na Wordpressu jsem začínal. Vyvíjel jsem custom šablony a pluginy pro klienty."
                                 },
                                 {
                                     name: "MySQL / MariaDB"
