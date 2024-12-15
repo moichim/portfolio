@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "year": 2011,
     "month": 4,
     "day": 17,
-    "keywords": ["school"],
+    "keywords": ["school", "featured", "interactive"],
     "public": true
 }
 

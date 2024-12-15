@@ -1,0 +1,42 @@
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: "10px";
+
+    padding-bottom: 1rem;
+
+    @include upto( sm ) {
+
+        flex-direction: column;
+
+    }
+
+    @include up( sm ) {
+
+    }
+
+    & > i {
+        display: block;
+        font-style: normal;
+        padding: 10px;
+    }
+
+}
+
+.component {
+    background: var(--thermal-slate-light);
+    border-radius: var(--thermal-radius);
+    text-align: center;
+    padding: .3rem .5rem;
+}
+
+.mark {
+
+}
+
+.hint {
+    font-size: .6rem;
+}
