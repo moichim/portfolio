@@ -59,18 +59,22 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             technology="Frontend"
                             features={[
                                 {
-                                    name: "Next.js",
-                                    years: "od roku 2023",
-                                    desc: "V Next.js vyvíjím aplikaci pro vzdělávání a výzkum - webové rozhraní pro analýzu termogramů v kontextu meterologických dat.",
-                                    referencies: [
-                                        { name: "Mikroklima", link: "/projects/ntc/meteo" }
-                                    ]
-                                },
-                                
-                                {
                                     name: "React.js",
                                     years: "od roku 2019",
                                     desc: "Vizualizace dat, formuláře, datagridy či dashboardy."
+                                },
+                                {
+                                    name: "Next.js",
+                                    years: "od roku 2023",
+                                    desc: "V Next.js vyvíjím webové rozhraní pro analýzu termogramů v kontextu meterologických dat.",
+                                },
+                                {
+                                    name: "webcomponents & Lit.js",
+                                    years: "od roku 2024",
+                                    desc: "Vyvíjím open-source knihovnu webkomponent pro práci se snímky z termokamer",
+                                    referencies: [
+                                        { name: "@labir/embed", link: "/projects/ntc/labir" }
+                                    ]
                                 },
                                 {
                                     name: "Electron.js",
@@ -85,22 +89,16 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 },
                                 
                                 {
-                                    name: "CSS",
-                                    years: "od roku 2014",
-                                    desc: "Tailwind.css, CSS modules, BEM"
+                                    name: "SCSS, Tailwind & spol."
                                 },
                                 {
                                     name: "p5.js",
                                 },
                                 {
-                                    name: "Lottie Files",
-                                    // desc: "V rámci Electron.js jsem jednoduchým způsobem implementoval webový server."
-                                },
-                                {
-                                    name: "Gatsby.js",
-                                    years: "2019 - 2020",
-                                    desc: "Pro klienty jsem realizoval prezentační webové aplikace.",
-                                    minor: true
+                                    name: "Phaser.js",
+                                    referencies: [
+                                        { name: "Monnom studio", link: "/projects/monnom" }
+                                    ]
                                 },
                                 {
                                     name: "Angular",
