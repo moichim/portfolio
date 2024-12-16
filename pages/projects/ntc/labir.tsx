@@ -135,7 +135,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
         if (!hasScript()) {
             const script = document.createElement("script");
-            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.2.63/+esm'"
+            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.2.64/+esm'"
             script.type = "module";
             script.id = SCIRPT_ID;
             document.head.appendChild(script);
