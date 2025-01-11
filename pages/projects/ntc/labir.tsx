@@ -152,7 +152,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
     return (<>
         <Head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.2.62/dist/embed.min.css"></link>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.2.64/dist/embed.min.css"></link>
         </Head>
         <ProjectLayout ref={ref} meta={metadata}>
             <Content>
