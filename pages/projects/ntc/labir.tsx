@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     "year": 2024,
     "month": 12,
     "day": 1,
-    "keywords": ["code", "featured"],
+    "keywords": ["code", ],
     "public": true
 }
 
-const SCIRPT_ID = "@labir/embed/js";
-const STYPE_ID = "@labir/embed/css";
+export const SCIRPT_ID = "@labir/embed/js";
+export const STYPE_ID = "@labir/embed/css";
 
 type PieceTypes = React.PropsWithChildren & {
     hint?: React.ReactNode
@@ -135,7 +135,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
         if (!hasScript()) {
             const script = document.createElement("script");
-            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.2.64/+esm'"
+            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.2.67/+esm'"
             script.type = "module";
             script.id = SCIRPT_ID;
             document.head.appendChild(script);
@@ -152,7 +152,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
     return (<>
         <Head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.2.64/dist/embed.min.css"></link>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.2.67/dist/embed.min.css"></link>
         </Head>
         <ProjectLayout ref={ref} meta={metadata}>
             <Content>
@@ -174,7 +174,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 </Partial>
 
                 <Partial md={12} lg={7}>
-                    <thermal-file-analyser
+                    <thermal-file-app
                         url="/labir/snimek.lrc"
                         label="Analýza jednoho souboru"
                         license="CC BY-SA 4.0"
@@ -183,8 +183,9 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                         ref={showcaseRef}
                         analysis1={analysis1}
                         analysis2={analysis2}
-                        showhistogram="false"
-                    ></thermal-file-analyser>
+                        // showhistogram="false"
+                        layout="advanced"
+                    ></thermal-file-app>
                 </Partial>
 
                 <Partial md={12} lg={5}>

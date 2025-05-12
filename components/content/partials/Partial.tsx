@@ -8,7 +8,8 @@ export type PartialProps = React.PropsWithChildren & {
     [index in Breakpoint]?: number
 } & {
     xs?: number,
-    type?: "image"|"video"|"text"|"audio"|"bare"|"external"
+    type?: "image"|"video"|"text"|"audio"|"bare"|"external",
+    className?: string
 }
 
 const Element: React.FC<PropsWithChildren & {
@@ -39,6 +40,10 @@ const Partial: React.FC<PartialProps> = ({
             classes.push( styles[`col-${bp}-${props[bp]}`] );
         }
     } );
+
+    if ( props.className ) {
+        classes.push( props.className );
+    }
 
     return <div className={clsx( classes )}>
         <Element type={type} className={styles.wrapper}>
