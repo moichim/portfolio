@@ -1,15 +1,9 @@
 import Content from "@/components/content/Content"
-import BioItem from "@/components/content/page/BioItem"
-import IndexText from "@/components/content/page/IndexText"
 import Partial from "@/components/content/partials/Partial"
 import Text from "@/components/content/partials/Text"
 import PageLayout from "@/components/layout/page/PageLayout"
-import ListLayout from "@/components/layout/projects/ListLayout"
-import ProjectsManager from "@/data/ProjectsManager"
-import { InferGetStaticPropsType } from "next"
-import { Link } from "@madeinhaus/nextjs-page-transition"
-import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { formatTitle } from "@/components/utils/formatters"
+import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import Head from "next/head"
 
 function IndexPage() {

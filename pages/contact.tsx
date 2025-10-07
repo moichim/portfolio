@@ -1,12 +1,8 @@
 import Content from "@/components/content/Content"
 import Text from "@/components/content/partials/Text"
 import PageLayout from "@/components/layout/page/PageLayout"
-import ProjectGrid from "@/components/listing/ProjectGrid"
 import { formatTitle } from "@/components/utils/formatters"
-import ProjectsManager from "@/data/ProjectsManager"
-import { InferGetStaticPropsType } from "next"
 import Head from "next/head"
-import { forwardRef } from "react"
 
 function IndexPage() {
 

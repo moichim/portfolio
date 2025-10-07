@@ -1,21 +1,16 @@
 import IndexText from "@/components/content/page/IndexText"
-import ListLayout from "@/components/layout/projects/ListLayout"
 import ProjectsManager from "@/data/ProjectsManager"
-import { InferGetStaticPropsType } from "next"
 import { Link } from "@madeinhaus/nextjs-page-transition"
+import { InferGetStaticPropsType } from "next"
 
 import FrontLayout from "@/components/layout/projects/FrontLayout"
 
-import img1 from "@/public/blik/labordy-sanau/radio_1_B.jpg"
-import Picture from "@/components/content/partials/Picture"
-import Content from "@/components/content/Content"
-import Text from "@/components/content/partials/Text"
 import { Thumbnail } from "@/components/content/partials/Thumbnail"
-import { useCallback, useEffect } from "react"
-import { SCIRPT_ID } from "./projects/ntc/labir"
-import Partial from "@/components/content/partials/Partial"
+import img1 from "@/public/blik/labordy-sanau/radio_1_B.jpg"
 import Head from "next/head"
 import Image from "next/image"
+import { useCallback, useEffect } from "react"
+import { SCIRPT_ID } from "./projects/ntc/labir"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
@@ -96,7 +91,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
             </Thumbnail>
 
-            <h2 style={{marginBottom: "5rem"}}>Další projekty</h2>
+            <h2 style={{ marginBottom: "5rem" }}>Další projekty</h2>
 
         </FrontLayout>
     </>;

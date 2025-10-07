@@ -5,8 +5,8 @@ import { Metadata as Meta } from "next";
 
 export type Metadata = Meta & {
     title: string,
-	image: string,
-	color?: string,
+    image: string,
+    color?: string,
     keywords: string[],
     year: number,
     month: number,
@@ -104,10 +104,12 @@ class ProjectsManager {
                                 .replace("pages", "")
                                 .replaceAll(".tsx", "")
                                 .replaceAll("\\", "/");
+
+                            // CHYBÍ TOTO!
                             projects.push(parsed);
 
                         } catch (e) {
-                            console.error(`Projekt "${file}" does has invalid metadata declaration:`, sanitized, e );
+                            console.error(`Projekt "${file}" does have invalid metadata declaration:`, sanitized, e);
                         }
 
                     }
@@ -118,13 +120,13 @@ class ProjectsManager {
 
         }
 
-        const sortByNumericField = ( a: ProjectMetadata, b: ProjectMetadata, key: keyof ProjectMetadata ): number | false => {
-            
-            const valA = a[ key ]!;
-            const valB = b[ key ]!;
+        const sortByNumericField = (a: ProjectMetadata, b: ProjectMetadata, key: keyof ProjectMetadata): number | false => {
+
+            const valA = a[key]!;
+            const valB = b[key]!;
 
             // If equal, return false
-            if ( valA === valB ) return false;
+            if (valA === valB) return false;
 
             // Otherwise, return number
             return valA >= valB ? -1 : 1;
@@ -133,18 +135,18 @@ class ProjectsManager {
         }
 
         // Order found projects by date and title
-        projects = projects.sort( ( a, b ) => {
-            
-            const numericFields = [ "year", "month", "day" ] as (keyof ProjectMetadata)[]
+        projects = projects.sort((a, b) => {
 
-            for ( const key of numericFields ) {
-                const result = sortByNumericField( a, b, key );
-                if ( result !== false ) return result;
+            const numericFields = ["year", "month", "day"] as (keyof ProjectMetadata)[]
+
+            for (const key of numericFields) {
+                const result = sortByNumericField(a, b, key);
+                if (result !== false) return result;
             }
 
-            return a.title.localeCompare( b.title );
+            return a.title.localeCompare(b.title);
 
-        } );
+        });
 
         return projects;
 
@@ -157,20 +159,20 @@ class ProjectsManager {
 
     }
 
-    public static getProjects( options: {
+    public static getProjects(options: {
         keyword?: string,
         visibility?: boolean
     } = {}): ProjectMetadata[] {
 
         let projects = ProjectsManager.getAllProjectsMetadata();
 
-        if ( "keyword" in options )
-        if ( options.keyword !== undefined )
-            projects = projects.filter( project => project.keywords.includes( options.keyword! ) );
+        if ("keyword" in options)
+            if (options.keyword !== undefined)
+                projects = projects.filter(project => project.keywords.includes(options.keyword!));
 
-        if ( "visibility" in options )
-        if ( options.visibility !== undefined )
-            projects = projects.filter( project => project.public === options.visibility );
+        if ("visibility" in options)
+            if (options.visibility !== undefined)
+                projects = projects.filter(project => project.public === options.visibility);
 
         return projects;
 
