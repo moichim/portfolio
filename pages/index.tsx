@@ -11,6 +11,7 @@ import Head from "next/head"
 import Image from "next/image"
 import { useCallback, useEffect } from "react"
 import { SCIRPT_ID } from "./projects/ntc/labir"
+import Youtube from "@/components/content/partials/Youtube"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
@@ -52,27 +53,34 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
             <Thumbnail
                 ltr={true}
-                badge="Připravovaná výstava"
+                badge="Léto 2025"
                 title="Laboratoř zvuků"
-                bg="#9bf2ef"
+                subtitle="Interaktivní instalace v DEPO2025, Plzeň"
+                bg="#292929ff"
+                bgHover="#3b3b3bff"
+                color="white"
                 text={<>
-                    <p>Interaktivní expozice pro&nbsp;děti</p>
-                    <p>↓</p>
                     <p>léto 2025,<br />DEPO2015,<br />Plzeň</p>
                 </>}
-                content={<Link href="/projects/blik/laborator-zvuku"><Image src={img1} alt="Něco tu je" style={{ width: "100%", height: "auto", display: "block" }} /></Link>}
-                href="/projects/blik/laborator-zvuku"
+                content={
+                    <Youtube id="o139xA2kJLo" />
+                }
+                href="/projects/blik/pipak"
             >
 
             </Thumbnail>
 
             <Thumbnail
-                badge="Opensource knihovna"
+                badge="Od roku 2024"
                 title="@labir/embed"
+                subtitle="Open-source knihovny (TypeScript)"
                 bg={"#4b224d"}
+                bgHover={"#741e77ff"}
                 color="white"
 
-                text={<p>Pracujte se snímky z termokamer v prohlížeči.</p>}
+                text={<div style={{opacity: .5}}>
+                    <p>Ekosystém TS knihoven pro práci se snímky z termokamer ve webovém prohlížeči.</p>
+                </div>}
                 ltr={false}
                 content={<div style={{ padding: "1rem" }}>
                     <thermal-file-app
