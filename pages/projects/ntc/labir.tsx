@@ -135,7 +135,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
         if (!hasScript()) {
             const script = document.createElement("script");
-            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.2.67/+esm'"
+            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/+esm'"
             script.type = "module";
             script.id = SCIRPT_ID;
             document.head.appendChild(script);
@@ -152,7 +152,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
     return (<>
         <Head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.2.67/dist/embed.min.css"></link>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/dist/embed.min.css"></link>
         </Head>
         <ProjectLayout ref={ref} meta={metadata}>
             <Content>
@@ -176,7 +176,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 <Partial md={12} lg={7}>
                     <thermal-file-app
                         url="/labir/snimek.lrc"
-                        label="Analýza jednoho souboru"
+                        label="Ukázka"
                         license="CC BY-SA 4.0"
                         author="Jan Jáchim"
                         palette={palette}
@@ -184,6 +184,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                         analysis1={analysis1}
                         analysis2={analysis2}
                         // showhistogram="false"
+                        showfullscreen="false"
                         layout="advanced"
                     ></thermal-file-app>
                 </Partial>
@@ -198,7 +199,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                         {`<!-- Nejjednodušší verze webcomponenty -->
 <thermal-file-app 
     url="/labir/snimek.lrc" 
-    label="Analýza jednoho souboru"
+    label="Ukázka"
     palette="${palette}"${analysis1 ? `
     analysis1="${analysis1}"` : ""}${analysis2 ? `
     analysis2="${analysis2}"` : ""}${analysis3 ? `

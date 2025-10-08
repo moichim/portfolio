@@ -23,7 +23,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
         if (!hasScript()) {
             const script = document.createElement("script");
-            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.2.67/+esm'"
+            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/+esm'"
             script.type = "module";
             script.id = SCIRPT_ID;
             document.head.appendChild(script);
@@ -38,7 +38,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
     return <>
 
         <Head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.2.67/dist/embed.min.css"></link>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/dist/embed.min.css"></link>
         </Head>
         <FrontLayout
             projects={props.projects}
@@ -76,14 +76,13 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 ltr={false}
                 content={<div style={{ padding: "1rem" }}>
                     <thermal-file-app
-                        url="/labir/snimek.lrc"
+                        url="/labir/velbloud.lrc"
                         label="LabIR Edu Analyser"
                         license="CC BY-SA 4.0"
                         author="Jan Jáchim"
-                        palette="jet"
+                        palette="iron"
                         layout="advanced"
-                        analysis1="Analýza A;rectangle;color:Blue;top:14;left:8;width:65;height:31"
-                        analysis2="Analýza B;ellipsis;color:Green;top:34;left:102;width:34;height:47"
+                        showfullscreen="false"
                     ></thermal-file-app>
                 </div>}
                 href="/projects/ntc/labir"

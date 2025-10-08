@@ -57,6 +57,9 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             technology="Frontend"
                             features={[
                                 {
+                                    name: "Typescript"
+                                },
+                                {
                                     name: "React.js",
                                     years: "od roku 2019",
                                     desc: "Vizualizace dat, formuláře, datagridy či dashboardy."
@@ -77,14 +80,9 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                 {
                                     name: "Electron.js",
                                     years: "cca 2 roky",
-                                    desc: "Interaktivní kiosky běžící na Rapsberry PI.",
-                                    referencies: [
-                                        { name: "Blablátor", link: "/projects/blik/blablator" }
-                                    ]
+                                    desc: "Kiosky pro vizualizaci dat na Rapsberry Pi. Ovladače interaktivních aplikací a projekcí."
                                 },
-                                {
-                                    name: "Typescript"
-                                },
+                                
                                 
                                 {
                                     name: "SCSS, Tailwind & spol."
@@ -99,12 +97,15 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     ]
                                 },
                                 {
+                                    name: "Babylon.js",
+                                },
+                                {
+                                    name: "WebGPU",
+                                    desc: "Využívám pro tvorbu výkonných ovladačů interaktivních instalací a projekcí."
+                                },
+                                {
                                     name: "Angular",
-                                    minor: true,
-                                    // desc: "Realioval jsem v něm 1 menší interaktivní projekt.",
-                                    referencies: [
-                                        { name: "Blablátor", link: "/projects/blik/blablator" }
-                                    ]
+                                    minor: true
                                 },
                                 {
                                     name: "Vue 3",

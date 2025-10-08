@@ -55,6 +55,7 @@ const Feature: React.FC<FeaturePropType> = props => {
     const detail = props.desc || props.years || props.referencies
         ? <div className={styles.detail}>
             <div className={styles.clip}>
+                {props.name && <h4>{props.name}</h4>}
                 {props.years && <p>{props.years}</p>}
                 {props.desc && <p>{props.desc}</p>}
                 {props.referencies && <div>

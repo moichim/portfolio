@@ -34,7 +34,7 @@ const small = ((16 / 9) * 100) + "%";
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
 
-	useScheme([{ bg: "#eee" }, { bg: "black" }]);
+	useScheme([{ bg: "#e7efffff" }, { bg: "black" }]);
 
 	const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -88,7 +88,8 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 						width: "100%",
 						paddingTop: height,
 						overflow: "hidden",
-						position: "relative"
+						position: "relative",
+						background: "black"
 					}}>
 						<iframe
 							ref={iframeRef}
