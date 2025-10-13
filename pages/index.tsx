@@ -65,7 +65,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 content={
                     <Youtube id="o139xA2kJLo" />
                 }
-                href="/projects/blik/pipak"
+                href="/projects/blik/fflach-01"
             >
 
             </Thumbnail>
