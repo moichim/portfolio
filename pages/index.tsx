@@ -12,6 +12,7 @@ import Image from "next/image"
 import { useCallback, useEffect } from "react"
 import { SCIRPT_ID } from "./projects/ntc/labir"
 import Youtube from "@/components/content/partials/Youtube"
+import Content from "@/components/content/Content"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
@@ -63,7 +64,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                     <p>léto 2025,<br />DEPO2015,<br />Plzeň</p>
                 </>}
                 content={
-                    <Youtube id="o139xA2kJLo" />
+                        <Youtube id="o139xA2kJLo" wrap={false} />
                 }
                 href="/projects/blik/fflach-01"
             >

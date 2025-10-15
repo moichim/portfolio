@@ -1,12 +1,20 @@
 import { PropsWithChildren } from "react";
 
 import styles from "./Content.module.scss"
+import clsx from "clsx";
 
-const Content: React.FC<PropsWithChildren> = props => {
+const Content: React.FC<PropsWithChildren<{
+    wrap?: boolean
+}>> = ({ wrap = true, children }) => {
+
+    const classes = clsx([
+        styles.wrapper,
+        wrap ? styles.wrap : styles.nowrap
+    ]);
 
     return <div className={styles.container}>
-        <div className={styles.wrapper}>
-        {props.children}
+        <div className={classes}>
+            {children}
         </div>
     </div>
 

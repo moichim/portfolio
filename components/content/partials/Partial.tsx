@@ -9,7 +9,8 @@ export type PartialProps = React.PropsWithChildren & {
 } & {
     xs?: number,
     type?: "image"|"video"|"text"|"audio"|"bare"|"external",
-    className?: string
+    className?: string,
+    wrap?: boolean
 }
 
 const Element: React.FC<PropsWithChildren & {
@@ -26,13 +27,15 @@ const Element: React.FC<PropsWithChildren & {
 const Partial: React.FC<PartialProps> = ({
     xs = 12,
     type = "bare",
+    wrap = true,
     ...props
 }) => {
 
     const classes: string[] = [
         styles.container,
         styles[type],
-        styles[`col-xs-${xs}` ]
+        styles[`col-xs-${xs}`],
+        wrap ? styles.wrap : styles.nowrap
     ];
 
     ( ["sm","md","lg","xl"] as Breakpoint[] ).forEach( (bp) => {
