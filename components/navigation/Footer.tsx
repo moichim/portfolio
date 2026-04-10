@@ -35,9 +35,9 @@ const Footer: React.FC = () => {
             </ul>
         </nav>
         <section className={styles.footer}>
-            <p>© 2015 - 2023 Jan Jáchim</p>
-            <p>Nakódováno v Next.js</p>
-            <p><a href="https://github.com/moichim/portfolio" target="_blank">github</a></p>
+            <p>© 2015 - 2026 Jan Jáchim</p>
+            <p>Website created using Next.js</p>
+            <p><a href="https://github.com/moichim" target="_blank">github</a></p>
         </section>
     </footer>
 

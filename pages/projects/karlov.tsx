@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 	"month": 10,
 	"day": 10,
 	"keywords": [ "design" ],
-	"public": true
+	"public": false
 }
 
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {

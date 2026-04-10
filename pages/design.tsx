@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            projects: ProjectsManager.getProjects( {keyword: "design" } )
+            projects: ProjectsManager.getProjects( {keyword: "design", publicFilter: true } )
         }
     }
 

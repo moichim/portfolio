@@ -24,7 +24,7 @@ type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
 
 export const metadata: Metadata = {
-    "title": "Fflach #1",
+    "title": "Laboratoř zvuků",
     "description": "Interaktivní exponát pro Laboratoř zvuků",
     "authors": [{
         "name": "Jan Jáchim"

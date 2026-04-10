@@ -70,15 +70,13 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
     useEffect(() => {
 
-        console.log(showcaseRef.current);
-
         if (showcaseRef.current) {
 
 
             var observer = new MutationObserver(function (mutations) {
                 mutations.forEach(function (mutation) {
                     if (mutation.type === "attributes") {
-                        console.log("attributes changed", mutation);
+                        // console.log("attributes changed", mutation);
 
                         if (mutation.attributeName === "palette") {
                             setPalette((mutation.target as any).palette);
@@ -135,8 +133,9 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
         if (!hasScript()) {
             const script = document.createElement("script");
-            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/+esm'"
-            script.type = "module";
+            // script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/+esm'";
+            // script.type = "module";
+            script.src = "https://termogram.labir.cz/lib/embed.js?version=1.3.0";
             script.id = SCIRPT_ID;
             document.head.appendChild(script);
         }
@@ -152,7 +151,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
     return (<>
         <Head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/dist/embed.min.css"></link>
+            <link rel="stylesheet" href="https://termogram.labir.cz/lib/embed.css?version=1.3.0"></link>
         </Head>
         <ProjectLayout ref={ref} meta={metadata}>
             <Content>

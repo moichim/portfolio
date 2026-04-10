@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 	"month": 7,
 	"day": 1,
 	"keywords": [ "design", "techmania", "featured"],
-	"public": true
+	"public": false
 }
 
 const bbProps = {

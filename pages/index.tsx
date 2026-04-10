@@ -6,13 +6,15 @@ import { InferGetStaticPropsType } from "next"
 import FrontLayout from "@/components/layout/projects/FrontLayout"
 
 import { Thumbnail } from "@/components/content/partials/Thumbnail"
-import img1 from "@/public/blik/labordy-sanau/radio_1_B.jpg"
+import fflach from "@/public/blik/labordy-sanau/radio_1_B.jpg"
+import cerrynt from "@/public/cerrynt/cerrynt_depo_01.jpg"
 import Head from "next/head"
 import Image from "next/image"
 import { useCallback, useEffect } from "react"
 import { SCIRPT_ID } from "./projects/ntc/labir"
 import Youtube from "@/components/content/partials/Youtube"
 import Content from "@/components/content/Content"
+import Picture from "@/components/content/partials/Picture"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
@@ -25,8 +27,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
         if (!hasScript()) {
             const script = document.createElement("script");
-            script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/+esm'"
-            script.type = "module";
+            script.src = "https://termogram.labir.cz/lib/embed.js?version=1.3.0";
             script.id = SCIRPT_ID;
             document.head.appendChild(script);
         }
@@ -40,7 +41,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
     return <>
 
         <Head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/dist/embed.min.css"></link>
+            <link rel="stylesheet" href="https://termogram.labir.cz/lib/embed.css?version=1.3.0"></link>
         </Head>
         <FrontLayout
             projects={props.projects}
@@ -54,19 +55,19 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
             <Thumbnail
                 ltr={true}
-                badge="Léto 2025"
-                title="Laboratoř zvuků"
-                subtitle="Interaktivní instalace v DEPO2025, Plzeň"
-                bg="#292929ff"
-                bgHover="#3b3b3bff"
+                badge="březen 2026"
+                title="Cerrynt"
+                subtitle="Velkoformátová interaktivní projekce"
+                bg="#1a1e25"
+                bgHover="#1e2736"
                 color="white"
                 text={<>
-                    <p>léto 2025,<br />DEPO2015,<br />Plzeň</p>
+                    <p>březen 2026,<br />festival BLIK BLIK,<br />Plzeň</p>
                 </>}
                 content={
-                        <Youtube id="o139xA2kJLo" wrap={false} />
+                        <Picture src={cerrynt} wrap={false} />
                 }
-                href="/projects/blik/fflach-01"
+                href="/projects/blik/cerrynt-pilsen"
             >
 
             </Thumbnail>
@@ -92,9 +93,30 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                         palette="iron"
                         layout="advanced"
                         showfullscreen="false"
+                        advanced-palettes="true"
+                        skin="light"
                     ></thermal-file-app>
                 </div>}
                 href="/projects/ntc/labir"
+            >
+
+            </Thumbnail>
+
+            <Thumbnail
+                ltr={true}
+                badge="Léto 2025"
+                title="Laboratoř zvuků"
+                subtitle="Interaktivní instalace v DEPO2025, Plzeň"
+                bg="#292929ff"
+                bgHover="#3b3b3bff"
+                color="white"
+                text={<>
+                    <p>léto 2025,<br />DEPO2015,<br />Plzeň</p>
+                </>}
+                content={
+                        <Youtube id="o139xA2kJLo" wrap={false} />
+                }
+                href="/projects/blik/fflach-01"
             >
 
             </Thumbnail>
@@ -110,7 +132,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            projects: ProjectsManager.getProjects({ keyword: "featured", visibility: true })
+            projects: ProjectsManager.getProjects({ keyword: "featured", publicFilter: true })
         }
     }
 

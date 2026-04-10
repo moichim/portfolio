@@ -161,18 +161,18 @@ class ProjectsManager {
 
     public static getProjects(options: {
         keyword?: string,
-        visibility?: boolean
+        publicFilter?: boolean
     } = {}): ProjectMetadata[] {
 
         let projects = ProjectsManager.getAllProjectsMetadata();
 
-        if ("keyword" in options)
-            if (options.keyword !== undefined)
-                projects = projects.filter(project => project.keywords.includes(options.keyword!));
+        if ("keyword" in options && options.keyword !== undefined) {
+            projects = projects.filter(project => project.keywords.includes(options.keyword!));
+        }
 
-        if ("visibility" in options)
-            if (options.visibility !== undefined)
-                projects = projects.filter(project => project.public === options.visibility);
+        if ("publicFilter" in options && options.publicFilter !== undefined) {
+            projects = projects.filter(project => project.public === options.publicFilter);
+        }       
 
         return projects;
 

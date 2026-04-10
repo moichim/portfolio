@@ -12,7 +12,7 @@ import { Link } from "@madeinhaus/nextjs-page-transition"
 import { InferGetStaticPropsType } from "next"
 import Head from "next/head"
 
-function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
+function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
     const layout = useLayoutContext();
 
@@ -57,17 +57,14 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             technology="Frontend"
                             features={[
                                 {
-                                    name: "Typescript"
+                                    name: "Typescript ❤️"
                                 },
                                 {
-                                    name: "React.js",
-                                    years: "od roku 2019",
-                                    desc: "Vizualizace dat, formuláře, datagridy či dashboardy."
-                                },
-                                {
-                                    name: "Next.js",
-                                    years: "od roku 2023",
-                                    desc: "V Next.js vyvíjím webové rozhraní pro analýzu termogramů v kontextu meterologických dat.",
+                                    name: "WebGPU",
+                                    desc: "Využívám pro tvorbu výkonných ovladačů interaktivních instalací a projekcí.",
+                                    referencies: [
+                                        { name: "Cerrynt", link: "/projects/blik/cerrynt-pilsen" }
+                                    ]
                                 },
                                 {
                                     name: "webcomponents & Lit.js",
@@ -82,8 +79,6 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     years: "cca 2 roky",
                                     desc: "Kiosky pro vizualizaci dat na Rapsberry Pi. Ovladače interaktivních aplikací a projekcí."
                                 },
-                                
-                                
                                 {
                                     name: "SCSS, Tailwind & spol."
                                 },
@@ -97,22 +92,17 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                     ]
                                 },
                                 {
-                                    name: "Babylon.js",
+                                    name: "React.js",
+                                    years: "od roku 2019",
+                                    desc: "Vizualizace dat, formuláře, datagridy či dashboardy."
                                 },
                                 {
-                                    name: "WebGPU",
-                                    desc: "Využívám pro tvorbu výkonných ovladačů interaktivních instalací a projekcí."
+                                    name: "Next.js",
+                                    years: "od roku 2023",
+                                    desc: "V Next.js vyvíjím webové rozhraní pro analýzu termogramů v kontextu meterologických dat.",
                                 },
-                                {
-                                    name: "Angular",
-                                    minor: true
-                                },
-                                {
-                                    name: "Vue 3",
-                                    minor: true,
-                                    // desc: "Realioval jsem v něm 1 menší interaktivní projekt.",
-                                }
-                                
+
+
                             ]}
 
                         />
@@ -121,38 +111,31 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                             technology="Backend"
                             features={[
                                 {
-                                    name: "GraphQL",
-                                    desc: "Implementoval jsem ApolloServer v Next.js. Používám @apollo/client."
+                                    name: "Nodejs",
+                                    years: "od roku 2022",
+                                    desc: "express.js, prisma, GraphQL, Apollo Server & ..."
+                                },
+                                {
+                                    name: "MySQL / MariaDB / PostgreSQL"
                                 },
                                 {
                                     minor: true,
-                                    name: "Nodejs",
-                                    desc: "V Electron.js využívám Express.js, v Next.js využívám @apollo/server."
-                                },
-                                {
                                     name: "Nette",
-                                    years: "od roku 2020",
+                                    years: "2020 - 2023",
                                     desc: "Vyvinul jsem středně velký portál pro sdílení vzdělávacího obsahu a zapůjčování termokamer.",
-                                    referencies: [
-                                        { name: "edu.labir.cz", link: "https://edu.labir.cz" }
-                                    ]
                                 },
                                 {
+                                    minor: true,
                                     name: "Wordpress",
-                                    years: "od roku 2015",
+                                    years: "2015 - 2019",
                                     desc: "Na Wordpressu jsem začínal. Vyvíjel jsem custom šablony a pluginy pro klienty."
                                 },
-                                {
-                                    name: "MySQL / MariaDB"
-                                },
+
                                 {
                                     minor: true,
                                     name: "Django / Wagtail CMS",
                                     years: "2017 - 2019",
-                                    desc: "Provozuji meněí VPS s několika weby na platformě Wagtail CMS.",
-                                    referencies: [
-                                        { name: "matej.rizek.serchan.cz", link: "http://matej.rizek.serchan.cz/" }
-                                    ]
+                                    desc: "Provozuji meněí VPS s několika weby na platformě Wagtail CMS."
                                 },
 
 
@@ -185,18 +168,14 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                         { name: "Projekty v Processingu", link: "/processing" }
                                     ]
                                 },
-                                {
-                                    name: "Unity 3D",
-                                    minor: true,
-                                    desc: "Absolvoval jsem základní kurz skriptování."
-                                },
+
                                 {
                                     name: "Blender 3D",
                                     years: "od roku 2018",
-                                    // minor: true,
-                                    referencies: [
-                                        { name: "Projekty v Blenderu", link: "/blender" }
-                                    ]
+                                },
+                                {
+                                    name: "Unity 3D",
+                                    minor: true,
                                 },
 
                             ]}
@@ -214,8 +193,6 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
                                         { name: "Projekty, které jsem realizoval s využitím SuperCollideru", link: "/supercollider" }
                                     ]
                                 },
-                                
-
 
                             ]}
 
@@ -233,7 +210,7 @@ function IndexPage(props: InferGetStaticPropsType< typeof getStaticProps> ) {
             <h2>Projekty, které jsem kódoval:</h2>
         </IndexText>
 
-        <ProjectGrid projects={props.projects}/>
+        <ProjectGrid projects={props.projects} />
 
     </PageLayout>;
 
@@ -243,7 +220,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            projects: ProjectsManager.getProjects( {keyword: "code" } )
+            projects: ProjectsManager.getProjects({ keyword: "code" })
         }
     }
 

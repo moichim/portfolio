@@ -11,7 +11,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps> ) {
         title="Všechny práce"
         above={
             <IndexText>
-                Zde jsou všechny práce, které jsem na web dal.
+                Všechny projekty zveřejněné na tomto webu...
             </IndexText>
         }
     />;
