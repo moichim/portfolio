@@ -2,11 +2,10 @@ import { forwardRef } from "react";
 import { useLayoutContext } from "@/context/layout/LayoutContext";
 import { Metadata } from "@/data/ProjectsManager";
 import clsx from "clsx";
-import Head from "next/head";
 import styles from "./ProjectLayout.module.scss";
 import ProjectTransition, { PageTransitionRef } from "@/components/transitions/ProjectTransition";
 import { Link } from "@madeinhaus/nextjs-page-transition";
-import { formatTitle } from "@/components/utils/formatters";
+import SeoHead from "@/components/utils/SeoHead";
 
 
 type ProjectProps = React.PropsWithChildren & {
@@ -25,9 +24,13 @@ function ProjectLayout(props: ProjectProps, ref: PageTransitionRef) {
         classes.push(styles.zoomed);
 
     return <ProjectTransition ref={ref}>
-        <Head>
-            <title>{formatTitle(props.meta.title)}</title>
-        </Head>
+        <SeoHead
+            title={props.meta.title}
+            description={props.meta.description as string}
+            image={props.meta.image}
+            color={props.meta.color}
+            type="article"
+        />
         <main>
             <article className={clsx(classes)}>
 

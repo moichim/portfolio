@@ -1,9 +1,8 @@
-import { formatTitle } from "@/components/utils/formatters";
 import clsx from "clsx";
-import Head from "next/head";
 import { forwardRef } from "react";
 import styles from "./PageLayout.module.scss";
 import PageTransition, { PageTransitionRef } from "@/components/transitions/PageTransition";
+import SeoHead from "@/components/utils/SeoHead";
 
 function PageLayout( props: React.PropsWithChildren, ref: PageTransitionRef ) {
 
@@ -13,9 +12,7 @@ function PageLayout( props: React.PropsWithChildren, ref: PageTransitionRef ) {
     ]);
 
     return <PageTransition ref={ref}>
-            <Head>
-                <title>{formatTitle()}</title>
-            </Head>
+            <SeoHead />
             <main className={classes}>
                 {props.children}
             </main>

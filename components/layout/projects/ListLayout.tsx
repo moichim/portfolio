@@ -1,11 +1,10 @@
 import ProjectGrid from "@/components/listing/ProjectGrid";
 import { ProjectMetadata } from "@/data/ProjectsManager";
-import { formatTitle } from "@/components/utils/formatters";
 import clsx from "clsx";
-import Head from "next/head";
 import { forwardRef } from "react";
 import styles from "./ListLayout.module.scss";
 import PageTransition, { PageTransitionRef } from "@/components/transitions/PageTransition";
+import SeoHead from "@/components/utils/SeoHead";
 
 type ListLayoutProps = {
     title?: string,
@@ -21,11 +20,7 @@ function ListLayout( props: ListLayoutProps, ref: PageTransitionRef ) {
     ]);
 
     return <PageTransition ref={ref}>
-        <Head>
-            <title>
-                {formatTitle( props.title )}
-            </title>
-        </Head>
+        <SeoHead title={props.title} />
         <main className={classes}>
                 
                 {props.title && <header className={styles.header}>
