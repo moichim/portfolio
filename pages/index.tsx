@@ -47,7 +47,6 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
             projects={props.projects}
             above={
                 <IndexText>
-                    <p className="mobileOnly">Jmenuji se Jan Jáchim.</p>
                     <p>Dělám <Link href="/code">kód</Link>, <Link href="/design">design</Link> a <Link href="/interactive">interaktivní projekty</Link>.</p>
                 </IndexText>
             }
@@ -58,12 +57,9 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 badge="březen 2026"
                 title="Cerrynt"
                 subtitle="Velkoformátová interaktivní projekce"
-                bg="#1a1e25"
+                bg="#262e3b"
                 bgHover="#1e2736"
                 color="white"
-                text={<>
-                    <p>březen 2026,<br />festival BLIK BLIK,<br />Plzeň</p>
-                </>}
                 content={
                         <Picture src={cerrynt} wrap={false} />
                 }
@@ -74,15 +70,11 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
             <Thumbnail
                 badge="Od roku 2024"
-                title="@labir/embed"
-                subtitle="Open-source knihovny (TypeScript)"
+                title="@labirthermal/web"
+                subtitle="Open-source libraries for work with IR camera recordings in webbrowsers."
                 bg={"#4b224d"}
                 bgHover={"#741e77ff"}
                 color="white"
-
-                text={<div style={{opacity: .5}}>
-                    <p>Ekosystém TS knihoven pro práci se snímky z termokamer ve webovém prohlížeči.</p>
-                </div>}
                 ltr={false}
                 content={<div style={{ padding: "1rem" }}>
                     <thermal-file-app
@@ -110,9 +102,6 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 bg="#292929ff"
                 bgHover="#3b3b3bff"
                 color="white"
-                text={<>
-                    <p>léto 2025,<br />DEPO2015,<br />Plzeň</p>
-                </>}
                 content={
                         <Youtube id="o139xA2kJLo" wrap={false} />
                 }

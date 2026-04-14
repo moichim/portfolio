@@ -10,7 +10,8 @@ export type PartialProps = React.PropsWithChildren & {
     xs?: number,
     type?: "image"|"video"|"text"|"audio"|"bare"|"external",
     className?: string,
-    wrap?: boolean
+    wrap?: boolean,
+    credits?: React.ReactNode
 }
 
 const Element: React.FC<PropsWithChildren & {
@@ -28,6 +29,7 @@ const Partial: React.FC<PartialProps> = ({
     xs = 12,
     type = "bare",
     wrap = true,
+    credits = undefined,
     ...props
 }) => {
 
@@ -51,6 +53,7 @@ const Partial: React.FC<PartialProps> = ({
     return <div className={clsx( classes )}>
         <Element type={type} className={styles.wrapper}>
             {props.children}
+            {credits && <figcaption className={styles.credits}>{credits}</figcaption>}
         </Element>
     </div>
 }

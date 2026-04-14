@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         "name": "Jan Jáchim"
     }],
     "image": "/cerrynt/cerrynt_butzke_02.jpg",
-    "color": "#180621",
+    "color": "#0d4441",
     "year": 2026,
     "month": 3,
     "day": 19,
@@ -41,23 +41,27 @@ export const metadata: Metadata = {
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
 
-    useScheme([{ bg: "#101318", text: "white", primary: "blue" }, { bg: "#1c1c1c" }]);
+    useScheme([{ bg: "#061224", text: "#18819b", primary: "#18819b"}, { bg: "#0d0522" }]);
 
     return (
         <ProjectLayout ref={ref} meta={metadata}>
+
             <Content>
 
                 <Picture src={img2} md={6} lg={4} />
 
                 <Text md={4} lg={3}>
-                    <p>'Cerrynt' [kerint] means 'flow' or 'path' in Welsh. The installation is based on the principle of collective drawing, whose visual stream is guided by a generative algorithm. It transforms input from visitors' smartphones into a fluid dialogue of shapes, traces, and messages. An open space for shared imagination emerges, where individual gestures merge into an endless, ever-changing stream of images.</p>
+                    <p><b>Cerrynt</b> [kerint] means <i>flow</i> or <i>path</i> in Welsh.</p>
+                    <p>The installation is based on the principle of collective drawing, whose visual stream is guided by a generative algorithm.</p>
+                    <p>It transforms input from visitors' smartphones into a fluid dialogue of shapes, traces, and messages.</p>
+                    <p>An open space for shared imagination emerges, where individual gestures merge into an endless, ever-changing stream of images.</p>
                 </Text>
 
-                <Youtube id="0eMXOLZw1KM" md={6} lg={4} short >Camera by Jan Vlček</Youtube>
+                <Youtube id="0eMXOLZw1KM" md={6} lg={4} short credits="Camera by Jan Vlček"></Youtube>
 
-                <Picture src={img6} md={6} lg={5}>Photo by Jan Vlček</Picture>
+                <Picture src={img6} md={6} lg={5} credits="Photo by Jan Vlček" />
 
-                <Picture src={img8} md={6} >Photo by Jan Vlček</Picture>
+                <Picture src={img8} md={6} credits="Photo by Jan Vlček"></Picture>
 
 
                 <Text md={12}>
@@ -65,12 +69,12 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 </Text>
 
                 <Text md={4} lg={3}>
-                    <h2>Visual</h2>
-                    <p>Custom rendering and animation engine written using:</p>
+                    <h2>Visuals</h2>
+                    <p>Custom rendering, animation and mapping engine written using:</p>
                     <ul>
-                        <li>WebGPU - shaders</li>
-                        <li>Electron.js - build</li>
-                        <li>Lit.js - GUI elements</li>
+                        <li>pure WebGPU</li>
+                        <li>Electron.js</li>
+                        <li>Lit.js</li>
                     </ul>
                 </Text>
 
@@ -91,27 +95,22 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                     <h2>Control</h2>
                     <p>Spectators use web interface to submit their drawings. This infrastructure was built using:</p>
                     <ul>
-                        <li>React.js - interface</li>
-                        <li>Express.js - backend</li>
-                        <li>Socket.io - realtime communication</li>
+                        <li>React.js</li>
+                        <li>Express.js</li>
+                        <li>Socket.io</li>
                     </ul>
-                    
                     
                 </Text>
 
-                <Picture src={img4} md={12} >Photo by Blik Blik Festival, Pilsen, CZ</Picture>
+                <Picture src={img4} md={12} credits="Photo by Blik Blik Festival, Pilsen, CZ" />
 
-                <Picture src={img7} md={6} lg={4} >Photo by Jan Vlček</Picture>
+                <Picture src={img7} md={6} lg={4} credits="Photo by Jan Vlček" />
 
-                <Picture src={img1} md={6} >Photo by Jan Vlček</Picture>
+                <Picture src={img1} md={6} credits="Photo by Jan Vlček" />
 
-                <Picture src={img5} md={6} lg={4}>Photo by Blik Blik Festival, Pilsen, CZ</Picture>
+                <Picture src={img5} md={6} lg={4} credits="Photo by Blik Blik Festival, Pilsen, CZ" />
 
                 <Picture src={img3} md={6} />
-
-                
-
-                
 
             </Content>
 

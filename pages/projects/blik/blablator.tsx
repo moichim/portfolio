@@ -77,7 +77,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
                 </Partial>
                 
-                <Picture md={6} lg={4} src={joha}>Omlouvám se, já nemám po ruce lepší fotku. Vypadalo to líp...</Picture>
+                <Picture md={6} lg={4} src={joha}></Picture>
 
                 <Text md={6} lg={4}>
                     <p>Stiskem kláves anebo jejich kombinací robot promluví. Umí toto:</p>

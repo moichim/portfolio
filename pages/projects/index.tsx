@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            projects: ProjectsManager.getProjects( )
+            projects: ProjectsManager.getProjects( {publicFilter: true })
         }
     }
 

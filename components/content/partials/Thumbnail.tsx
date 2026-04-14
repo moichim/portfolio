@@ -14,7 +14,7 @@ type ThumbProps = {
     title: string,
     subtitle?: React.ReactNode,
     content: React.ReactNode,
-    text: React.ReactNode,
+    text?: React.ReactNode,
     badge?: React.ReactNode,
     ltr: boolean,
     color?: string,
@@ -57,21 +57,22 @@ export const Thumbnail: React.FC<ThumbProps> = (props) => {
             <h2 className={styles.title}>{props.title}</h2>
             {props.subtitle && <p className={styles.subtitle}>{props.subtitle}</p>}
         </div>
-        <div className={styles.text_inner}>
-            {props.text}
-            <p className={styles.link}>Více informací <span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={styles.arrow}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-            </span></p>
-        </div>
+        
+            <div className={styles.text_inner}>
+                {props.text}
+                <p className={styles.link}>Více informací <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={styles.arrow}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </span></p>
+            </div>
     </Link>;
 
 
 
-    return <div 
-        className={classes} 
-        style={{ backgroundColor: bg }} 
+    return <div
+        className={classes}
+        style={{ backgroundColor: bg }}
         ref={container}
     >
         {props.ltr === true

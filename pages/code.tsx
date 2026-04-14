@@ -30,9 +30,9 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
                     <h2>Programuji</h2>
 
-                    <p>Mám zkušenosti s webovým vývojem a s kreativním kódováním v různých prostředích.</p>
+                    <p>Věnuji se převádně webovému frontendu a kreativnímu kódování v různých prostředích.</p>
 
-                    <ul>
+                    {/*<ul>
                         <li>
                             <a href="#skills" onClick={() => layout.setIsZoomed(z => !z)}>{layout.isZoomed ? "Skrýt podrobnosti" : "Zobrazit podrobnosti"}</a>
                         </li>
@@ -40,6 +40,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                             <Link href="#reference" scroll={true}>Přejít na referenční projekty</Link>
                         </li>
                     </ul>
+                    */}
 
                 </Text>
 
@@ -220,7 +221,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            projects: ProjectsManager.getProjects({ keyword: "code" })
+            projects: ProjectsManager.getProjects({ keyword: "code", publicFilter: true })
         }
     }
 

@@ -18,6 +18,14 @@ $gap: 1rem;
 
     $cols: 12;
 
+    strong, b {
+        font-weight: 600;
+    }
+
+    em {
+        font-style: italic;
+    }
+
     @each $bp, $val in $breakpoints {
 
         @for $i from 1 through $cols {
@@ -68,6 +76,11 @@ $gap: 1rem;
 .wrapper {
     padding: math.div($gap, 2);
     overflow: hidden;
+}
+
+.credits {
+    font-size: small;
+    opacity: .4;
 }
 
 .bare {

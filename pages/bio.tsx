@@ -27,12 +27,14 @@ function IndexPage() {
 
                     <p>Profesně působím povětšinou někde poblíž vzdělávání, popularizace vědy a interaktivních projektů pro děti. Mám zkušenosti s tvorbou vzdělávacích exponátů a materiálů pro online vzdělávání. Domluvím se s marketéry i s didaktiky.</p>
 
+                    {/*
                     <ul>
                         <li>webový vývoj provozuji dle současných standardů (<Link href="/code">co umím</Link>)</li>
                         <li>Adobe Creative Suite ovládám rutinně</li>
                         <li>Pro tvůrčí záměr vždy najdu adekvátní technologii</li>
                         <li>nejvíce ze všeho mne baví učit se novým věcem</li>
                     </ul>
+                    */}
 
                 </Text>
 
@@ -53,14 +55,8 @@ function IndexPage() {
                         <BioItem
                             from={2020}
                             to={"současnost"}
-                            position="Vývojář TypeScript a PHP"
+                            position="Vývojář TypeScript a autor vzdělávacího obsahu"
                             companyName="Nové technologie - Výzkumné centrum ZČU v Plzni"
-                        />
-                        <BioItem
-                            from={2015}
-                            to={2020}
-                            position="Wordpress vývojář"
-                            companyName="Grafique, s.r.o. (Brno)"
                         />
                         <BioItem
                             from={2014}
@@ -83,7 +79,7 @@ function IndexPage() {
                     <div className="" role="list">
                         <BioItem
                             from={2010}
-                            to={"2015 (MgA.)"}
+                            to={"2012 (MgA.)"}
                             position="Intermadiální tvorba"
                             companyName="Fakulta výtvarných uměni VUT v Brně"
                         />

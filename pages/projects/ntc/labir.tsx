@@ -5,7 +5,6 @@ import ProjectLayout from "@/components/layout/projects/ProjectLayout";
 import { Metadata } from "@/data/ProjectsManager";
 import React, { forwardRef, useCallback, useEffect, useRef, useState } from "react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import Text from "@/components/content/partials/Text";
 
@@ -20,7 +19,7 @@ import Link from "next/link";
 import style from "../../../styles/modules/schema.module.scss";
 
 export const metadata: Metadata = {
-    "title": "@labir",
+    "title": "@labirthermal",
     "description": "Opensource knihovna",
     "authors": [{
         "name": "Jan Jáchim"
@@ -133,8 +132,6 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
         if (!hasScript()) {
             const script = document.createElement("script");
-            // script.innerHTML = "import labirembed from 'https://cdn.jsdelivr.net/npm/@labir/embed@1.3.3/+esm'";
-            // script.type = "module";
             script.src = "https://termogram.labir.cz/lib/embed.js?version=1.3.0";
             script.id = SCIRPT_ID;
             document.head.appendChild(script);
