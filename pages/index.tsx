@@ -36,14 +36,10 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
     }, [hasScript]);
 
     useEffect(() => {
-        loadScript();
+        // loadScript();
     }, [loadScript]);
 
     return <>
-
-        <Head>
-            <link rel="stylesheet" href="https://termogram.labir.cz/lib/embed.css?version=1.3.0"></link>
-        </Head>
         <FrontLayout
             projects={props.projects}
             above={
