@@ -68,7 +68,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
             <Thumbnail
                 badge="Od roku 2024"
                 title="@labirthermal/web"
-                subtitle="Open-source libraries for work with IR camera recordings in webbrowsers."
+                subtitle="Open-source libraries for work with IR camera recordings in web browsers."
                 bg={"#4b224d"}
                 bgHover={"#741e77ff"}
                 color="white"

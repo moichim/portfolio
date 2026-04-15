@@ -30,7 +30,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
                     <h2>Programuji</h2>
 
-                    <p>Věnuji se převádně webovému frontendu a kreativnímu kódování v různých prostředích.</p>
+                    <p>Webový frontend v TypeScriptu. Kreativní kódování v různých prostředích, převážně taky na webu. Realtime zvuk v SuperCollideru.</p>
 
                     {/*<ul>
                         <li>
@@ -125,12 +125,16 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                     years: "2020 - 2023",
                                     desc: "Vyvinul jsem středně velký portál pro sdílení vzdělávacího obsahu a zapůjčování termokamer.",
                                 },
+
+                                /*
                                 {
                                     minor: true,
                                     name: "Wordpress",
                                     years: "2015 - 2019",
                                     desc: "Na Wordpressu jsem začínal. Vyvíjel jsem custom šablony a pluginy pro klienty."
                                 },
+                                */
+                            
 
                                 {
                                     minor: true,

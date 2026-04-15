@@ -11,7 +11,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps>, ref:
         projects={props.projects}
         above={
             <IndexText>
-                <p>Multimediální instalace, projekce a interaktivní exponáty.</p>
+                <p>Instalace, projekce, exponáty a podobné věci.</p>
             </IndexText>
         }
     />;
