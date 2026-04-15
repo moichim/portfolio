@@ -8,6 +8,7 @@ import FrontLayout from "@/components/layout/projects/FrontLayout"
 import { Thumbnail } from "@/components/content/partials/Thumbnail"
 import fflach from "@/public/blik/labordy-sanau/radio_1_B.jpg"
 import cerrynt from "@/public/cerrynt/cerrynt_depo_01.jpg"
+import labir from "@/public/labir/thumb.png"
 import Head from "next/head"
 import Image from "next/image"
 import { useCallback, useEffect } from "react"
@@ -76,19 +77,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 bgHover={"#741e77ff"}
                 color="white"
                 ltr={false}
-                content={<div style={{ padding: "1rem" }}>
-                    <thermal-file-app
-                        url="/labir/velbloud.lrc"
-                        label="LabIR Edu Analyser"
-                        license="CC BY-SA 4.0"
-                        author="Jan Jáchim"
-                        palette="iron"
-                        layout="advanced"
-                        showfullscreen="false"
-                        advanced-palettes="true"
-                        skin="light"
-                    ></thermal-file-app>
-                </div>}
+                content={<Picture src={labir} wrap={false} />}
                 href="/projects/ntc/labir"
             >
 
