@@ -116,9 +116,18 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                     years: "od roku 2022",
                                     desc: "express.js, prisma, GraphQL, Apollo Server & ..."
                                 },
+                                
                                 {
                                     name: "MySQL / MariaDB / PostgreSQL"
                                 },
+                                
+                                {
+                                    minor: true,
+                                    name: "Django / Wagtail CMS",
+                                    years: "2017 - 2019",
+                                    desc: "Provozuji meněí VPS s několika weby na platformě Wagtail CMS."
+                                },
+
                                 {
                                     minor: true,
                                     name: "Nette",
@@ -134,15 +143,6 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                     desc: "Na Wordpressu jsem začínal. Vyvíjel jsem custom šablony a pluginy pro klienty."
                                 },
                                 */
-                            
-
-                                {
-                                    minor: true,
-                                    name: "Django / Wagtail CMS",
-                                    years: "2017 - 2019",
-                                    desc: "Provozuji meněí VPS s několika weby na platformě Wagtail CMS."
-                                },
-
 
                             ]}
 

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "authors": [{
         "name": "Jan Jáchim"
     }],
-    "image": "/cerrynt/cerrynt_butzke_02.jpg",
+    "image": "/cerrynt/thumb.jpg",
     "color": "#0d4441",
     "year": 2026,
     "month": 3,

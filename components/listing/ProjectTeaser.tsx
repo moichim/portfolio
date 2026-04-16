@@ -12,7 +12,6 @@ const ProjectTeaser: React.FC<ProjectMetadata> = props => {
             href={props.path}
             className={styles.link}
         >
-
             <div className={styles.image}>
                 <Image 
                     src={props.image} 
@@ -24,8 +23,8 @@ const ProjectTeaser: React.FC<ProjectMetadata> = props => {
             
             <div className={styles.text}>
                 <h2 className={styles.title}>{props.title}</h2>
+                <p className={styles.year}>{props.year}</p>
             </div>
-            
         </Link>
     </article>
 
