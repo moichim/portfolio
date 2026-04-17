@@ -41,7 +41,12 @@ export const metadata: Metadata = {
 function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
 
-    useScheme([{ bg: "#28292bff", text: "white", primary: "blue" }, { bg: "#1c1c1c" }]);
+    useScheme([{ 
+        // bg: "#2c3542", text: "#1d697c", primary: "#18819b"
+    }, { 
+        bg: "#44404d",
+        primary: "#1dc1eb"
+    }]);
 
     return (
         <ProjectLayout ref={ref} meta={metadata}>
