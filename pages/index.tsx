@@ -36,7 +36,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
     }, [hasScript]);
 
     useEffect(() => {
-        // loadScript();
+        loadScript();
     }, [loadScript]);
 
     return <>
@@ -73,7 +73,20 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 bgHover={"#741e77ff"}
                 color="white"
                 ltr={false}
-                content={<Picture src={labir} wrap={false} />}
+                content={<div style={{
+                    padding: "1em"
+                }}>
+                    <thermal-file-app
+                        url="/labir/snimek.lrc"
+                        label="Ukázka"
+                        license="CC BY-SA 4.0"
+                        author="Jan Jáchim"
+                        // showhistogram="false"
+                        showfullscreen="false"
+                        layout="advanced"
+                        advanced-palettes="true"
+                    ></thermal-file-app>
+                </div>}
                 href="/projects/ntc/labir"
             >
 
@@ -88,7 +101,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 bgHover="#3b3b3bff"
                 color="white"
                 content={
-                        <Youtube id="o139xA2kJLo" wrap={false} />
+                    <Youtube id="o139xA2kJLo" wrap={false} />
                 }
                 href="/projects/blik/fflach-01"
             >
