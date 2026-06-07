@@ -79,14 +79,14 @@ function IndexPage() {
                     <div className="" role="list">
                         <BioItem
                             from={2010}
-                            to={"2012 (MgA.)"}
-                            position="Intermadiální tvorba"
+                            to={"2013 (MgA.)"}
+                            position="Intermediální tvorba - ateliér Environment"
                             companyName="Fakulta výtvarných uměni VUT v Brně"
                         />
                         <BioItem
                             from={2006}
                             to={"2009 (BcA.)"}
-                            position="Grafika a ilustrace"
+                            position="Grafika a ilustrace - ateliér Knižní vazba"
                             companyName="Ústav umění a designu ZČU v Plzni"
                         />
                         <BioItem

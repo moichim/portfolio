@@ -88,9 +88,9 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                 },
                                 {
                                     name: "Phaser.js",
-                                    referencies: [
-                                        { name: "Monnom studio", link: "/projects/monnom" }
-                                    ]
+                                    // referencies: [
+                                        // { name: "Monnom studio", link: "/projects/monnom" }
+                                    // ]
                                 },
                                 {
                                     name: "React.js",
@@ -167,20 +167,19 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                             features={[
                                 {
                                     name: "Processing.org",
-                                    years: "od roku 2015",
-                                    desc: <span>Ovládám framework <a href="https://processing.org" target="_blank">Processing.org</a> pro interaktivní aplikace v Javě.</span>,
-                                    referencies: [
-                                        { name: "Projekty v Processingu", link: "/processing" }
-                                    ]
+                                    // years: "od roku 2015",
+                                    // desc: <span>Ovládám framework <a href="https://processing.org" target="_blank">Processing.org</a> pro interaktivní aplikace v Javě.</span>,
+                                    // referencies: [
+                                    //    { name: "Projekty v Processingu", link: "/processing" }
+                                    // ]
+                                },
+                                {
+                                    name: "Arduino"
                                 },
 
                                 {
                                     name: "Blender 3D",
-                                    years: "od roku 2018",
-                                },
-                                {
-                                    name: "Unity 3D",
-                                    minor: true,
+                                    // years: "od roku 2018",
                                 },
 
                             ]}
@@ -192,11 +191,11 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                             features={[
                                 {
                                     name: "SuperCollider",
-                                    years: "od roku 2019",
-                                    desc: "Ve zvukovém serveru SuperCollider píšu aplikace pro algoritmický zvuk.",
-                                    referencies: [
-                                        { name: "Projekty, které jsem realizoval s využitím SuperCollideru", link: "/supercollider" }
-                                    ]
+                                    // years: "od roku 2019",
+                                    // desc: "Ve zvukovém serveru SuperCollider píšu aplikace pro algoritmický zvuk.",
+                                    // referencies: [
+                                        // { name: "Projekty, které jsem realizoval s využitím SuperCollideru", link: "/supercollider" }
+                                    // ]
                                 },
 
                             ]}

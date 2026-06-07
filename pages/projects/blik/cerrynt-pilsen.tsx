@@ -77,7 +77,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                     <h2>Visuals</h2>
                     <p>Custom rendering, animation and mapping engine written using:</p>
                     <ul>
-                        <li>pure WebGPU</li>
+                        <li>WebGPU shaders & render pipeline</li>
                         <li>Electron.js</li>
                         <li>Lit.js</li>
                     </ul>
