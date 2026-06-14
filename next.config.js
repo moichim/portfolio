@@ -20,6 +20,13 @@ const nextConfig = {
     loader: "custom",
     loaderFile: "./my-loader.ts",
   },
+  async redirects() {
+    return [{
+      source: "/cerrynt",
+      destination: "/projects/blik/cerrynt-pilsen",
+      permanent: true,
+    }]
+  }
 };
 
 module.exports = nextConfig;
