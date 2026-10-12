@@ -92,13 +92,13 @@ const Header: React.FC = () => {
                 <ul>
                     
                     <li className={styles.link}>
-                        <Navlink title="Intermédia" href="/interactive" />
+                        <Navlink title="Intermedia" href="/interactive" />
                     </li>
                     <li className={styles.link}>
                         <Navlink title="Design" href="/design" />
                     </li>
                     <li className={styles.link}>
-                        <Navlink title="Kód" href="/code" />
+                        <Navlink title="Code" href="/code" />
                     </li>
                     <li className={styles.separator}></li>
                     <li className={styles.link}>
