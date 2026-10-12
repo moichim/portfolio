@@ -26,6 +26,20 @@
     }
 }
 
+.vertical {
+    flex-direction: column;
+
+    .content,
+    .text {
+        width: 100%;
+    }
+
+    .content {
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+    }
+}
+
 
 .content {
     width: 70%;

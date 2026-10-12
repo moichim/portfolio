@@ -1,0 +1,17 @@
+$gap: 1rem;
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $gap;
+    margin-bottom: 5rem;
+
+    > * {
+        min-width: 0;
+        margin-bottom: 0;
+    }
+
+    @include upto(md) {
+        grid-template-columns: 1fr;
+    }
+}

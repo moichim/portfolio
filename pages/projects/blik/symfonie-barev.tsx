@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "year": 2025,
     "month": 6,
     "day": 14,
-    "keywords": ["interactive", "processing", "supercollider"],
+    "keywords": ["interactive", "processing", "supercollider", "featured"],
     "public": true
 }
 

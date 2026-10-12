@@ -19,7 +19,8 @@ type ThumbProps = {
     ltr: boolean,
     color?: string,
     bg?: string,
-    bgHover?: string
+    bgHover?: string,
+    variant?: "horizontal" | "vertical"
 }
 
 export const Thumbnail: React.FC<ThumbProps> = (props) => {
@@ -47,6 +48,7 @@ export const Thumbnail: React.FC<ThumbProps> = (props) => {
 
     const classes = clsx([
         styles.container,
+        props.variant === "vertical" && styles.vertical,
     ]);
 
     const content = <div className={styles.content}>{props.content}</div>;
@@ -60,7 +62,7 @@ export const Thumbnail: React.FC<ThumbProps> = (props) => {
         
             <div className={styles.text_inner}>
                 {props.text}
-                <p className={styles.link}>Více informací <span>
+                <p className={styles.link}>More info <span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={styles.arrow}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
@@ -75,7 +77,9 @@ export const Thumbnail: React.FC<ThumbProps> = (props) => {
         style={{ backgroundColor: bg }}
         ref={container}
     >
-        {props.ltr === true
+        {props.variant === "vertical"
+            ? <>{content}{text}</>
+            : props.ltr === true
             ? <>
                 {content}{text}
             </>

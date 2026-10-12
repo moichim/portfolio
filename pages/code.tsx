@@ -28,9 +28,10 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
                 <Text>
 
-                    <h2>Programuji</h2>
+                    <h2>I code</h2>
 
-                    <p>Webový frontend v TypeScriptu. Kreativní kódování v různých prostředích, převážně taky na webu. Realtime zvuk v SuperCollideru.</p>
+                    <p>Web frontend in modern TypeScript. Creative coding in various environments, mostly using web technologies such as WebGPU. I do realtime sound in SuperCollider.</p>
+
 
                     {/*<ul>
                         <li>
@@ -62,7 +63,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                 },
                                 {
                                     name: "WebGPU",
-                                    desc: "Využívám pro tvorbu výkonných ovladačů interaktivních instalací a projekcí.",
+                                    desc: "Tvorba výkonných ovladačů interaktivních instalací a projekcí.",
                                     referencies: [
                                         { name: "Cerrynt", link: "/projects/blik/cerrynt-pilsen" }
                                     ]
@@ -77,8 +78,8 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                 },
                                 {
                                     name: "Electron.js",
-                                    years: "cca 2 roky",
-                                    desc: "Kiosky pro vizualizaci dat na Rapsberry Pi. Ovladače interaktivních aplikací a projekcí."
+                                    years: "since 2023",
+                                    desc: "Kiosks for data visualisation, interactive installations and projections."
                                 },
                                 {
                                     name: "SCSS, Tailwind & spol."
@@ -113,8 +114,8 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                             features={[
                                 {
                                     name: "Nodejs",
-                                    years: "od roku 2022",
-                                    desc: "express.js, prisma, GraphQL, Apollo Server & ..."
+                                    years: "since 2022",
+                                    desc: "Fast UDP/TCP communication via websockets or Open Sound Controll in Electron.js. Inter-process communication, web workers and performance optimalisation. Web servers using express.js. I have basic experience with prisma, GraphQL & Apollo Server."
                                 },
                                 
                                 {
@@ -125,7 +126,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                     minor: true,
                                     name: "Django / Wagtail CMS",
                                     years: "2017 - 2019",
-                                    desc: "Provozuji meněí VPS s několika weby na platformě Wagtail CMS."
+                                    desc: "I run a small VPS with several websites on the Wagtail CMS platform."
                                 },
 
                                 {
@@ -134,6 +135,13 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                     years: "2020 - 2023",
                                     desc: "Vyvinul jsem středně velký portál pro sdílení vzdělávacího obsahu a zapůjčování termokamer.",
                                 },
+
+                                {
+                                    minor: true,
+                                    name: "Kubernetes",
+                                    years: "since 2026",
+                                    desc: "I have basic experience with Kubernetes for container orchestration.",
+                                }
 
                                 /*
                                 {
@@ -158,12 +166,12 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
                 <Text>
 
-                    <h2>Multimédia</h2>
+                    <h2>Multimedia</h2>
 
                     <div className="" role="list">
 
                         <SkillItem
-                            technology="Interaktivita"
+                            technology="Interactivity"
                             features={[
                                 {
                                     name: "Processing.org",
@@ -187,15 +195,18 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                         />
 
                         <SkillItem
-                            technology="Zvuk"
+                            technology="Sound"
                             features={[
                                 {
                                     name: "SuperCollider",
-                                    // years: "od roku 2019",
-                                    // desc: "Ve zvukovém serveru SuperCollider píšu aplikace pro algoritmický zvuk.",
-                                    // referencies: [
-                                        // { name: "Projekty, které jsem realizoval s využitím SuperCollideru", link: "/supercollider" }
-                                    // ]
+                                    years: "since 2019",
+                                    desc: "I write applications for realtime algorithmic sound in the SuperCollider sound server.",
+                                    referencies: [
+                                        { name: "Brain", link: "/projects/blik/brain" },
+                                        { name: "Cerrynt", link: "/projects/blik/cerrynt" },
+                                        { name: "Sound Lab", link: "/projects/blik/symfonie-barev" },
+                                        { name: "Souzvon", link: "/projects/blik/souzvon" },
+                                    ]
                                 },
 
                             ]}

@@ -6,6 +6,7 @@ import { InferGetStaticPropsType } from "next"
 import FrontLayout from "@/components/layout/projects/FrontLayout"
 
 import { Thumbnail } from "@/components/content/partials/Thumbnail"
+import ThumbnailGrid from "@/components/content/partials/ThumbnailGrid"
 import fflach from "@/public/blik/labordy-sanau/radio_1_B.jpg"
 import cerrynt from "@/public/cerrynt/cerrynt_depo_01.jpg"
 import labir from "@/public/labir/thumb.png"
@@ -16,6 +17,7 @@ import { SCIRPT_ID } from "./projects/ntc/labir"
 import Youtube from "@/components/content/partials/Youtube"
 import Content from "@/components/content/Content"
 import Picture from "@/components/content/partials/Picture"
+import brain from "@/public/brain/thumb2.png"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
@@ -44,31 +46,49 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
             projects={props.projects}
             above={
                 <IndexText>
-                    <p>Dělám <Link href="/code">kód</Link>, <Link href="/design">design</Link> a <Link href="/interactive">interaktivní projekty</Link>.</p>
+                    <p>I do <Link href="/code">code</Link>, <Link href="/design">design</Link> and <Link href="/interactive">interactive projects</Link>.</p>
                 </IndexText>
             }
         >
 
-            <Thumbnail
-                ltr={true}
-                badge="březen 2026"
-                title="Cerrynt"
-                subtitle="Velkoformátová interaktivní projekce"
-                bg="#262e3b"
-                bgHover="#1e2736"
-                color="white"
-                content={
+            <ThumbnailGrid>
+                <Thumbnail
+                    variant="vertical"
+                    ltr={false}
+                    badge="September 2026"
+                    title="Brain"
+                    subtitle="Interactive installation of brain neurons."
+                    bg="#42291e"
+                    bgHover="#751520"
+                    color="white"
+                    content={
+                        <Picture src={brain} wrap={false} />
+                    }
+                    href="/projects/blik/brain"
+                ></Thumbnail>
+
+                <Thumbnail
+                    variant="vertical"
+                    ltr={true}
+                    badge="March 2026"
+                    title="Cerrynt"
+                    subtitle="Large-scale interactive projection enabling the audience to contribute to the dialogue of drawings."
+                    bg="#21104b"
+                    bgHover="rgb(82, 45, 150)"
+                    color="white"
+                    content={
                         <Picture src={cerrynt} wrap={false} />
-                }
-                href="/projects/blik/cerrynt-pilsen"
-            >
+                    }
+                    href="/projects/blik/cerrynt"
+                >
 
-            </Thumbnail>
+                </Thumbnail>
+            </ThumbnailGrid>
 
             <Thumbnail
-                badge="Od roku 2024"
+                badge="Since 2024"
                 title="@labirthermal/web"
-                subtitle="Open-source libraries for work with IR camera recordings in web browsers."
+                subtitle="Open-source libraries for work with IR camera recordings in the web browsers."
                 bg={"#4b224d"}
                 bgHover={"#741e77ff"}
                 color="white"
@@ -78,7 +98,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 }}>
                     <thermal-file-app
                         url="/labir/snimek.lrc"
-                        label="Ukázka"
+                        label="Showcase"
                         license="CC BY-SA 4.0"
                         author="Jan Jáchim"
                         // showhistogram="false"
@@ -92,23 +112,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
             </Thumbnail>
 
-            <Thumbnail
-                ltr={true}
-                badge="Léto 2025"
-                title="Laboratoř zvuků"
-                subtitle="Interaktivní instalace v DEPO2025, Plzeň"
-                bg="#292929ff"
-                bgHover="#3b3b3bff"
-                color="white"
-                content={
-                    <Youtube id="o139xA2kJLo" wrap={false} />
-                }
-                href="/projects/blik/fflach-01"
-            >
-
-            </Thumbnail>
-
-            <h2 style={{ marginBottom: "5rem" }}>Další projekty</h2>
+            <h2 style={{ marginBottom: "5rem" }}>More projects</h2>
 
         </FrontLayout>
     </>;
