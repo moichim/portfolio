@@ -18,6 +18,7 @@ import Youtube from "@/components/content/partials/Youtube"
 import Content from "@/components/content/Content"
 import Picture from "@/components/content/partials/Picture"
 import brain from "@/public/brain/thumb2.png"
+import styles from "./index.module.scss"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
@@ -93,19 +94,19 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 bgHover={"#741e77ff"}
                 color="white"
                 ltr={false}
-                content={<div style={{
-                    padding: "1em"
-                }}>
-                    <thermal-file-app
-                        url="/labir/snimek.lrc"
-                        label="Showcase"
-                        license="CC BY-SA 4.0"
-                        author="Jan Jáchim"
-                        // showhistogram="false"
-                        showfullscreen="false"
-                        layout="advanced"
-                        advanced-palettes="true"
-                    ></thermal-file-app>
+                content={<div className={styles.thermalShowcase}>
+                    <div className={styles.thermalSlot}>
+                        <thermal-file-app
+                            url="/labir/snimek.lrc"
+                            label="Showcase"
+                            license="CC BY-SA 4.0"
+                            author="Jan Jáchim"
+                            // showhistogram="false"
+                            showfullscreen="false"
+                            layout="advanced"
+                            advanced-palettes="true"
+                        ></thermal-file-app>
+                    </div>
                 </div>}
                 href="/projects/ntc/labir"
             >
