@@ -22,9 +22,9 @@ const Footer: React.FC = () => {
 
         <nav className={styles.nav}>
             <ul>
-                <li><Link href="/code">Code</Link></li>
                 <li><Link href="/interactive">Intermedia</Link></li>
                 <li><Link href="/design">Design</Link></li>
+                <li><Link href="/code">Code</Link></li>
                 <li><Link href="/projects">All works</Link></li>
             </ul>
         </nav>
