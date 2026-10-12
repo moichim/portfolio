@@ -58,7 +58,7 @@
 
 .bg {
     @include upto(md) {
-        opacity: .8;
+        opacity: 0;
     }
 
     @include up(md) {

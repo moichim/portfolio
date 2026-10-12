@@ -59,7 +59,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                     title="Brain"
                     subtitle="Interactive installation of brain neurons."
                     bg="#42291e"
-                    bgHover="#751520"
+                    bgHover="#b68832"
                     color="white"
                     content={
                         <Picture src={brain} wrap={false} />
