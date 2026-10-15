@@ -30,6 +30,7 @@ function ProjectLayout(props: ProjectProps, ref: PageTransitionRef) {
             image={props.meta.image}
             color={props.meta.color}
             type="article"
+            noindex={!props.meta.public}
         />
         <main>
             <article className={clsx(classes)}>

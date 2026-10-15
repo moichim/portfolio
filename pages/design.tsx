@@ -7,6 +7,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps>) {
 
     return <ListLayout 
         title="Design"
+        description="Selected visual identity, book design and other graphic design projects by Jan Jáchim."
         projects={props.projects} 
         above={
             <IndexText>

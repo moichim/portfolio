@@ -1,16 +1,12 @@
 import Content from "@/components/content/Content"
 import Text from "@/components/content/partials/Text"
 import PageLayout from "@/components/layout/page/PageLayout"
-import { formatTitle } from "@/components/utils/formatters"
-import Head from "next/head"
 
 function IndexPage() {
 
-    return <PageLayout>
-
-        <Head>
-            <title>{formatTitle("Contact")}</title>
-        </Head>
+    return <PageLayout
+        title="Contact"
+    >
 
         <Content>
             <Text>

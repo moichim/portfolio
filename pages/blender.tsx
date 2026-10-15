@@ -8,6 +8,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps>, ref:
 
     return <ListLayout 
         title="Blender"
+        description="Selected projects created in Blender."
         projects={props.projects}
         above={
             <IndexText>

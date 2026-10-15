@@ -8,6 +8,7 @@ import SeoHead from "@/components/utils/SeoHead";
 
 type ListLayoutProps = {
     title?: string,
+    description?: string,
     projects: ProjectMetadata[],
     above?: React.ReactNode,
     below?: React.ReactNode
@@ -20,7 +21,7 @@ function ListLayout( props: ListLayoutProps, ref: PageTransitionRef ) {
     ]);
 
     return <PageTransition ref={ref}>
-        <SeoHead title={props.title} />
+        <SeoHead title={props.title} description={props.description} />
         <main className={classes}>
                 
                 {props.title && <header className={styles.header}>

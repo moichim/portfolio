@@ -7,11 +7,13 @@ import clsx from "clsx";
 import Caption from "./Caption";
 
 type PictureProps = PartialProps & {
-    src: StaticImport
+    src: StaticImport;
+    alt?: string;
 };
 
 const Picture: React.FC<PictureProps> = ({
-    src, 
+    src,
+    alt = "",
     ...props
 }) => {
 
@@ -29,7 +31,7 @@ const Picture: React.FC<PictureProps> = ({
         {/* <Magnifier> */}
             <Image 
                 src={src}
-                alt=""
+                alt={alt}
                 objectFit="cover"
                 layout="responsive"
                 className={styles.image}

@@ -44,6 +44,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
     return <>
         <FrontLayout
+            description="I do code, design and interactive projects. TypeScript, Electron.js and WebGPU ❤️"
             projects={props.projects}
             above={
                 <IndexText>
@@ -63,7 +64,11 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                     bgHover="#b68832"
                     color="white"
                     content={
-                        <Picture src={brain} wrap={false} />
+                        <Picture
+                            src={brain}
+                            alt="Brain neuron installation by Jan Jáchim"
+                            wrap={false}
+                        />
                     }
                     href="/projects/blik/brain"
                 ></Thumbnail>
@@ -78,7 +83,11 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                     bgHover="rgb(82, 45, 150)"
                     color="white"
                     content={
-                        <Picture src={cerrynt} wrap={false} />
+                        <Picture
+                            src={cerrynt}
+                            alt="Cerrynt interactive projection installation"
+                            wrap={false}
+                        />
                     }
                     href="/projects/blik/cerrynt"
                 >

@@ -7,7 +7,8 @@ import { forwardRef } from "react"
 function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps>, ref: React.ForwardedRef<HTMLDivElement> ) {
 
     return <ListLayout 
-        title="Interaktivita"
+        title="Interactive"
+        description="Interactive installations and projects combining code, design and real-time experiences."
         projects={props.projects}
         above={
             <IndexText>

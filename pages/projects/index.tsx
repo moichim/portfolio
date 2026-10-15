@@ -8,7 +8,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps> ) {
 
     return <ListLayout
         projects={props.projects}
-        title="Všechny práce"
+        title="All works"
         above={
             <IndexText>
                 Všechny projekty zveřejněné na tomto webu...

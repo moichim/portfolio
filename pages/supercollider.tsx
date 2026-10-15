@@ -8,6 +8,7 @@ function IndexPage( props: InferGetStaticPropsType< typeof getStaticProps>, ref:
 
     return <ListLayout 
         title="SuperCollider"
+        description="Selected realtime sound and audio projects using SuperCollider."
         projects={props.projects}
         above={
             <IndexText>

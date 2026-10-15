@@ -4,7 +4,13 @@ import styles from "./PageLayout.module.scss";
 import PageTransition, { PageTransitionRef } from "@/components/transitions/PageTransition";
 import SeoHead from "@/components/utils/SeoHead";
 
-function PageLayout( props: React.PropsWithChildren, ref: PageTransitionRef ) {
+type PageLayoutProps = React.PropsWithChildren & {
+    title?: string;
+    description?: string;
+    noindex?: boolean;
+}
+
+function PageLayout( props: PageLayoutProps, ref: PageTransitionRef ) {
 
     const classes = clsx([
         styles.container,
@@ -12,7 +18,11 @@ function PageLayout( props: React.PropsWithChildren, ref: PageTransitionRef ) {
     ]);
 
     return <PageTransition ref={ref}>
-            <SeoHead />
+            <SeoHead
+                title={props.title}
+                description={props.description}
+                noindex={props.noindex}
+            />
             <main className={classes}>
                 {props.children}
             </main>

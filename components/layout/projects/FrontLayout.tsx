@@ -8,6 +8,8 @@ import SeoHead from "@/components/utils/SeoHead";
 
 type FrontLayout = React.PropsWithChildren &{
     title?: string,
+    seoTitle?: string,
+    description?: string,
     projects: ProjectMetadata[],
     above?: React.ReactNode,
     below?: React.ReactNode
@@ -20,7 +22,7 @@ function FrontLayout( props: FrontLayout, ref: PageTransitionRef ) {
     ]);
 
     return <PageTransition ref={ref}>
-        <SeoHead title={props.title} />
+        <SeoHead title={props.seoTitle ?? props.title} description={props.description} />
         <main className={classes}>
                 
                 {props.title && <header className={styles.header}>
