@@ -65,7 +65,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                     name: "WebGPU",
                                     desc: "Tvorba výkonných ovladačů interaktivních instalací a projekcí.",
                                     referencies: [
-                                        { name: "Cerrynt", link: "/projects/blik/cerrynt-pilsen" }
+                                        { name: "Cerrynt", link: "/projects/blik/cerrynt" }
                                     ]
                                 },
                                 {
