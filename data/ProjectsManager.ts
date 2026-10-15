@@ -8,9 +8,13 @@ export type Metadata = Meta & {
     image: string,
     color?: string,
     keywords: string[],
-    year: number,
-    month: number,
-    day: number,
+    authors?: Array<{
+        name: string,
+        url?: string,
+    }>,
+    year?: number,
+    month?: number,
+    day?: number,
     public: boolean
 }
 

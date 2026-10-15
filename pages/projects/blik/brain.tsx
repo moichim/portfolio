@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     "description": "Interactive installation",
     "authors": [{
         "name": "Jan Jáchim",
-        "url": "https://janjachim.com"
+        "url": "https://janjachim.cz"
     }, {
         "name": "Matěj Řízek",
-        "url": "https://matejrizek.com"
+        "url": "https://matej.rizek.serchan.cz"
     }],
     "image": "/brain/thumb2.jpg",
     "color": "#0d4441",

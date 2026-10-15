@@ -31,6 +31,10 @@ function ProjectLayout(props: ProjectProps, ref: PageTransitionRef) {
             color={props.meta.color}
             type="article"
             noindex={!props.meta.public}
+            authors={props.meta.authors}
+            year={props.meta.year}
+            month={props.meta.month}
+            day={props.meta.day}
         />
         <main>
             <article className={clsx(classes)}>
