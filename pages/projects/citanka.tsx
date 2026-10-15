@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 	"color": "#54401f",
 	"year": 2022,
 	"month": 4,
-	"day": 31,
+	"day": 15,
 	"keywords": [ "design" ],
 	"public": true
 }
