@@ -64,11 +64,13 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                     bgHover="#b68832"
                     color="white"
                     content={
-                        <Picture
-                            src={brain}
-                            alt="Brain neuron installation by Jan Jáchim"
-                            wrap={false}
-                        />
+                        <Link href="/projects/blik/brain">
+                            <Picture
+                                src={brain}
+                                alt="Brain neuron installation by Jan Jáchim"
+                                wrap={false}
+                            />
+                        </Link>
                     }
                     href="/projects/blik/brain"
                 ></Thumbnail>
@@ -83,11 +85,13 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                     bgHover="rgb(82, 45, 150)"
                     color="white"
                     content={
-                        <Picture
-                            src={cerrynt}
-                            alt="Cerrynt interactive projection installation"
-                            wrap={false}
-                        />
+                        <Link href="/projects/blik/cerrynt">
+                            <Picture
+                                src={cerrynt}
+                                alt="Cerrynt interactive projection installation"
+                                wrap={false}
+                            />
+                        </Link>
                     }
                     href="/projects/blik/cerrynt"
                 >
