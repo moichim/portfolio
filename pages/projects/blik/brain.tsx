@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         "name": "Matěj Řízek",
         "url": "https://matej.rizek.serchan.cz"
     }],
-    "image": "/brain/thumb2.jpg",
+    "image": "/brain/thumb2_small.jpg",
     "color": "#0d4441",
     "year": 2026,
     "month": 9,

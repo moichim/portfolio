@@ -17,7 +17,7 @@ import { SCIRPT_ID } from "./projects/ntc/labir"
 import Youtube from "@/components/content/partials/Youtube"
 import Content from "@/components/content/Content"
 import Picture from "@/components/content/partials/Picture"
-import brain from "@/public/brain/thumb2.png"
+import brain from "@/public/brain/thumb2_small.jpg"
 import styles from "./index.module.scss"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
