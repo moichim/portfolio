@@ -13,19 +13,21 @@ import { ReactElement } from 'react';
  */
 const TransitionProvider: React.FC<React.PropsWithChildren> = props => {
 
-    return <AnimatePresence
-        mode="sync"
-        initial={false}
-    >
-        <PageTransition
-          as="div"
-          outPhaseDuration={300}
-          inPhaseDuration={100}
-          className={styles.container}
+    return (
+        <AnimatePresence
+            mode="sync"
+            initial={false}
         >
-            {props.children as ReactElement}
-            </PageTransition>
-        </AnimatePresence>
+            <PageTransition
+              as="div"
+              outPhaseDuration={300}
+              inPhaseDuration={100}
+              className={styles.container}
+            >
+                {props.children as ReactElement<any>}
+                </PageTransition>
+            </AnimatePresence>
+    );
 }
 
 export default TransitionProvider;
