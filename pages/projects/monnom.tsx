@@ -5,8 +5,6 @@ import { useScheme } from "@/context/scheme/SchemeContextProvider"
 import { Metadata } from "@/data/ProjectsManager"
 import { forwardRef, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 
-import 'react-device-frameset/styles/marvel-devices.min.css'
-
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
