@@ -159,7 +159,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 </Text>
 
                 <Text md={6}>
-                    <strong>Cerrynt</strong> animation concept was initially tested in the installation <Link href="/blik/symfonie-barev">Sound Lab</Link>.
+                    <strong>Cerrynt</strong> animation concept was initially tested in the installation <Link href="/projects/blik/symfonie-barev">Sound Lab</Link>.
                 </Text>
 
 

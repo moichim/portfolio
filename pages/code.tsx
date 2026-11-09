@@ -69,7 +69,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                                     years: "od roku 2024",
                                     desc: "Vyvíjím open-source knihovnu webkomponent pro práci se snímky z termokamer",
                                     referencies: [
-                                        { name: "@labirthermal/webcomponents", link: "/projects/ntc/labir" }
+                                        { name: "@labirthermal/webcomponents", link: "/projects/labirthermal" }
                                     ]
                                 },
                                 {

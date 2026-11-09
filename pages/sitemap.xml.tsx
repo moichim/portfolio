@@ -24,7 +24,7 @@ const PROJECT_PATHS = [
   "/projects/blik/symfonie-barev",
   "/projects/humr/classmates",
   "/projects/humr/room-127",
-  "/projects/ntc/labir",
+  "/projects/labirthermal",
   "/projects/school/analyza",
   "/projects/school/kdo",
   "/projects/school/kytky",

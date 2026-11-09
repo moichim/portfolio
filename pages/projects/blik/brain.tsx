@@ -86,7 +86,7 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                     
                     <p>Large scale installation is part of interactive exhibition <strong>Do těla / Inside the Body</strong> at DEPO2015, Pilsen, CZ.</p>
                     <p>The <strong>Brain</strong> installation shows a portion of neural structures using 17 km of optical fibres in a 5 x 4 m object.</p>
-                    <p>Collaboration with <Link href="https://www.instagram.com/matejrizek/?hl=de" rel="nofollow" target="_blank">Matěj Řízek</Link> who helped with the physical object inlstallation, design and planning.</p>
+                    <p>Collaboration with the sculptor <Link href="https://www.instagram.com/matejrizek/?hl=de" rel="nofollow" target="_blank">Matěj Řízek</Link> who helped with the physical object design, planning and installation.</p>
                 </Text>
 
                  <Picture src={img27} md={4} />

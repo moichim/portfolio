@@ -50,7 +50,11 @@ const nextConfig = {
   async redirects() {
     return [{
       source: "/cerrynt",
-      destination: "/projects/blik/cerrynt-pilsen",
+      destination: "/projects/blik/cerrynt",
+      permanent: true,
+    }, {
+      source: "/projects/ntc/labir",
+      destination: "/projects/labirthermal",
       permanent: true,
     }]
   }

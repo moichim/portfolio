@@ -93,7 +93,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                         }} />
                     </div>
                 </div>}
-                href="/projects/ntc/labir"
+                href="/projects/labirthermal"
             >
 
             </Thumbnail>

@@ -32,6 +32,9 @@ pnpm; recheck it when upgrading the transition library.
 
 ## LabIR showcase
 
+The project lives at `/projects/labirthermal`; the former
+`/projects/ntc/labir` URL permanently redirects there.
+
 `components/content/partials/Labirthermal.tsx` is the SSR-safe entry point:
 
 ```tsx

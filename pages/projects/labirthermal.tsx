@@ -13,8 +13,8 @@ type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
 import Link from "next/link";
 
-import style from "../../../styles/modules/schema.module.scss";
-import styles from "../../../styles/modules/labir.module.scss";
+import style from "@/styles/modules/schema.module.scss";
+import styles from "@/styles/modules/labir.module.scss";
 
 const documentation = "https://labirthermal.github.io/web";
 const fileDocumentation = `${documentation}/webcomponents/applications/thermal-file-app.html`;
@@ -44,9 +44,11 @@ type ShowcaseConfiguration = Pick<LabirthermalFileElement, "palette" | typeof an
 const advancedExample = {
     thermal: "/labir/sekvence.lrc",
     label: "Sekvence s analýzami",
-    palette: "lava",
+    palette: "rainbow",
     advancedPalettes: true,
     unit: "F",
+    from: 68,
+    to: 82.5,
     playbackSpeed: 2,
     analysis1: "Oblast A;rectangle;color:Blue;top:14;left:8;width:65;height:31;avg;max",
     analysis2: "Oblast B;ellipsis;color:Green;top:34;left:102;width:34;height:47;avg;max",
@@ -111,8 +113,8 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
     const [configuration, setConfiguration] = useState<ShowcaseConfiguration>({
         palette: "lava",
-        analysis1: "Analýza A;rectangle;color:Blue;top:14;left:8;width:65;height:31",
-        analysis2: "Analýza B;ellipsis;color:Green;top:34;left:102;width:34;height:47",
+        analysis1: "Analýza A;rectangle;color:Blue;top:100;left:80;width:420;height:250",
+        analysis2: "Analýza B;ellipsis;color:Green;top:280;left:600;width:280;height:360",
     });
     const [showcase, setShowcase] = useState<LabirthermalFileElement | null>(null);
     const basicExample = {
