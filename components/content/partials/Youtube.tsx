@@ -36,8 +36,9 @@ const Youtube: React.FC<YoutubeProps> = ({
                     >
                         <Image
                             src={`https://img.youtube.com/vi/${id}/sddefault.jpg`}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            sizes="100vw"
+                            style={{ objectFit: "cover" }}
                             alt="yt thumbnail"
                             priority
                         />

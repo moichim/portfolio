@@ -34,7 +34,10 @@ const Navlink: React.FC< NavigationLinkProps > = ( props ) => {
 
 }
 
-import exp from "@/styles/modules/export.module.scss";
+// Mirrors $menuCollapseBreakpoint (lg: 1200px) in styles/_variables.scss.
+// Turbopack does not support ICSS `:export`, so the value lives here.
+const MENU_COLLAPSE_BREAKPOINT = 1200;
+
 import { Link } from "@madeinhaus/nextjs-page-transition";
 
 const SiteTitle: React.FC = () => {
@@ -47,7 +50,7 @@ const SiteTitle: React.FC = () => {
 
         event.preventDefault();
 
-        if (window.innerWidth < ( parseFloat( exp.menuCollapseBreakpoint ) ) ) {
+        if (window.innerWidth < MENU_COLLAPSE_BREAKPOINT ) {
 
             if ( context.isExpanded === false ) {
                 context.setIsExpanded( true );

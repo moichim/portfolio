@@ -32,8 +32,8 @@ const Picture: React.FC<PictureProps> = ({
             <Image 
                 src={src}
                 alt={alt}
-                objectFit="cover"
-                layout="responsive"
+                sizes="100vw"
+                style={{ width: "100%", height: "auto", objectFit: "cover" }}
                 className={styles.image}
                 onLoad={() => setLoaded( true )}
             />
