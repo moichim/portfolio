@@ -33,6 +33,40 @@
     overflow-wrap: anywhere;
 }
 
+.sourceDisclosure {
+    min-width: 0;
+    padding: .75rem;
+    border: 1px solid currentColor;
+    border-radius: .25rem;
+
+    > summary {
+        cursor: pointer;
+    }
+
+    &[open] > summary {
+        margin-bottom: 1rem;
+    }
+}
+
+.sourceTabs {
+    display: flex;
+    gap: .5rem;
+
+    > button {
+        padding: .5rem 1rem;
+        color: inherit;
+        background: transparent;
+        border: 1px solid currentColor;
+        border-radius: .25rem;
+        cursor: pointer;
+
+        &[data-selected] {
+            color: var(--moichim-bg);
+            background: var(--moichim-text);
+        }
+    }
+}
+
 .preview {
     min-width: 0;
 

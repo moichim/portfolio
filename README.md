@@ -79,6 +79,16 @@ Advanced demos use a narrow description column and a wide code/viewer column,
 stacking on smaller screens. Supported formats and package links follow the
 basic example and point to the upstream documentation.
 
+The custom interface demo uses React wrappers for the
+`ManagerProvider` → `RegistryProvider` → `GroupProvider` → `FileProvider`
+hierarchy, mixing shared controls and four still images with ordinary HTML.
+It uses the library's built-in `skin="solarized"` without theme overrides.
+Layout CSS is scoped to `.labir-solarized` and shared with the displayed
+CSS example, as is the file list with the HTML example. `LabirthermalCustom.tsx` is an SSR-safe
+dynamic entry point; only `LabirthermalCustomClient.tsx` imports runtime wrappers.
+The demo follows the drop-in example; its complete HTML and CSS are collapsed
+under "View HTML & CSS" by default, with separate HTML and CSS tabs.
+
 The homepage reserves space for the asynchronous LabIR component using
 `pages/index.module.scss`. The width-dependent minimum height was checked with
 `@labirthermal/react`, `/labir/snimek.lrc`, and viewport widths from 320 to 2560 px.

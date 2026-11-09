@@ -1,6 +1,8 @@
 import Content from "@/components/content/Content";
 import Partial from "@/components/content/partials/Partial";
 import Labirthermal, { type LabirthermalFileElement, type LabirthermalProps } from "@/components/content/partials/Labirthermal";
+import LabirthermalCustom, { customInterfaceCss, customInterfaceHtml } from "@/components/content/partials/LabirthermalCustom";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import ProjectLayout from "@/components/layout/projects/ProjectLayout";
 import { Metadata } from "@/data/ProjectsManager";
 import React, { forwardRef, useEffect, useState } from "react";
@@ -21,7 +23,7 @@ const fileDocumentation = `${documentation}/webcomponents/applications/thermal-f
 
 export const metadata: Metadata = {
     "title": "@labirthermal/web",
-    "description": "Opensource knihovna",
+    "description": "Open-source thermal imaging library",
     "authors": [{
         "name": "Jan Jáchim"
     }],
@@ -43,25 +45,25 @@ type ShowcaseConfiguration = Pick<LabirthermalFileElement, "palette" | typeof an
 
 const advancedExample = {
     thermal: "/labir/sekvence.lrc",
-    label: "Sekvence s analýzami",
+    label: "Thermal sequence with analyses",
     palette: "rainbow",
     advancedPalettes: true,
     unit: "F",
     from: 68,
     to: 82.5,
     playbackSpeed: 2,
-    analysis1: "Oblast A;rectangle;color:Blue;top:14;left:8;width:65;height:31;avg;max",
-    analysis2: "Oblast B;ellipsis;color:Green;top:34;left:102;width:34;height:47;avg;max",
+    analysis1: "Region A;rectangle;color:Blue;top:14;left:8;width:65;height:31;avg;max",
+    analysis2: "Region B;ellipsis;color:Green;top:34;left:102;width:34;height:47;avg;max",
 } satisfies NonNullable<LabirthermalProps["file"]>;
 
 const groupExample = {
-    label: "Skupina souborů",
+    label: "File group",
     palette: "iron",
     filesString: "thermal~/labir/snimek.lrc;thermal~/labir/snimek_2.lrc;thermal~/labir/snimek_3.lrc;thermal~/labir/snimek_4.lrc",
 } satisfies NonNullable<LabirthermalProps["group"]>;
 
 const dropinExample = {
-    label: "Vyzkoušejte vlastní termogram",
+    label: "Try your own thermal image",
     palette: "iron",
     advancedPalettes: true,
 } satisfies NonNullable<LabirthermalProps["dropin"]>;
@@ -83,7 +85,7 @@ function elementHtml(tag: string, attributes: Record<string, string | number | b
     return `<${tag}\n${lines.join("\n")}\n></${tag}>`;
 }
 
-function HtmlExample({ code, language = "html" }: { code: string; language?: "html" | "tsx" }) {
+function HtmlExample({ code, language = "html" }: { code: string; language?: "html" | "css" | "tsx" }) {
     return <div className={styles.source}>
         <SyntaxHighlighter
             language={language}
@@ -113,13 +115,13 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
 
     const [configuration, setConfiguration] = useState<ShowcaseConfiguration>({
         palette: "lava",
-        analysis1: "Analýza A;rectangle;color:Blue;top:100;left:80;width:420;height:250",
-        analysis2: "Analýza B;ellipsis;color:Green;top:280;left:600;width:280;height:360",
+        analysis1: "Analysis A;rectangle;color:Blue;top:100;left:80;width:420;height:250",
+        analysis2: "Analysis B;ellipsis;color:Green;top:280;left:600;width:280;height:360",
     });
     const [showcase, setShowcase] = useState<LabirthermalFileElement | null>(null);
     const basicExample = {
         thermal: "/labir/flir_02.jpg",
-        label: "FLIR radiometrický JPEG",
+        label: "FLIR JPEG",
         advancedPalettes: true,
         from: 24,
         to: 30,
@@ -155,16 +157,16 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 <Partial xs={12}>
                     <div className={style.container}>
                         <Piece
-                            hint={<Link href={`${documentation}/core/supported-files/`}>LRC / radiometrický JPEG</Link>}
-                        >snímek z termokamery</Piece>
+                            hint={<Link href={`${documentation}/core/supported-files/`}>LRC / FLIR JPEG</Link>}
+                        >thermal camera recording</Piece>
                         <i>+</i>
                         <Piece
-                            hint={<>JS knihovna pro browser</>}
+                            hint={<>JavaScript library for the browser</>}
                         >@labirthermal/web</Piece>
                         <i>=</i>
                         <Piece
                             hint={<>webcomponents / React / Vue / …</>}
-                        >analytická aplikace v prohlížeči</Piece>
+                        >browser-based analysis app</Piece>
                     </div>
                 </Partial>
 
@@ -179,54 +181,54 @@ function IndexPage(props: IndexPageProps, ref: IndexPageRef) {
                 </Partial>
 
                 <Partial md={12} lg={5}>
-                    <HtmlExample code={`<!-- Jednou načtěte lokálně uložený IIFE build knihovny. -->
+                    <HtmlExample code={`<!-- Load the locally hosted IIFE build once. -->
 <script src="/lib/labirthermal.iife.js"></script>
 
 ${elementHtml("thermal-file-app", basicExample)}`} />
-                    <p>Změňte paletu nebo analýzy v ukázce — atributy v kódu se průběžně aktualizují.</p>
+                    <p>Change the palette or analyses in the demo — the code attributes update live.</p>
                 </Partial>
 
                 <Partial md={4} className={styles.overview}>
-                    <h2>Podporované soubory</h2>
+                    <h2>Supported file formats</h2>
                     <ul>
-                        <li><Link href={`${documentation}/core/supported-files/lrc.html`}>LabIR Recording (.lrc)</Link><br />Jednotlivé snímky i sekvence z kamer TIMI Edu a měřicích systémů IRT ZČU.</li>
-                        <li><Link href={`${documentation}/core/supported-files/flir.html`}>Radiometrický JPEG (.jpg, .jpeg)</Link><br />Snímky FLIR a kompatibilních kamer, například DJI Zenmuse XT / XT2.</li>
+                        <li><Link href={`${documentation}/core/supported-files/lrc.html`}>LabIR Recording (.lrc)</Link><br />Single images and sequences from TIMI Edu cameras and IRT measurement systems at the University of West Bohemia.</li>
+                        <li><Link href={`${documentation}/core/supported-files/flir.html`}>FLIR JPEG (.jpg, .jpeg)</Link><br />Images from FLIR and compatible cameras, including DJI Zenmuse XT / XT2.</li>
                     </ul>
-                    <p>Automatické rozpoznání formátu podle obsahu souboru.</p>
-                    <p><Link href={`${documentation}/core/supported-files/`}>Přehled formátů a parserů</Link></p>
+                    <p>Automatic format detection based on file contents.</p>
+                    <p><Link href={`${documentation}/core/supported-files/`}>Formats and parsers</Link></p>
                 </Partial>
 
                 <Partial md={4} className={styles.overview}>
-                    <h2>Struktura balíčků</h2>
-                    <p><code className="code">@labirthermal/web</code> je otevřené monorepo se společným základem:</p>
+                    <h2>Package structure</h2>
+                    <p><code className="code">@labirthermal/web</code> is an open-source monorepo built on a shared foundation:</p>
                     <ul>
-                        <li><Link href={`${documentation}/core/`}>@labirthermal/core</Link><br />Čtení souborů, teplotní data, analýzy a správa měření v TypeScriptu.</li>
-                        <li><Link href={`${documentation}/webcomponents/`}>@labirthermal/webcomponents</Link><br />Hotové aplikace a UI prvky založené na Lit pro HTML, React i Vue.</li>
-                        <li><Link href={`${documentation}/react/`}>@labirthermal/react</Link><br />Typované komponenty pro React aplikace.</li>
+                        <li><Link href={`${documentation}/core/`}>@labirthermal/core</Link><br />File reading, temperature data, analysis and measurement management in TypeScript.</li>
+                        <li><Link href={`${documentation}/webcomponents/`}>@labirthermal/webcomponents</Link><br />Ready-to-use Lit-based apps and UI elements for HTML, React and Vue.</li>
+                        <li><Link href={`${documentation}/react/`}>@labirthermal/react</Link><br />Typed components for React apps.</li>
                     </ul>
-                    <p><Link href={documentation}>Dokumentace knihovny</Link>
+                    <p><Link href={documentation}>Library documentation</Link>
                         {" · "}<Link href="https://github.com/labirthermal/web">GitHub</Link></p>
                 </Partial>
 
                 <Partial md={4} className={styles.overview}>
-                    <h2>Hlavní funkce</h2>
+                    <h2>Key features</h2>
                     <ul>
-                        <li>Lokální zpracování v prohlížeči a Web Workers.</li>
-                        <li>Přehrávání sekvencí a procházení jednotlivých snímků.</li>
-                        <li><Link href={`${documentation}/webcomponents/guide/thermal-palette.html`}>Barevné palety</Link><br />Histogram a nastavitelný teplotní rozsah.</li>
-                        <li>Bodové, obdélníkové a eliptické analýzy s tabulkou a časovým grafem.</li>
-                        <li><Link href={`${documentation}/webcomponents/guide/thermal-range-and-units.html`}>Jednotky °C, °F a K</Link>.</li>
-                        <li>Porovnávání více souborů, export obrázků, dat a videa.</li>
+                        <li>Local processing in the browser with Web Workers.</li>
+                        <li>Sequence playback and frame-by-frame navigation.</li>
+                        <li><Link href={`${documentation}/webcomponents/guide/thermal-palette.html`}>Colour palettes</Link><br />Histogram and adjustable temperature range.</li>
+                        <li>Point, rectangle and ellipse analyses with tables and time-series charts.</li>
+                        <li><Link href={`${documentation}/webcomponents/guide/thermal-range-and-units.html`}>Temperature units: °C, °F and K</Link>.</li>
+                        <li>Multi-file comparison and image, data and video export.</li>
                     </ul>
                 </Partial>
 
                 <Partial xs={12}>
                     <section className={styles.example} aria-labelledby="labir-advanced">
                         <div className={styles.description}>
-                            <h2 id="labir-advanced">Pokročilé možnosti</h2>
-                            <p>Sekvence s časovou osou, dvěma analýzami a grafem průměrných i maximálních teplot.</p>
-                            <p>Paleta <code className="code">lava</code>, rozšířený výběr palet, jednotky °F a přehrávání 2×. Jednotky lze přepnout na °C nebo K.</p>
-                            <p><Link href={fileDocumentation}>Atributy a možnosti thermal-file-app</Link></p>
+                            <h2 id="labir-advanced">Advanced features</h2>
+                            <p>A sequence with a timeline, two analysis regions and a chart of average and maximum temperatures.</p>
+                            <p>The <code className="code">rainbow</code> palette, advanced palette selection, a 68–82.5 °F range and 2× playback. Switch units to °C or K.</p>
+                            <p><Link href={fileDocumentation}>thermal-file-app attributes and options</Link></p>
                         </div>
                         <div className={styles.demo}>
                             <HtmlExample code={elementHtml("thermal-file-app", advancedExample)} />
@@ -240,10 +242,10 @@ ${elementHtml("thermal-file-app", basicExample)}`} />
                 <Partial xs={12}>
                     <section className={styles.example} aria-labelledby="labir-group">
                         <div className={styles.description}>
-                            <h2 id="labir-group">Skupinový modul</h2>
-                            <p>Porovnání snímků se společnou paletou a teplotním rozsahem.</p>
-                            <p>Nastavitelná mřížka, tabulkový přehled a detail každého měření.</p>
-                            <p><Link href={`${documentation}/webcomponents/applications/thermal-group-app.html`}>Dokumentace thermal-group-app</Link></p>
+                            <h2 id="labir-group">Group module</h2>
+                            <p>Compare images with a shared palette and temperature range.</p>
+                            <p>An adjustable grid, a summary table and a detailed view of each measurement.</p>
+                            <p><Link href={`${documentation}/webcomponents/applications/thermal-group-app.html`}>thermal-group-app documentation</Link></p>
                         </div>
                         <div className={styles.demo}>
                             <HtmlExample code={elementHtml("thermal-group-app", groupExample)} />
@@ -257,9 +259,9 @@ ${elementHtml("thermal-file-app", basicExample)}`} />
                 <Partial xs={12}>
                     <section className={styles.example} aria-labelledby="labir-dropin">
                         <div className={styles.description}>
-                            <h2 id="labir-dropin">Vlastní soubory: drop-in</h2>
-                            <p>Přetáhněte vlastní termogramy nebo je vyberte z disku. Analýza i porovnávání běží lokálně v prohlížeči.</p>
-                            <p><Link href={`${documentation}/webcomponents/applications/thermal-dropin-app.html`}>Dokumentace thermal-dropin-app</Link></p>
+                            <h2 id="labir-dropin">Your own files: drop-in</h2>
+                            <p>Drag in your thermal images or select them from disk. Analysis and comparison run locally in your browser.</p>
+                            <p><Link href={`${documentation}/webcomponents/applications/thermal-dropin-app.html`}>thermal-dropin-app documentation</Link></p>
                         </div>
                         <div className={styles.demo}>
                             <HtmlExample code={elementHtml("thermal-dropin-app", dropinExample)} />
@@ -271,24 +273,58 @@ ${elementHtml("thermal-file-app", basicExample)}`} />
                 </Partial>
 
                 <Partial xs={12}>
-                    <h2>Integrace do aplikace</h2>
+                    <section className={styles.example} aria-labelledby="labir-custom">
+                        <div className={styles.description}>
+                            <h2 id="labir-custom">Build custom interfaces</h2>
+                            <p>Combine standalone webcomponents with your own HTML to build any interface.</p>
+                            <p>Four still images, shared palette and range controls, and a scoped Solarized theme. Providers connect the controls and images through a shared context.</p>
+                            <p><Link href={`${documentation}/webcomponents/list.html`}>Explore all webcomponents</Link>
+                                {" · "}<Link href={`${documentation}/webcomponents/guide/hierarchy.html`}>Provider hierarchy</Link></p>
+                        </div>
+                        <div className={styles.demo}>
+                            <details className={styles.sourceDisclosure}>
+                                <summary>View HTML &amp; CSS</summary>
+                                <TabGroup>
+                                    <TabList className={styles.sourceTabs} aria-label="Source language">
+                                        <Tab>HTML</Tab>
+                                        <Tab>CSS</Tab>
+                                    </TabList>
+                                    <TabPanels>
+                                        <TabPanel>
+                                            <HtmlExample code={customInterfaceHtml} />
+                                        </TabPanel>
+                                        <TabPanel>
+                                            <HtmlExample code={customInterfaceCss} language="css" />
+                                        </TabPanel>
+                                    </TabPanels>
+                                </TabGroup>
+                            </details>
+                            <div className={styles.preview}>
+                                <LabirthermalCustom />
+                            </div>
+                        </div>
+                    </section>
+                </Partial>
+
+                <Partial xs={12}>
+                    <h2>App integration</h2>
                 </Partial>
 
                 <Partial md={6}>
                     <h3>HTML / IIFE</h3>
-                    <p>Lokálně uložený IIFE build zaregistruje komponenty pro použití kdekoliv v HTML.</p>
+                    <p>The locally hosted IIFE build registers the components for use anywhere in HTML.</p>
                     <HtmlExample code={`<script src="/lib/labirthermal.iife.js"></script>
 
 <thermal-file-app
     thermal="/labir/flir_02.jpg"
     palette="iron"
 ></thermal-file-app>`} />
-                    <p><Link href={`${documentation}/webcomponents/usage.html`}>Načtení IIFE buildu</Link></p>
+                    <p><Link href={`${documentation}/webcomponents/usage.html`}>Loading the IIFE build</Link></p>
                 </Partial>
 
                 <Partial md={6}>
                     <h3>React</h3>
-                    <p>Provider připraví runtime a zpřístupní typované komponenty.</p>
+                    <p>The provider initializes the runtime and makes the typed components available.</p>
                     <HtmlExample language="tsx" code={`import {
     LabirthermalProvider,
     ThermalFileApp,
@@ -296,7 +332,7 @@ ${elementHtml("thermal-file-app", basicExample)}`} />
 
 export default function ThermalViewer() {
     return (
-        <LabirthermalProvider fallback={<p>Načítání…</p>}>
+        <LabirthermalProvider fallback={<p>Loading…</p>}>
             <ThermalFileApp
                 thermal="/labir/flir_02.jpg"
                 palette="iron"
@@ -305,7 +341,7 @@ export default function ThermalViewer() {
     );
 }`} />
                     <p><Link href={`${documentation}/react/`}>React API</Link>
-                        {" · "}<Link href={`${documentation}/react/nextjs.html`}>Klientské načítání v Next.js</Link></p>
+                        {" · "}<Link href={`${documentation}/react/nextjs.html`}>Client-side loading in Next.js</Link></p>
                 </Partial>
 
             </Content>
