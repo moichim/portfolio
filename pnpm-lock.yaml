@@ -166,6 +166,9 @@ overrides:
   '@types/react': 19.3.0
   '@types/react-dom': 19.3.0
 
+patchedDependencies:
+  '@madeinhaus/nextjs-page-transition@4.2.0': b86133f8111d6de78d29b111d2a7f1c31bd5fc2d73c758edaacc572bbd205c47
+
 importers:
 
   .:
@@ -177,11 +180,11 @@ importers:
         specifier: ^2.2.10
         version: 2.2.10(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@labirthermal/react':
-        specifier: ^2.0.3
-        version: 2.0.3(@types/react@19.3.0)(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: ^2.0.4
+        version: 2.0.4(@types/react@19.3.0)(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@madeinhaus/nextjs-page-transition':
         specifier: ^4.2.0
-        version: 4.2.0(next@16.4.5(@babel/core@7.29.13(supports-color@7.2.0))(@types/node@20.19.43)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.108.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        version: 4.2.0(patch_hash=b86133f8111d6de78d29b111d2a7f1c31bd5fc2d73c758edaacc572bbd205c47)(next@16.4.5(@babel/core@7.29.13(supports-color@7.2.0))(@types/node@20.19.43)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.108.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@types/node':
         specifier: ^20.19.43
         version: 20.19.43
@@ -753,17 +756,17 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@labirthermal/core@2.0.3':
-    resolution: {integrity: sha512-8MGQ+4p5xYv3V3IXZuIKz1dzJgXsNLt8b7gbPbk+Gqvvma71eouiN5y3WupH5yv019GfW/7ccYiIkDR7pZCe7A==}
+  '@labirthermal/core@2.0.4':
+    resolution: {integrity: sha512-pHr1EeV6vNgJXlVWfWJvzlksr2//BoCAgI6FE8Y1+yOLeIL7/rx4FfbfsxUWck/YdVeqk7JmzBqpt6KeV8uYRQ==}
 
-  '@labirthermal/react@2.0.3':
-    resolution: {integrity: sha512-n6K498/rBjwjQIycjyCeQBKx8j8w7mXsUHXzxdMgf73F/qkvBfiywTrSnQzkNecBsXgfbvs7iZ2LWzutUgqTEw==}
+  '@labirthermal/react@2.0.4':
+    resolution: {integrity: sha512-VqffT+J+eLl3Y+5a1A6+vtkqMxXfeRXzBQymhnNsnRnXBNU5PQNKZfmAQBlz0ORTWoItXtMwRxWa1zvLJa3S6w==}
     peerDependencies:
       react: ^19.3.1
       react-dom: ^19.3.1
 
-  '@labirthermal/webcomponents@2.0.3':
-    resolution: {integrity: sha512-4+/ry/DTRa39pfgrcTqTzswVjqzDWmh690xYe1tbUCAVv9AycVpY4zTlmU6ZmtVMrD/ce2NJ9Veu+wp+l04ncQ==}
+  '@labirthermal/webcomponents@2.0.4':
+    resolution: {integrity: sha512-rRl6WW4YaocWYbHzvz4JNN8tcmpHoK20V6mqmLWHUfbEK06HFGVgRzC4JPzBZmPPcXVx3dLwvvFNnCCajUmQug==}
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
@@ -3122,7 +3125,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@labirthermal/core@2.0.3':
+  '@labirthermal/core@2.0.4':
     dependencies:
       client-zip: 2.5.1
       cross-fetch: 4.1.0
@@ -3133,10 +3136,10 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@labirthermal/react@2.0.3(@types/react@19.3.0)(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@labirthermal/react@2.0.4(@types/react@19.3.0)(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@labirthermal/core': 2.0.3
-      '@labirthermal/webcomponents': 2.0.3(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)
+      '@labirthermal/core': 2.0.4
+      '@labirthermal/webcomponents': 2.0.4(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)
       '@lit/context': 1.1.6
       '@lit/react': 1.0.8(@types/react@19.3.0)
       react: 19.3.1
@@ -3147,10 +3150,10 @@ snapshots:
       - i18next
       - lit-html
 
-  '@labirthermal/webcomponents@2.0.3(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)':
+  '@labirthermal/webcomponents@2.0.4(i18next@27.0.1(typescript@5.9.3))(lit-html@3.3.3)':
     dependencies:
       '@floating-ui/dom': 1.8.0
-      '@labirthermal/core': 2.0.3
+      '@labirthermal/core': 2.0.4
       '@lit/context': 1.1.6
       date-fns: 4.4.0
       i18next-browser-languagedetector: 8.3.0
@@ -3186,7 +3189,7 @@ snapshots:
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.6.0
 
-  '@madeinhaus/nextjs-page-transition@4.2.0(next@16.4.5(@babel/core@7.29.13(supports-color@7.2.0))(@types/node@20.19.43)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.108.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@madeinhaus/nextjs-page-transition@4.2.0(patch_hash=b86133f8111d6de78d29b111d2a7f1c31bd5fc2d73c758edaacc572bbd205c47)(next@16.4.5(@babel/core@7.29.13(supports-color@7.2.0))(@types/node@20.19.43)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.108.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@madeinhaus/utils': 2.2.0(react@19.3.1)
       clsx: 2.1.1

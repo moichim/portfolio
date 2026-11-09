@@ -4,6 +4,25 @@ const nextConfig = {
   // distDir: "out",
   pageExtensions: ["tsx"],
   reactStrictMode: true,
+  // workerpool's browser build retains guarded Node-only imports.
+  turbopack: {
+    resolveAlias: {
+      worker_threads: { browser: false },
+      child_process: { browser: false },
+      os: { browser: false },
+    },
+  },
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        worker_threads: false,
+        child_process: false,
+        os: false,
+      };
+    }
+    return config;
+  },
   sassOptions: {
     prependData: `@use 'sass:math'; @import "@/styles/prepend.scss";`,
     logger: {

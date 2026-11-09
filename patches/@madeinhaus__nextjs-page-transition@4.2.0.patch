@@ -1,0 +1,28 @@
+diff --git a/dist/index.js b/dist/index.js
+index ae3e3248e04ff56a8076f69afb03b2b9f88ca7f5..1d0b7d9df22cd89e8438fdec249b9483e59ef945 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -48,7 +48,8 @@ var import_utils2 = require("@madeinhaus/utils");
+ // src/helpers/useNextCssRemovalPrevention.ts
+ var React = __toESM(require("react"));
+ var import_router = require("next/router");
+-var useNextCssRemovalPrevention = () => {
++// Turbopack owns CSS lifetimes; legacy cleanup invalidates its stylesheet cache.
++var useNextCssRemovalPrevention = process.env.TURBOPACK ? () => () => {} : () => {
+   const { events } = (0, import_router.useRouter)();
+   const fullAsPath = useFullAsPath();
+   const cssHashMap = React.useRef(/* @__PURE__ */ new Map());
+diff --git a/dist/index.mjs b/dist/index.mjs
+index f0f3509bdb222df28d2c586593ca66720a1d0b81..ca5fc858003331e09d24acceefda2f9d0fb9d6c8 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -8,7 +8,8 @@ import { getHash as getHash2, removeHash as removeHash2 } from "@madeinhaus/util
+ // src/helpers/useNextCssRemovalPrevention.ts
+ import * as React from "react";
+ import { useRouter } from "next/router";
+-var useNextCssRemovalPrevention = () => {
++// Turbopack owns CSS lifetimes; legacy cleanup invalidates its stylesheet cache.
++var useNextCssRemovalPrevention = process.env.TURBOPACK ? () => () => {} : () => {
+   const { events } = useRouter();
+   const fullAsPath = useFullAsPath();
+   const cssHashMap = React.useRef(/* @__PURE__ */ new Map());

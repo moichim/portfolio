@@ -11,7 +11,7 @@
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^5.3.0",
     "@headlessui/react": "^2.2.10",
-    "@labirthermal/react": "^2.0.3",
+    "@labirthermal/react": "^2.0.4",
     "@madeinhaus/nextjs-page-transition": "^4.2.0",
     "@types/node": "^20.19.43",
     "@types/react": "19.3.0",

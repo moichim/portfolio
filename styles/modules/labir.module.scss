@@ -1,0 +1,45 @@
+.overview {
+    margin: 2rem 0 3rem;
+}
+
+.example {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid currentColor;
+
+    @include up(lg) {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+        gap: 3rem;
+    }
+}
+
+.description,
+.demo {
+    min-width: 0;
+}
+
+.demo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.source {
+    font-size: .75rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.preview {
+    min-width: 0;
+
+    > thermal-file-app,
+    > thermal-group-app,
+    > thermal-dropin-app {
+        display: block;
+        width: 100%;
+    }
+}

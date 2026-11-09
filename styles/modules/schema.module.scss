@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: "10px";
+    gap: 10px;
 
     padding-bottom: 1rem;
 
@@ -27,10 +27,16 @@
 }
 
 .component {
-    background: var(--thermal-slate-light);
-    border-radius: var(--thermal-radius);
+    background: color-mix(in srgb, var(--moichim-text) 10%, var(--moichim-bg));
+    color: var(--moichim-text);
+    border-radius: .25rem;
     text-align: center;
     padding: .3rem .5rem;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
 }
 
 .mark {

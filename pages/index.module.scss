@@ -4,11 +4,12 @@
 }
 
 .thermalSlot {
-    // Measured with embed 1.3.0 and snimek.lrc; keep the reserve after loading.
+    // Measured with @labirthermal/react and snimek.lrc; keep the reserve after loading.
     min-height: calc(37.5cqw + 180px);
 
-    @media (max-width: 800px) {
-        min-height: calc(37.5cqw + 580px);
+    // Include the viewer's internal padding around its 700px layout breakpoint.
+    @container (width < 720px) {
+        min-height: max(760px, calc(37.5cqw + 620px));
     }
 
     > thermal-file-app {

@@ -2,6 +2,12 @@ allowBuilds:
   '@parcel/watcher': false
   sharp: false
   unrs-resolver: false
+minimumReleaseAgeExclude:
+  - '@labirthermal/core@2.0.4'
+  - '@labirthermal/react@2.0.4'
+  - '@labirthermal/webcomponents@2.0.4'
 overrides:
   '@types/react': 19.3.0
   '@types/react-dom': 19.3.0
+patchedDependencies:
+  '@madeinhaus/nextjs-page-transition@4.2.0': patches/@madeinhaus__nextjs-page-transition@4.2.0.patch

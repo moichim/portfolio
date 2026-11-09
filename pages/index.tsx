@@ -9,38 +9,12 @@ import { Thumbnail } from "@/components/content/partials/Thumbnail"
 import ThumbnailGrid from "@/components/content/partials/ThumbnailGrid"
 import fflach from "@/public/blik/labordy-sanau/radio_1_B.jpg"
 import cerrynt from "@/public/cerrynt/cerrynt_depo_01.jpg"
-import labir from "@/public/labir/thumb.png"
-import Head from "next/head"
-import Image from "next/image"
-import { useCallback, useEffect } from "react"
-import { SCIRPT_ID } from "./projects/ntc/labir"
-import Youtube from "@/components/content/partials/Youtube"
-import Content from "@/components/content/Content"
+import Labirthermal from "@/components/content/partials/Labirthermal"
 import Picture from "@/components/content/partials/Picture"
 import brain from "@/public/brain/thumb2_small.jpg"
 import styles from "./index.module.scss"
 
 function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
-
-    const hasScript = useCallback(() => {
-        const script = document.getElementById(SCIRPT_ID);
-        return script !== null;
-    }, []);
-
-    const loadScript = useCallback(() => {
-
-        if (!hasScript()) {
-            const script = document.createElement("script");
-            script.src = "https://termogram.labir.cz/lib/embed.js?version=1.3.0";
-            script.id = SCIRPT_ID;
-            document.head.appendChild(script);
-        }
-
-    }, [hasScript]);
-
-    useEffect(() => {
-        loadScript();
-    }, [loadScript]);
 
     return <>
         <FrontLayout
@@ -109,16 +83,14 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
                 ltr={false}
                 content={<div className={styles.thermalShowcase}>
                     <div className={styles.thermalSlot}>
-                        <thermal-file-app
-                            url="/labir/snimek.lrc"
-                            label="Showcase"
-                            license="CC BY-SA 4.0"
-                            author="Jan Jáchim"
-                            // showhistogram="false"
-                            showfullscreen="false"
-                            layout="advanced"
-                            advanced-palettes="true"
-                        ></thermal-file-app>
+                        <Labirthermal file={{
+                            thermal: "/labir/snimek.lrc",
+                            label: "Showcase",
+                            license: "CC BY-SA 4.0",
+                            author: "Jan Jáchim",
+                            showFullscreen: false,
+                            advancedPalettes: true,
+                        }} />
                     </div>
                 </div>}
                 href="/projects/ntc/labir"
